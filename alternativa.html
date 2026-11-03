@@ -1,0 +1,1358 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Grupo Tecnoil S.A.S.: filtración de agua de flowback y produced water, reparación de válvulas, orificios calibrados de tungsteno y desarrollos metalmecánicos para la industria petrolera en Argentina.">
+<link rel="icon" type="image/png" href="assets/img/favicon.png">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Grupo Tecnoil Alternativa</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Red+Hat+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: estructura de sitio corporativo industrial (header fijo con megamenú, slider, grillas de equipos, ficha técnica). Ilustraciones tipo plano técnico. */
+:root{
+  --bg:#F3F5F7; --surface:#FFFFFF; --ink:#0E2236; --muted:#4F5F70; --line:#D5DCE3;
+  --navy:#14365A; --red:#1F6FBF; --red-ink:#1C64AD; --steel:#8A98A6;
+  --band:#0D1F31; --band-ink:#E8EDF2; --band-muted:#9FB0C1;
+  --ill-bg:#E9EEF3; --ill-grid:#D6DEE6; --ill-line:#14365A; --ill-fill:#F7F9FB; --ill-txt:#4F5F70;
+  --header:#FFFFFF; --header-ink:#0E2236;
+  --ok:#1E7A4C; --ok-bg:#E3F2EA; --warn:#8A5A00; --warn-bg:#FBF0D9; --new:#14365A; --new-bg:#E3EBF4; --no:#6B7480; --no-bg:#ECEEF1;
+  --f-display:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --f-body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0B1724; --surface:#112233; --ink:#E6ECF2; --muted:#A3B2C2; --line:#233A51;
+  --navy:#7FA9D6; --red:#3D8BD6; --red-ink:#86BDF0; --steel:#7D8B99;
+  --band:#07111B; --band-ink:#E8EDF2; --band-muted:#91A3B5;
+  --ill-bg:#0F2133; --ill-grid:#1A3149; --ill-line:#9CC0E6; --ill-fill:#13283D; --ill-txt:#9FB0C1;
+  --ok:#6FD39F; --ok-bg:#12321F; --warn:#F0C26A; --warn-bg:#352812; --new:#9CC0E6; --new-bg:#15304A; --no:#A9B2BC; --no-bg:#1D2A37;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0B1724; --surface:#112233; --ink:#E6ECF2; --muted:#A3B2C2; --line:#233A51;
+  --navy:#7FA9D6; --red:#3D8BD6; --red-ink:#86BDF0; --steel:#7D8B99;
+  --band:#07111B; --band-ink:#E8EDF2; --band-muted:#91A3B5;
+  --ill-bg:#0F2133; --ill-grid:#1A3149; --ill-line:#9CC0E6; --ill-fill:#13283D; --ill-txt:#9FB0C1;
+  --ok:#6FD39F; --ok-bg:#12321F; --warn:#F0C26A; --warn-bg:#352812; --new:#9CC0E6; --new-bg:#15304A; --no:#A9B2BC; --no-bg:#1D2A37;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--header)}
+a{color:inherit}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:.005em}
+p{margin:0}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink);font-weight:500}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+/* top bar + header */
+.topbar{background:var(--band);color:var(--band-muted);font-size:13px}
+.topbar .wrap{display:flex;gap:20px;justify-content:space-between;align-items:center;padding-block:7px;flex-wrap:wrap}
+.topbar span b{color:var(--band-ink);font-weight:500}
+.ph{background:rgba(31,111,191,.18);color:#BFDBF7;padding:0 6px;border-radius:3px;font-family:var(--f-mono);font-size:12px}
+header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--header);color:var(--header-ink);border-bottom:1px solid #D5DCE3;color-scheme:light}
+header.site .wrap{display:flex;align-items:center;gap:16px;height:76px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0}
+.brand img.gota{height:50px;width:auto}
+.brand img.texto{height:22px;width:auto}
+.brand small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:#4F5F70;text-transform:uppercase;margin-top:3px}
+nav.main{display:flex;align-items:stretch;gap:2px;margin-left:auto;height:100%}
+nav.main>.item{position:relative;display:flex;align-items:center}
+nav.main>.item>a{display:flex;align-items:center;gap:5px;height:100%;padding:0 9px;text-decoration:none;font-family:var(--f-display);font-weight:600;font-size:16px;letter-spacing:.03em;text-transform:uppercase;color:#0E2236;border-bottom:3px solid transparent;white-space:nowrap}
+nav.main>.item>a:hover,nav.main>.item>a.on{border-bottom-color:#1F6FBF}
+nav.main>.item>a .car{width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-2px);opacity:.6}
+.mega{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#FFFFFF;border:1px solid #D5DCE3;border-top:3px solid #1F6FBF;box-shadow:0 18px 40px rgba(14,34,54,.16);padding:22px;display:none;gap:28px;min-width:260px}
+.item:hover>.mega,.item:focus-within>.mega{display:flex}
+.mega .col{min-width:220px}
+.mega h5{margin:0 0 8px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#1F6FBF;font-weight:500}
+.mega a{display:block;padding:6px 0;text-decoration:none;font-size:14.5px;color:#0E2236;border-bottom:1px solid #EEF1F4}
+.mega a:hover{color:#1F6FBF}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:600;font-size:17px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:12px 20px;border:2px solid transparent;cursor:pointer;line-height:1;border-radius:2px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{filter:brightness(1.08)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+header .btn-red{background:#1F6FBF;padding:11px 16px;font-size:16px;flex-shrink:0}
+.burger{display:none;margin-left:auto;background:none;border:1px solid #D5DCE3;width:44px;height:44px;cursor:pointer;color:#0E2236;border-radius:2px}
+.burger span{display:block;width:20px;height:2px;background:currentColor;margin:4px auto}
+.mnav{display:none}
+
+@media (max-width:1380px){nav.main>.item:first-child{display:none}nav.main>.item>a{padding:0 6px;font-size:15px}.brand small{display:none}}
+@media (max-width:1440px){header .btn-red{display:none}}
+@media (max-width:1180px){
+  nav.main,header .btn-red{display:none}
+  .burger{display:block}
+  .mnav{background:#FFFFFF;color:#0E2236;border-bottom:1px solid #D5DCE3;color-scheme:light}
+  .mnav.open{display:block}
+  .mnav .wrap{padding-block:8px 16px}
+  .mnav details{border-bottom:1px solid #EEF1F4}
+  .mnav summary,.mnav>.wrap>a{display:block;padding:12px 0;font-family:var(--f-display);font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:.03em;text-decoration:none;cursor:pointer;list-style:none;border-bottom:1px solid #EEF1F4}
+  .mnav details summary{border-bottom:0}
+  .mnav details a{display:block;padding:7px 0 7px 12px;text-decoration:none;font-size:15px}
+  .mnav h5{margin:8px 0 2px 12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;color:#1F6FBF;text-transform:uppercase;font-weight:500}
+  .mnav .btn{margin-top:14px;width:100%;justify-content:center;background:#1F6FBF;color:#fff}
+}
+
+/* illustrations */
+.ill{background-color:var(--ill-bg);position:relative;overflow:hidden}
+.prod .ill{background-image:linear-gradient(var(--ill-grid) 1px,transparent 1px),linear-gradient(90deg,var(--ill-grid) 1px,transparent 1px);background-size:20px 20px}
+.card .ill .t,.card .ill .a{display:none}
+.photo{background:#FFFFFF;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;aspect-ratio:400/260;max-width:100%}
+.photo img{height:100%;width:100%;object-fit:cover;padding:0}
+.photo.contain img{object-fit:contain;padding:10px}
+.photo.cover img{object-fit:cover;padding:0}
+.photo .tag{position:absolute;left:10px;bottom:8px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;background:rgba(13,31,49,.78);color:#E8EDF2;padding:2px 6px}
+.ill svg{display:block;width:100%;height:100%}
+.ill .l{fill:none;stroke:var(--ill-line);stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.ill .f{fill:var(--ill-fill)}
+.ill .s{fill:var(--ill-line);opacity:.14}
+.ill .d{stroke-dasharray:5 4;stroke-width:1.4}
+.ill .a{fill:none;stroke:var(--red);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.ill .t{fill:var(--ill-txt);font-family:var(--f-mono);font-size:10px;letter-spacing:.08em}
+.ill .g{stroke:var(--ill-line);stroke-width:1;opacity:.5}
+.ill .tag{position:absolute;left:12px;bottom:10px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;color:var(--ill-txt);text-transform:uppercase}
+
+/* hero slider */
+.hero{background:var(--band);color:var(--band-ink);position:relative}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding-block:48px 56px;min-height:440px}
+.slide{display:none}
+.slide.on{display:contents}
+.slide .txt{display:flex;flex-direction:column;gap:18px;min-width:0}
+.slide .eyebrow{color:#8EC3F2}
+.slide h2{font-size:clamp(38px,5.2vw,64px);text-transform:uppercase;color:#fff}
+.slide p{color:var(--band-muted);font-size:17px;max-width:52ch}
+.slide .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.slide .ctas .btn-red{background:#1F6FBF}
+.slide .ill{aspect-ratio:400/260;max-width:100%;--ill-bg:#102A42;--ill-grid:#173755;--ill-line:#A9C7E6;--ill-fill:#123049;--ill-txt:#8FA7BF;border:1px solid #1E3C59}
+.slide .ill .tag{display:none}
+.dots{position:absolute;left:0;right:0;bottom:18px}
+.dots .wrap{display:flex;gap:8px;min-height:0;padding-block:0;grid-template-columns:none}
+.dots button{width:34px;height:4px;border:0;background:#33506C;cursor:pointer;padding:0}
+.dots button.on{background:#3D8BD6}
+.dots button span{position:absolute;left:-9999px}
+
+/* sections */
+section.blk{padding-block:72px}
+section.blk.alt{background:var(--surface);border-block:1px solid var(--line)}
+.sh{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.sh .l1{display:flex;flex-direction:column;gap:10px;max-width:68ch}
+.sh h2{font-size:clamp(32px,4vw,46px);text-transform:uppercase}
+.sh p{color:var(--muted)}
+.more{font-family:var(--f-display);font-weight:600;font-size:17px;letter-spacing:.05em;text-transform:uppercase;color:var(--red-ink);text-decoration:none;white-space:nowrap}
+.more:hover{text-decoration:underline}
+
+.intro .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+.intro h1{font-size:clamp(30px,3.6vw,44px);text-transform:uppercase}
+.intro p{color:var(--muted);margin-top:16px;max-width:62ch}
+.quick{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.quick a{display:flex;justify-content:space-between;align-items:center;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-family:var(--f-display);font-weight:600;font-size:20px;text-transform:uppercase;letter-spacing:.02em}
+.quick a:hover{color:var(--red-ink)}
+.quick a::after{content:"→";color:var(--red-ink);font-family:var(--f-body)}
+
+.stats{background:var(--navy);color:#fff}
+:root .stats{background:#14365A}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding-block:30px}
+.stat{padding:6px 22px;border-left:1px solid rgba(255,255,255,.18)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-family:var(--f-display);font-size:44px;line-height:1;font-weight:700;font-variant-numeric:tabular-nums}
+.stat span{display:block;color:#C3D3E3;font-size:14px;margin-top:6px}
+
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;text-decoration:none;min-width:0;transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--navy);transform:translateY(-2px)}
+.card .ill,.card .photo{aspect-ratio:400/260;max-width:100%;border-bottom:1px solid var(--line)}
+.card .body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:23px;text-transform:uppercase;display:flex;justify-content:space-between;gap:12px}
+.card h3::after{content:"→";font-family:var(--f-body);font-size:18px;color:var(--red-ink);opacity:0;transform:translateX(-6px);transition:opacity .15s,transform .15s}
+.card:hover h3::after{opacity:1;transform:none}
+.card p{color:var(--muted);font-size:14.5px}
+.card .go{margin-top:auto;padding-top:10px;font-family:var(--f-display);font-weight:600;font-size:16px;letter-spacing:.05em;text-transform:uppercase;color:var(--red-ink)}
+.chip{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:2px;align-self:flex-start;font-weight:500}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.c-compatible{color:var(--ok);background:var(--ok-bg)}
+.c-parcial{color:var(--warn);background:var(--warn-bg)}
+.c-nuevo{color:var(--new);background:var(--new-bg)}
+.c-no{color:var(--no);background:var(--no-bg)}
+.c-propio{color:var(--red-ink);background:rgba(31,111,191,.1)}
+
+.sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.sector{padding:26px 24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);text-decoration:none;display:flex;flex-direction:column;gap:8px;background:var(--surface);min-width:0}
+.sector:hover{background:var(--bg)}
+.sector .eyebrow{color:var(--muted)}
+.sector h3{font-size:26px;text-transform:uppercase}
+.sector p{color:var(--muted);font-size:14.5px}
+.sector .go{margin-top:6px;color:var(--red-ink);font-family:var(--f-display);font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+
+.clients{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.client{background:var(--surface);display:flex;align-items:center;justify-content:center;text-align:center;padding:22px 12px;font-family:var(--f-display);font-weight:600;font-size:19px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);min-height:84px;overflow-wrap:anywhere;min-width:0}
+
+.contact-band{background:var(--band);color:var(--band-ink)}
+.contact-band .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;padding-block:64px;align-items:center}
+.contact-band h2{font-size:clamp(32px,4vw,46px);text-transform:uppercase;color:#fff}
+.contact-band p{color:var(--band-muted);margin-top:12px;max-width:56ch}
+.contact-band .btn{margin-top:22px;background:#1F6FBF;color:#fff}
+.cinfo{display:flex;flex-direction:column;gap:14px;border-left:1px solid #22405C;padding-left:28px}
+.cinfo div{display:flex;flex-direction:column}
+.cinfo small{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8EC3F2}
+.cinfo span{font-size:17px}
+
+footer.site{background:var(--band);color:var(--band-muted);border-top:1px solid #1B3350;font-size:14px}
+footer .top{display:grid;grid-template-columns:1.4fr repeat(4,1fr);gap:32px;padding-block:52px 36px}
+footer h6{margin:0 0 12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E8EDF2;font-weight:500}
+footer a{display:block;text-decoration:none;padding:3px 0;color:var(--band-muted)}
+footer a:hover{color:#fff}
+.fbrand{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.fbrand img{height:52px}
+.wordmark{font-family:var(--f-display);font-weight:700;font-size:30px;letter-spacing:.06em;color:#E8EDF2;line-height:1}
+.wordmark em{font-style:normal;color:#E0475C}
+footer .bottom{border-top:1px solid #1B3350;padding-block:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+
+/* inner pages */
+.crumbs{font-size:13px;color:var(--muted);padding-block:16px;font-family:var(--f-mono)}
+.crumbs a{text-decoration:none;color:var(--muted)}
+.crumbs a:hover{color:var(--red-ink)}
+.crumbs i{font-style:normal;margin:0 8px;opacity:.5}
+.phero{background:var(--band);color:var(--band-ink)}
+.phero .wrap{padding-block:46px 50px;display:flex;flex-direction:column;gap:14px}
+.phero .eyebrow{color:#8EC3F2}
+.phero h1{font-size:clamp(36px,5vw,60px);text-transform:uppercase;color:#fff;max-width:22ch}
+.phero p{color:var(--band-muted);max-width:66ch;font-size:17px}
+.prod{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.prod .ill,.prod .photo{aspect-ratio:400/260;max-width:100%;border:1px solid var(--line)}
+.thumbs{display:flex;gap:10px;margin-top:10px}
+.thumbs button{flex:1;padding:0;border:1px solid var(--line);background:none;cursor:pointer;min-width:0}
+.thumbs button.on{outline:2px solid var(--red);outline-offset:-2px}
+.thumbs .ill,.thumbs .photo{aspect-ratio:400/260;border:0;pointer-events:none}
+.thumbs .ill .t,.thumbs .photo .tag,.thumbs .ill .tag{display:none}
+.spot{display:grid;grid-template-columns:1.25fr 1fr;background:var(--surface);border:1px solid var(--line)}
+.spot .photo{aspect-ratio:auto;height:100%;min-height:340px}
+.spot .photo img{object-position:100% 50%}
+.spot .txt{padding:40px 40px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.spot h2{font-size:clamp(30px,3.6vw,42px);text-transform:uppercase}
+.spot p{color:var(--muted)}
+.spot ul{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:15px}
+.spot li{padding-left:18px;position:relative}
+.spot li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--red)}
+.spot .btn{align-self:flex-start;margin-top:8px}
+.mk{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.mk a{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:center;background:var(--surface);border:1px solid var(--line);padding:26px 28px;text-decoration:none;min-width:0}
+.mk a:hover{border-color:var(--red)}
+.mk .wm{grid-row:span 2;font-family:var(--f-display);font-weight:700;font-size:30px;letter-spacing:.04em;color:var(--ink);border-right:1px solid var(--line);padding-right:22px;line-height:1}
+.mk .wm small{display:block;font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;color:var(--muted);font-weight:400;margin-top:6px}
+.mk b{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink);font-weight:500}
+.mk p{color:var(--muted);font-size:14.5px}
+.badge{display:inline-flex;align-self:flex-start;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;border:1px solid #8EC3F2;color:#BFDBF7;padding:5px 10px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);background:var(--surface)}
+.facts div{padding:20px 22px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
+.facts div:last-child{border-right:0}
+.facts b{font-family:var(--f-display);font-size:20px;text-transform:uppercase}
+.facts span{color:var(--muted);font-size:14.5px}
+.plines{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.plines div{background:var(--surface);border:1px solid var(--line);padding:22px 22px 24px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.plines h3{font-size:22px;text-transform:uppercase}
+.plines code{font-family:var(--f-mono);font-size:12px;color:var(--red-ink)}
+.plines p{color:var(--muted);font-size:14.5px}
+.sel{margin-top:40px;background:var(--surface);border:1px solid var(--line)}
+.sel-h{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding:18px 20px;border-bottom:1px solid var(--line)}
+.sel-h h3{font-size:24px;text-transform:uppercase;margin-top:4px}
+.sel-q{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted);font-weight:500}
+.sel-q span{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:13px;color:var(--ink)}
+.sel-q input{width:96px;font:inherit;font-family:var(--f-mono);font-size:16px;padding:8px 10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:2px}
+.sel-chips{display:flex;flex-wrap:wrap;gap:6px;padding:14px 20px;border-bottom:1px solid var(--line)}
+.sel-chips button{font-family:var(--f-mono);font-size:14px;font-variant-numeric:tabular-nums;padding:6px 10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;border-radius:2px;display:flex;align-items:baseline;gap:3px}
+.sel-chips button small{font-size:10px;color:var(--muted)}
+.sel-chips button:hover{border-color:var(--red)}
+.sel-chips button.on{background:var(--red);border-color:var(--red);color:#fff}
+.sel-chips button.on small{color:#DCEBFA}
+.sel-body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)}
+.sel-spec{padding:20px;border-right:1px solid var(--line)}
+.sel-model{display:flex;align-items:baseline;gap:12px}
+.sel-model b{font-family:var(--f-display);font-size:30px;font-weight:700}
+.sel-model span{font-family:var(--f-mono);color:var(--red-ink)}
+.sel-note{font-size:13.5px;color:var(--muted);margin-top:4px}
+.sel dl{display:grid;grid-template-columns:auto 1fr;gap:0;margin:14px 0 0;font-size:14.5px}
+.sel dt{color:var(--muted);padding:7px 16px 7px 0;border-bottom:1px solid var(--line)}
+.sel dd{margin:0;padding:7px 0;border-bottom:1px solid var(--line);font-family:var(--f-mono);font-size:13.5px;font-variant-numeric:tabular-nums;text-align:right}
+.sel-plano{padding:16px 20px;display:flex;flex-direction:column;gap:8px}
+.sel-plano .photo{aspect-ratio:1050/660}
+.sel-plano p{font-size:12.5px;color:var(--muted)}
+@media (max-width:760px){.sel-body{grid-template-columns:1fr}.sel-spec{border-right:0;border-bottom:1px solid var(--line)}}
+.gama{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border:1px solid var(--line);background:var(--surface)}
+.gama div{padding:18px 20px;border-right:1px solid var(--line);min-width:0}
+.gama div:last-child{border-right:0}
+.gama h4{font-size:17px;margin-bottom:10px}
+.gama ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--muted)}
+@media (max-width:980px){.gama{grid-template-columns:repeat(2,minmax(0,1fr))}.gama div{border-bottom:1px solid var(--line)}}
+@media (max-width:600px){.gama{grid-template-columns:1fr}.gama div{border-right:0}}
+.calc-in{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;padding:16px 20px;border-bottom:1px solid var(--line);align-items:end}
+.calc-in label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--muted);font-weight:500;min-width:0}
+.calc-in label span{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);color:var(--ink)}
+.calc-in input[type=number],.calc-in select{font:inherit;font-size:15px;padding:9px 10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:var(--r-s,2px);width:100%}
+.calc-in input[type=number]{width:110px;font-family:var(--f-mono)}
+.calc-in .chk{flex-direction:row;align-items:center;gap:8px;color:var(--ink);font-size:14px}
+.calc-svg{background:var(--ill-bg);border:1px solid var(--line);padding:10px;min-height:170px;display:flex;align-items:center}
+.calc-svg svg{width:100%;height:auto;display:block}
+.calc-svg .l{fill:none;stroke:var(--ill-line);stroke-width:1.6;stroke-linejoin:round}
+.calc-svg .f{fill:var(--ill-fill)} .calc-svg .s{fill:var(--red);opacity:.25} .calc-svg .g{stroke:var(--ill-line);opacity:.4}
+.calc-svg .d{stroke-dasharray:4 3} .calc-svg .t{fill:var(--ill-txt);font-family:var(--f-mono);font-size:10px}
+.calc-note{padding:12px 20px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line)}
+@media (max-width:980px){.calc-in{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.calc-in{grid-template-columns:1fr}}
+.d3{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:0;background:var(--surface);border:1px solid var(--line)}
+.d3-ctl{padding:20px;display:flex;flex-direction:column;gap:18px;border-right:1px solid var(--line)}
+.fld{display:flex;flex-direction:column;gap:8px}
+.fld>span{font-size:13px;font-weight:500;color:var(--muted)}
+.seg{display:flex;border:1px solid var(--line);border-radius:var(--r-s,2px);overflow:hidden}
+.seg button{flex:1;padding:9px 8px;border:0;background:var(--bg);color:var(--ink);font:inherit;font-size:14px;cursor:pointer;border-left:1px solid var(--line)}
+.seg button:first-child{border-left:0}
+.seg button.on{background:var(--red);color:#fff}
+.step{display:flex;align-items:center;gap:0;border:1px solid var(--line);border-radius:var(--r-s,2px);align-self:flex-start;overflow:hidden}
+.step button{width:42px;height:40px;border:0;background:var(--bg);color:var(--ink);font-size:20px;cursor:pointer}
+.step button:hover{background:var(--line)}
+.step b{min-width:52px;text-align:center;font-family:var(--f-mono);font-size:17px;font-variant-numeric:tabular-nums}
+.chks label{display:flex;gap:8px;align-items:center;font-size:14.5px}
+.d3-view{position:relative;min-width:0;display:flex}
+.d3-canvas{width:100%;flex:1;min-height:520px;background:#e9eef3;display:flex;align-items:center;justify-content:center}
+.d3-canvas canvas{display:block;touch-action:none}
+.d3-load{color:#4f5f70;font-size:14px;padding:20px;text-align:center}
+.d3-hint{position:absolute;left:12px;bottom:10px;font-family:var(--f-mono);font-size:11px;color:#4f5f70;background:rgba(255,255,255,.75);padding:3px 8px;border-radius:4px}
+.d3-sum{margin-top:18px;background:var(--surface);border:1px solid var(--line)}
+.d3-k{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.d3-k div{padding:16px 20px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.d3-k div:last-child{border-right:0}
+.d3-k small{font-size:12.5px;color:var(--muted)}
+.d3-k b{font-family:var(--f-display);font-size:28px;font-variant-numeric:tabular-nums}
+.d3-st{padding:10px 20px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+.d3band{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:var(--band);color:var(--band-ink);padding:30px 34px;text-decoration:none;border-radius:var(--r,0)}
+.d3band h2{color:#fff;font-size:clamp(24px,2.8vw,34px);margin-top:6px}
+.d3band p{color:var(--band-muted);margin-top:8px;max-width:60ch}
+.d3band .eyebrow{color:#8EC3F2}
+@media (max-width:900px){.d3{grid-template-columns:1fr}.d3-ctl{border-right:0;border-bottom:1px solid var(--line)}.d3-canvas{min-height:380px}.d3-k{grid-template-columns:1fr 1fr}.d3-k div:nth-child(2){border-right:0}.d3-k div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+.cinfo div,.side div{display:flex;flex-direction:column;gap:2px}
+.mail{user-select:all;overflow-wrap:anywhere;font-family:var(--f-mono);font-size:.92em}
+.lines{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.lines a{padding:24px 24px 26px 0;text-decoration:none;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line);min-width:0}
+.lines a+a{padding-left:24px;border-left:1px solid var(--line)}
+.lines h3{font-size:24px;text-transform:uppercase}
+.lines p{color:var(--muted);font-size:14.5px}
+.lines span{color:var(--red-ink);font-family:var(--f-display);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:15px}
+.slide .photo{aspect-ratio:400/260;border:1px solid #1E3C59}
+.cfg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.cfg div{background:var(--surface);border:1px solid var(--line);min-width:0}.cfg .photo{aspect-ratio:4/3;border-bottom:1px solid var(--line)}.cfg b{display:block;font-family:var(--f-display);font-size:21px;text-transform:uppercase;padding:14px 16px 4px}.cfg p{color:var(--muted);font-size:14px;padding:0 16px 18px}@media (max-width:980px){.cfg{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:560px){.cfg{grid-template-columns:1fr}}
+.sedes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}.sedes div{padding:24px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;gap:6px;min-width:0}.sedes h3{font-size:28px;text-transform:uppercase}.sedes p{color:var(--muted);font-size:14.5px}@media (max-width:760px){.sedes{grid-template-columns:1fr}}
+.prod h2{font-size:30px;text-transform:uppercase;margin-bottom:12px}
+.prod .lead{color:var(--muted);font-size:17px}
+.prod .cols{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.prod h4{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink);font-weight:500;margin-bottom:10px}
+.prod ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.prod li{padding-left:18px;position:relative;font-size:15px}
+.prod li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--red)}
+.compat{margin-top:22px;border:1px solid var(--line);background:var(--surface);padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.compat p{font-size:14px;color:var(--muted)}
+.specs{background:var(--surface);border:1px solid var(--line);margin-top:40px}
+.specs-h{padding:16px 20px;border-bottom:1px solid var(--line);font-family:var(--f-display);font-weight:700;font-size:22px;text-transform:uppercase}
+.specs-g{display:grid;grid-template-columns:repeat(4,1fr)}
+.specs-g div{padding:18px 20px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px;min-width:0}
+.specs-g div:last-child{border-right:0}
+.specs-g b{font-family:var(--f-display);font-size:19px;text-transform:uppercase}
+.specs-g span{font-size:14px;color:var(--muted)}
+.specs-g code{font-family:var(--f-mono);font-size:12.5px;color:var(--ink)}
+
+/* contact page */
+.cgrid{display:grid;grid-template-columns:1.5fr 1fr;gap:40px;align-items:start}
+form.q{background:var(--surface);border:1px solid var(--line);padding:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form.q .full{grid-column:1/-1}
+form.q label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:500;color:var(--muted)}
+form.q input,form.q select,form.q textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);padding:11px 12px;border-radius:2px;width:100%}
+form.q textarea{min-height:130px;resize:vertical}
+form.q input:focus,form.q select:focus,form.q textarea:focus{outline:2px solid var(--navy);outline-offset:0;border-color:var(--navy)}
+form.q .note{font-size:12.5px;color:var(--muted)}
+.okmsg{grid-column:1/-1;background:var(--ok-bg);color:var(--ok);padding:12px 14px;font-size:14px}
+.side{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);background:var(--surface)}
+.side div{padding:16px 20px;border-bottom:1px solid var(--line)}
+.side div:last-child{border-bottom:0}
+.side small{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink)}
+.side .phx{background:var(--warn-bg);color:var(--warn);font-family:var(--f-mono);font-size:13px;padding:1px 6px}
+
+/* estructura (interna) */
+.note-int{background:var(--warn-bg);color:var(--warn);padding:12px 16px;font-size:14px;border-left:4px solid var(--warn);margin-bottom:28px}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;background:var(--bg)}
+td b{font-weight:600}
+.tree{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tree div{background:var(--surface);border:1px solid var(--line);padding:16px 18px;min-width:0}
+.tree h4{font-size:20px;text-transform:uppercase;margin-bottom:8px}
+.tree ul{margin:0;padding-left:18px;font-size:14px;color:var(--muted)}
+
+@media (max-width:980px){
+  .hero .wrap,.intro .wrap,.contact-band .wrap,.prod,.cgrid,.spot{grid-template-columns:1fr}
+  .spot .photo{min-height:0;aspect-ratio:4/3}.spot .txt{padding:28px 22px}
+  .bgrid{grid-template-columns:1fr!important}
+  .lines,.mk,.facts,.plines{grid-template-columns:1fr}.facts div{border-right:0;border-bottom:1px solid var(--line)}.mk a{grid-template-columns:1fr}.mk .wm{grid-row:auto;border-right:0;padding-right:0}.lines a,.lines a+a{padding:20px 0;border-left:0}
+  .hero .wrap{padding-block:36px 64px;gap:28px}
+  .grid,.sectors{grid-template-columns:repeat(2,1fr)}
+  .clients{grid-template-columns:repeat(3,1fr)}
+  footer .top{grid-template-columns:repeat(2,1fr)}
+  .specs-g,.tree{grid-template-columns:repeat(2,1fr)}
+  .specs-g div:nth-child(2){border-right:0}
+  .specs-g div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .stats .wrap{grid-template-columns:repeat(2,1fr);gap:18px 0}
+  .stat:nth-child(3){border-left:0;padding-left:0}
+  .cinfo{border-left:0;padding-left:0;border-top:1px solid #22405C;padding-top:22px}
+}
+@media (max-width:600px){
+  section.blk{padding-block:52px}
+  .grid,.sectors,.specs-g,.tree,.prod .cols,form.q{grid-template-columns:1fr}
+  .specs-g div{border-right:0;border-bottom:1px solid var(--line)}
+  .clients{grid-template-columns:repeat(2,1fr)}
+  .client{font-size:16px;padding:18px 8px}
+  footer .top{grid-template-columns:1fr}
+  .brand small{display:none}
+  .brand img.gota{height:42px}
+  .brand img.texto{height:19px}
+  .topbar .hide-s{display:none}
+  .stat b{font-size:36px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+
+
+<style>
+/* Variante: tipografía redondeada (Rubik + Nunito Sans), formas suaves */
+:root{--f-display:"Rubik","Segoe UI",system-ui,sans-serif;--f-body:"Nunito Sans",system-ui,-apple-system,"Segoe UI",sans-serif;--f-mono:"Red Hat Mono",ui-monospace,Menlo,Consolas,monospace;--r:10px;--r-s:6px}
+body{font-size:16.5px}
+h1,h2,h3,h4{font-weight:600;letter-spacing:-.01em;line-height:1.12}
+h1,h2,h3,h4,.quick a,.client,.specs-h,.specs-g b,.facts b,.btn,nav.main>.item>a,.more,.go,.lines span,.mnav summary,.mnav>.wrap>a,.sel-model b{text-transform:none!important;letter-spacing:-.005em!important}
+.eyebrow,.mega h5,.mnav h5,footer h6,.prod h4,.side small,.cinfo small,.badge,.mk b{font-family:var(--f-display);font-weight:500;letter-spacing:.08em}
+.slide h2{font-size:clamp(32px,4.2vw,52px)}
+.phero h1{font-size:clamp(30px,4vw,48px)}
+.sh h2,.contact-band h2,.spot h2{font-size:clamp(26px,3vw,38px)}
+.intro h1{font-size:clamp(26px,2.8vw,36px)}
+.card h3,.lines h3,.plines h3{font-size:20px}
+.sector h3{font-size:21px}
+.quick a{font-size:17px;font-weight:500}
+.client{font-size:16px;font-weight:500}
+.stat b{font-weight:600;font-size:40px}
+.specs-h,.sel-h h3{font-size:20px}
+.specs-g b,.facts b{font-size:17px}
+.prod h2{font-size:26px}
+nav.main>.item>a{font-size:15.5px;font-weight:500;padding:0 10px}
+.btn{font-size:15px;font-weight:500;padding:13px 22px;border-radius:var(--r-s)}
+header .btn-red{font-size:14.5px;padding:11px 16px}
+.more,.card .go,.sector .go,.lines span{font-size:15px;font-weight:500}
+.card,.spot,.specs,.sel,.compat,.side,form.q,.mk a,.plines div,.facts,.tree div,.tbl,.sectors{border-radius:var(--r);overflow:hidden}
+.prod .ill,.prod .photo,.thumbs button,.slide .ill,.slide .photo,.sel-plano .photo{border-radius:var(--r-s);overflow:hidden}
+.mega{border-radius:0 0 var(--r) var(--r)}
+form.q input,form.q select,form.q textarea,.sel-q input,.sel-chips button{border-radius:var(--r-s)}
+.chip{border-radius:999px}
+.dots button{border-radius:4px}
+.clients{border-radius:var(--r);overflow:hidden}
+.wordmark{font-weight:700;letter-spacing:.04em}
+.mk .wm{font-weight:600;font-size:26px}
+</style>
+<header class="site"><div class="wrap">
+  <a class="brand" href="#inicio" aria-label="Grupo Tecnoil, inicio">
+    <img class="gota" src="assets/img/img-ac66d61980.png" alt="">
+    <span><img class="texto" src="assets/img/img-788ce39eb4.png" alt="TECNOIL"><small>Grupo Tecnoil S.A.S.</small></span>
+  </a>
+  <nav class="main" id="nav" aria-label="Principal"></nav>
+  <a class="btn btn-red" href="#contacto">Consulta técnica</a>
+  <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+<div class="mnav" id="mnav"><div class="wrap" id="mnavIn"></div></div>
+
+<main id="app"></main>
+
+<footer class="site">
+  <div class="wrap top" id="ftop"></div>
+  <div class="wrap bottom"><span>© 2026 Grupo Tecnoil S.A.S. Todos los derechos reservados.</span><span><a href="#estructura" style="display:inline">Estructura del sitio (borrador interno)</a></span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script>
+/* ---------- ilustraciones tipo plano ---------- */
+const R=(x,y,w,h,c='f l',rx=0)=>`<rect class="${c}" x="${x}" y="${y}" width="${w}" height="${h}" rx="${rx}"/>`;
+const Ln=(x1,y1,x2,y2,c='l')=>`<line class="${c}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"/>`;
+const P=(d,c='f l')=>`<path class="${c}" d="${d}"/>`;
+const T=(x,y,s,a='start')=>`<text class="t" x="${x}" y="${y}" text-anchor="${a}">${s}</text>`;
+const C=(cx,cy,r,c='f l')=>`<circle class="${c}" cx="${cx}" cy="${cy}" r="${r}"/>`;
+function Ar(x1,y1,x2,y2){const a=Math.atan2(y2-y1,x2-x1),h=8,
+  p1=[x2-h*Math.cos(a-0.5),y2-h*Math.sin(a-0.5)],p2=[x2-h*Math.cos(a+0.5),y2-h*Math.sin(a+0.5)];
+  return `<path class="a" d="M${x1} ${y1} L${x2} ${y2} M${p1[0].toFixed(1)} ${p1[1].toFixed(1)} L${x2} ${y2} L${p2[0].toFixed(1)} ${p2[1].toFixed(1)}"/>`}
+const ground=Ln(20,236,380,236,'g');
+const pipeH=(x,y,w,h=22)=>R(x,y,w,h)+R(x-4,y-6,8,h+12)+R(x+w-4,y-6,8,h+12);
+const pipeV=(x,y,h,w=22)=>R(x,y,w,h)+R(x-6,y-4,w+12,8)+R(x-6,y+h-4,w+12,8);
+
+const ILL={
+ autolimpiante:()=>ground+
+  pipeH(50,150,110)+pipeH(240,92,110)+
+  R(160,62,80,150,'f l',8)+R(176,34,48,28)+R(186,18,28,16)+
+  R(176,82,48,112,'l d')+Ln(200,62,200,200,'l d')+
+  R(192,212,16,14)+Ln(170,212,164,236)+Ln(230,212,236,236)+
+  Ar(66,161,128,161)+Ar(272,103,334,103)+Ar(200,214,200,232)+
+  T(50,136,'ENTRADA')+T(350,82,'SALIDA','end')+T(214,230,'PURGA')+T(232,30,'ACTUADOR'),
+ hidrociclon:()=>ground+
+  R(150,52,100,40)+P('M150 92 L250 92 L212 206 L188 206 Z')+R(192,206,16,16)+
+  pipeV(189,14,38)+pipeH(60,60,90,20)+
+  Ln(166,120,234,120,'l d')+Ln(176,150,224,150,'l d')+
+  P('M200 100 C230 110 230 130 200 140 C176 148 176 166 200 174','a')+
+  Ln(160,92,150,236)+Ln(240,92,250,236)+
+  Ar(76,70,130,70)+Ar(200,44,200,20)+Ar(200,212,200,232)+
+  T(60,52,'ALIMENTACIÓN')+T(216,26,'OVERFLOW · AGUA')+T(216,230,'UNDERFLOW · ARENA'),
+ multimedia:()=>ground+
+  P('M150 60 Q200 26 250 60 L250 196 Q200 228 150 196 Z')+
+  R(150,150,100,32,'s',0)+R(150,118,100,32,'s',0)+R(150,96,100,22,'s',0)+
+  Ln(150,150,250,150,'l d')+Ln(150,118,250,118,'l d')+Ln(150,96,250,96,'l d')+
+  pipeH(70,58,80,18)+pipeH(250,180,80,18)+
+  Ln(160,206,154,236)+Ln(240,206,246,236)+
+  Ar(84,67,136,67)+Ar(266,189,318,189)+
+  T(262,110,'ANTRACITA')+T(262,136,'ARENA')+T(262,168,'GRAVA'),
+ bolsas:()=>{let s=ground+R(40,180,320,18)+R(40,72,320,14);
+  for(let i=0;i<4;i++){const x=64+i*76;s+=R(x,86,44,94,'f l',6)+R(x+4,70,36,10)+R(x+10,98,24,70,'l d',10)+Ln(x+22,198,x+22,236)}
+  return s+Ar(20,79,56,79)+Ar(344,189,380,189)+T(40,62,'COLECTOR DE ENTRADA')+T(360,220,'SALIDA FILTRADA','end')},
+ cartuchos:()=>{let s=ground;
+  for(let i=0;i<3;i++){const x=80+i*90;s+=R(x,60,54,160,'f l',4)+R(x-4,52,62,10)+R(x-4,220,62,10);
+   for(let k=0;k<8;k++)s+=Ln(x+6+k*6,66,x+6+k*6,214,'l d')}
+  return s+T(80,40,'CARTUCHOS PLISADOS · 1–100 µm')},
+ aireaceite:()=>ground+
+  R(70,90,110,130,'f l',10)+R(80,74,90,16,'f l',4)+Ln(78,120,172,120,'l d')+Ln(78,150,172,150,'l d')+Ln(78,180,172,180,'l d')+
+  C(290,150,70)+C(290,150,40)+C(290,150,14,'s')+
+  T(70,60,'FILTRO ACEITE SPIN-ON')+T(290,62,'ELEMENTO DE AIRE','middle'),
+ skid:()=>ground+
+  R(40,180,320,16)+C(90,214,16)+C(130,214,16)+C(300,214,16)+
+  P('M60 180 L60 110 Q60 96 74 96 L150 96 Q164 96 164 110 L164 180')+
+  R(190,112,46,68,'f l',6)+R(252,112,46,68,'f l',6)+R(194,100,38,12)+R(256,100,38,12)+
+  R(310,130,40,50)+Ln(164,150,190,150)+Ln(236,150,252,150)+Ln(298,150,310,150)+
+  T(60,86,'TANQUE PULMÓN')+T(190,90,'FILTROS')+T(310,122,'BOMBA'),
+ sumergible:()=>
+  P('M20 110 Q60 100 100 110 T180 110 T260 110 T340 110 T380 110','l')+R(20,112,360,128,'s',0)+
+  R(120,150,150,56,'f l',28)+R(140,160,110,36,'l d',18)+
+  pipeH(270,166,90,20)+R(190,40,20,108)+R(180,36,40,10)+
+  Ar(130,226,150,210)+Ar(260,226,240,210)+Ar(200,60,200,40)+
+  T(24,100,'NIVEL DE AGUA')+T(216,34,'A BOMBA DE CAPTACIÓN'),
+ tren:()=>ground+
+  R(24,120,70,90,'f l',4)+P('M120 100 L170 100 L152 190 L138 190 Z')+R(196,96,50,110,'f l',8)+R(270,120,40,90,'f l',4)+R(326,130,54,80,'f l',4)+
+  Ln(94,140,120,120)+Ln(170,110,196,110)+Ln(246,170,270,170)+Ln(310,170,326,170)+
+  Ar(98,132,116,124)+Ar(172,110,192,110)+Ar(248,170,266,170)+Ar(312,170,322,170)+
+  T(24,112,'RECEPCIÓN')+T(118,92,'DESARENADO')+T(196,88,'FILTRACIÓN')+T(266,112,'PULIDO')+T(326,122,'REÚSO'),
+ osmosis:()=>{let s=ground+R(60,200,280,10)+Ln(80,210,80,236)+Ln(320,210,320,236);
+  for(let i=0;i<4;i++){const y=74+i*30;s+=R(80,y,240,20,'f l',10)+R(70,y+2,10,16)+R(320,y+2,10,16)}
+  return s+R(340,74,12,110)+T(60,60,'MÓDULOS DE MEMBRANA')+T(352,196,'RECHAZO','end')},
+ polimero:()=>ground+
+  P('M60 40 L150 40 L120 110 L90 110 Z')+R(96,110,18,20)+
+  R(170,120,100,90,'f l',6)+Ln(220,96,220,190)+R(206,84,28,14)+P('M204 186 L236 186','l')+
+  R(290,170,60,40,'f l',6)+C(320,190,12)+
+  Ln(114,124,170,140)+Ln(270,190,290,190)+Ar(350,190,380,190)+
+  T(60,30,'TOLVA PAM')+T(170,112,'MADURACIÓN')+T(290,160,'DOSIFICACIÓN'),
+ valvula:()=>ground+
+  R(150,100,100,80,'f l',6)+pipeH(60,124,90,32)+pipeH(250,124,90,32)+
+  R(186,70,28,30)+R(140,58,120,12,'f l',4)+
+  C(66,140,24)+C(334,140,24)+C(200,140,20,'s')+
+  T(60,104,'UNIÓN FIG 1502','start')+T(200,48,'OPERADOR','middle')+T(200,206,'CUERPO · TAPÓN','middle'),
+ kit:()=>ground+
+  P('M90 80 L160 80 L170 200 L80 200 Z')+R(104,124,42,40,'s')+
+  C(250,110,34)+C(250,110,22,'f l')+C(320,110,26)+C(320,110,16,'f l')+
+  R(220,170,120,12,'f l',6)+R(220,192,120,12,'f l',6)+
+  T(80,66,'ÉMBOLO')+T(220,62,'SOFT GOODS · SELLOS')+T(220,226,'ANILLOS DE SACRIFICIO'),
+ gaslift:()=>ground+
+  R(40,118,300,28,'f l',14)+R(340,124,30,16,'f l',4)+R(20,122,20,20,'f l',4)+
+  Ln(110,118,110,146)+Ln(220,118,220,146)+C(160,132,4,'s')+C(180,132,4,'s')+
+  T(40,100,'VÁLVULA GAS LIFT R-1')+T(370,170,'LATCH RK-2 / BK-2','end'),
+ orificio:()=>ground+
+  C(140,130,74)+C(140,130,16,'s')+C(140,130,16,'l')+
+  R(250,90,110,80,'f l',4)+R(250,118,110,24,'s')+Ln(276,90,276,170,'l d')+
+  T(140,226,'ORIFICIO CALIBRADO · WC','middle')+T(305,196,'CHOKE BEAN','middle'),
+ pico:()=>ground+
+  P('M60 110 L240 110 L300 124 L320 130 L300 136 L240 150 L60 150 Z')+R(60,102,40,56)+Ln(240,110,240,150,'l d')+
+  Ar(320,130,370,130)+T(60,90,'PICO DE INYECCIÓN · INSERTO DE METAL DURO'),
+ magnetico:()=>ground+
+  R(130,70,140,140,'f l',6)+R(120,58,160,14,'f l',3)+R(192,22,16,36)+R(150,16,100,8,'f l',4)+
+  [150,175,200,225,250].map(x=>R(x-5,74,10,122,'s',5)+R(x-5,74,10,122,'l',5)).join('')+
+  pipeH(40,150,90,24)+pipeH(270,150,90,24)+Ln(140,210,134,236)+Ln(260,210,266,236)+
+  Ar(54,162,112,162)+Ar(290,162,346,162)+
+  T(40,136,'ENTRADA')+T(360,136,'SALIDA','end')+T(286,92,'BARRAS MAGNÉTICAS')+T(210,22,'IZAJE'),
+ bes:()=>ground+
+  R(70,100,260,60,'f l',30)+R(110,92,40,76,'f l',4)+R(250,92,40,76,'f l',4)+
+  R(160,112,80,36,'s')+Ln(20,130,380,130,'l d')+
+  T(70,80,'PROTECTOR DE CABLE BES · 2 3/8" – 2 7/8"')+T(200,196,'CANAL PARA FLAT CABLE Y CONTROL LINES','middle'),
+ pistones:()=>{let s=ground;
+  for(let i=0;i<5;i++){const x=50+i*62;s+=R(x,90,40,120,'f l',4)+R(x-4,80,48,14,'f l',3)+Ln(x,140,x+40,140,'l d')}
+  return s+T(50,62,'KIT DE PISTONES · 5 UNIDADES')},
+ herramienta:()=>ground+
+  R(40,116,90,28)+P('M130 108 L310 108 L340 130 L310 152 L130 152 Z')+
+  Ln(170,108,200,152,'l d')+Ln(210,108,240,152,'l d')+Ln(250,108,280,152,'l d')+
+  T(40,96,'FRESA · ESCARIADOR')
+};
+ILL.fluidend=()=>{
+ const E=(cx,cy,rx,ry,c='f l')=>`<ellipse class="${c}" cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}"/>`;
+ const cylH=(x1,x2,cy,r)=>P(`M${x1} ${cy-r} L${x2} ${cy-r} A${r*0.35} ${r} 0 0 1 ${x2} ${cy+r} L${x1} ${cy+r}`)+E(x1,cy,r*0.35,r);
+ const ax=(x1,y1,x2,y2)=>Ln(x1,y1,x2,y2,'l d');
+ const call=(x,y,n)=>`<circle class="f l" cx="${x}" cy="${y}" r="7"/><text class="t" x="${x}" y="${y+3.5}" text-anchor="middle">${n}</text>`;
+ let s=Ln(20,240,380,240,'g');
+ // block (isometric)
+ s+=P('M170 112 L262 112 L292 96 L200 96 Z')+P('M262 112 L292 96 L292 168 L262 184 Z','f l')+R(170,112,92,72,'f l')+P('M262 112 L292 96 L292 168 L262 184 Z','s');
+ s+=E(196,148,9,16,'s')+E(216,148,9,16,'s')+E(236,148,9,16,'s');
+ s+=E(231,104,10,4,'s')+E(277,140,4,10,'s');
+ // plunger + packing (left)
+ s+=ax(40,148,170,148)+cylH(48,128,148,11)+R(36,141,14,14,'f l',2);
+ [138,146,154].forEach(x=>s+=E(x,148,4,15));
+ // discharge valve stack (up)
+ s+=ax(231,24,231,100)+E(231,82,13,5)+P('M222 70 L240 70 L236 80 L226 80 Z')+P('M224 54 L238 54 L236 64 L226 64 Z','f l')+P('M226 50 l2 -4 l2 4 l2 -4 l2 4 l2 -4 l2 4','l')+R(218,22,26,14,'f l',3)+E(231,22,13,4);
+ // suction valve + seat (down)
+ s+=ax(231,188,231,232)+E(231,200,12,4)+P('M223 206 L239 206 L236 216 L226 216 Z')+E(231,226,14,5);
+ // suction cover / retainer (right)
+ s+=ax(292,140,372,140)+E(318,140,7,20)+E(344,140,8,24)+E(344,140,4,12,'s')+R(356,128,18,24,'f l',3);
+ // callouts
+ s+=call(88,124,1)+call(146,124,2)+call(206,90,3)+call(262,52,4)+call(262,28,5)+call(256,214,6)+call(318,110,7)+call(360,110,8);
+ return s};
+ILL.tamiz=()=>ground+R(110,86,200,96,'f l',48)+R(140,106,140,56,'l d',4)+Ln(150,134,280,134,'l')+
+  R(310,122,26,24)+R(336,116,24,36)+pipeV(140,40,46,22)+pipeV(240,182,40,22)+
+  Ar(151,42,151,80)+Ar(251,190,251,228)+T(176,58,'ENTRADA')+T(276,214,'SALIDA')+T(312,108,'MOTOR');
+function photo(src,tag,cover,pos,contain){return `<div class="photo${contain?' contain':''}"><img${pos?` style="object-position:${pos}"`:''} src="${src}" alt="${tag||''}" loading="lazy">${tag?`<span class="tag">${tag}</span>`:''}</div>`}
+function media(m){return m.src?photo(m.src,m.tag,m.cover,m.pos,m.contain):ill(m.ill,m.tag)}
+function ill(k,tag){return `<div class="ill"><svg viewBox="0 0 400 260" role="img" aria-label="${tag||'Ilustración técnica'}">${(ILL[k]||ILL.herramienta)()}</svg>${tag?`<span class="tag">${tag}</span>`:''}</div>`}
+
+/* ---------- contenido ---------- */
+const IMG={aorif:'assets/img/aorif-7370f6ceb6.jpg',apist:'assets/img/apist-4573d0ff60.jpg',avalv:'assets/img/avalv-4379ca24be.jpg',aog:'assets/img/aog-e174789bae.jpg',mod1:'assets/img/mod1-5fa17d3553.jpg',mod2:'assets/img/mod2-87486e9f54.jpg',mod3:'assets/img/mod3-bf3001c8e8.jpg',mod4:'assets/img/mod4-16b87d6543.jpg',mod5:'assets/img/mod5-c4546917ca.jpg',mod6:'assets/img/mod6-42a1cf4021.jpg',mod7:'assets/img/mod7-cb14f28d4a.jpg',mod8:'assets/img/mod8-e8fd223a8f.jpg',kitt:'assets/img/kitt-9715c0fc25.jpg',comp:'assets/img/comp-42a51e1a3c.jpg',plunger:'assets/img/plunger-c96cc51adb.jpg',dos:'assets/img/dos-85b48c4473.jpg',trailer2:'assets/img/trailer2-597a7e4d1b.jpg',cons1:'assets/img/cons1-9c471be070.jpg',cons2:'assets/img/cons2-56a13b2828.jpg',cons3:'assets/img/cons3-e36684c72d.jpg',cons4:'assets/img/cons4-1543f18c0f.jpg',cons5:'assets/img/cons5-b8d47adfcf.jpg',skidb:'assets/img/skidb-76da37f977.jpg',trailer:'assets/img/trailer-92281d929a.jpg',sep1:'assets/img/sep1-b8eef0c4f5.jpg',sep2:'assets/img/sep2-71fd1bd2fe.jpg',sep3:'assets/img/sep3-7f66411bea.jpg',mm1:'assets/img/mm1-2118e8b65f.jpg',mm2:'assets/img/mm2-20662ad1ad.jpg',pump:'assets/img/pump-1a0b7021db.jpg',boll1:'assets/img/boll1-76a4495512.jpg',boll2:'assets/img/boll2-d6557b4293.jpg',bolsa:'assets/img/bolsa-7b50e3c3af.jpg',v1:'assets/img/v1-a95ca51098.jpg',v2:'assets/img/v2-61b274764c.jpg',v3:'assets/img/v3-721a1468c3.jpg',tz1:'assets/img/tz1-8356b6ae9c.jpg',tz2:'assets/img/tz2-376d0d4ab5.jpg',tz3:'assets/img/tz3-4860783f3e.jpg',daf1:'assets/img/daf1-9ef36cb259.jpg',daf2:'assets/img/daf2-2e35ad3d09.jpg',dafp:'assets/img/dafp-a97f0aba2f.png',medios:'assets/img/medios-fe92b18405.jpg',orif:'assets/img/orif-95e53d2189.jpg',orif2:'assets/img/orif2-3f7aeeff85.jpg'};
+const DAF=[
+ ['TF-003',3,'DN50','DN50','DN100','DN100','3.7/2.8','2.4/1.16','2.2/1.7',1500,5000],
+ ['TF-005',5,'DN80','DN80','DN100','DN80','4/3','2.4/1.16','2.2/1.7',1600,7000],
+ ['TF-010',10,'DN100','DN100','DN100','DN100','4.65/3.8','2.7/1.36','2.4/1.9',2000,12000],
+ ['TF-015',15,'DN125','DN100','DN150','DN100','5.6/4.5','2.9/1.66','2.5/2',2200,18000],
+ ['TF-020',20,'DN150','DN150','DN150','DN100','5.9/4.8','3.2/1.96','2.5/2',3000,22000],
+ ['TF-030',30,'DN150','DN150','DN150','DN100','6.8/5.5','3.2/2.16','2.7/2.2',3800,32000],
+ ['TF-040',40,'DN200','DN150','DN150','DN100','8/6.7','3.6/2.6','2.7/2.2',5000,45000],
+ ['TF-050',50,'DN200','DN150','DN150','DN100','8.4/7','3.6/2.6','2.7/2.2',5500,55000],
+ ['TF-060',60,'DN250','DN200','DN150','DN100','9.9/8.4','3.8/2.8','2.9/2.4',6000,66000],
+ ['TF-070',70,'DN250','DN200','DN150','DN100','10.4/9','3.8/2.8','2.9/2.4',6500,75000],
+ ['TF-080',80,'DN250','DN250','DN150','DN100','10.8/9.4','4/3','2.9/2.4',7500,100000],
+ ['TF-100',100,'DN300','DN250','DN150','DN100','12.1/10.6','4.2/3.2','2.9/2.4',9000,110000],
+ ['TF-120',120,'DN300','DN250','DN150','DN100','12.5/11.4','4.4/3.4','2.9/2.4',10000,130000]];
+const COTIZAR_AGUA=[
+ ['Caudal y proceso','Caudal de diseño y pico.','m³/h · bbl/día'],
+ ['Fluido y sólidos','Sólidos en suspensión, granulometría y contenido de hidrocarburo.','TSS ppm · µm · O&G ppm'],
+ ['Condiciones de operación','Presión, temperatura y salinidad del agua.','psi · °C · TDS mg/l'],
+ ['Destino del agua','Reúso en fractura, inyección, disposición o vertido.','Especificación de salida']];
+const COTIZAR_VALV=[
+ ['Equipo','Marca y modelo de la válvula.','TSI · FMC · otro'],
+ ['Medida','Tamaño nominal y conexión.','1×1 · 2×1 · 2×2 · 3×3'],
+ ['Servicio','Presión de trabajo y fluido.','psi · arena · ácido'],
+ ['Estado','Cantidad, fotos y reporte de inspección si existe.','Unidades · fotos']];
+const COTIZAR_PIEZA=[
+ ['Plano o muestra','Plano, modelo 3D o pieza de muestra.','PDF · STEP · muestra'],
+ ['Material','Acero, inoxidable, metal duro o aleación especial.','AISI · WC · tratamiento'],
+ ['Cantidad','Lote inicial y consumo anual estimado.','Unidades / año'],
+ ['Plazo y destino','Fecha requerida y equipo donde se monta.','Fecha · equipo']];
+
+const COTIZAR_MOD=[
+ ['Uso del módulo','Dormitorio, oficina, comedor, sala de reuniones o combinado.','Uso · personas'],
+ ['Medidas','Largo y ancho requeridos, o una planta de referencia.','m · plano'],
+ ['Destino','Yacimiento, clima y acceso para el camión.','Provincia · °C · camino'],
+ ['Equipamiento','Climatización, sanitarios, mobiliario y energía disponible.','kW · 220/380 V']];
+const P_=[
+ /* FILTROS */
+ {id:'filtros-autolimpiantes',cat:'filtros',name:'Filtros autolimpiantes',ill:'autolimpiante',
+  media:[{src:IMG.boll1,tag:'BOLLFILTER automático'},{src:IMG.boll2,tag:'BOLLFILTER · detalle',cover:1},{ill:'autolimpiante',tag:'Esquema'}],
+  short:'Filtración continua de agua y aceite con limpieza automática por contralavado, sin cortar el proceso.',
+  desc:'Sistemas autolimpiantes para agua y aceite. Somos representantes oficiales de BOLLFILTER (Boll & Kirch Filterbau GmbH). El elemento filtrante se limpia en servicio por contralavado. Se eliminan los cambios de bolsa o cartucho en la línea principal.',
+  apps:['Agua de flowback antes de tanques de almacenaje','Produced water para reinyección','Agua de captación para fractura','Aceite lubricante y de proceso en plantas'],
+  feats:['Limpieza automática por diferencial de presión o tiempo','Grados de filtración desde 10 µm','Operación sin interrupción de caudal','Cuerpos en acero al carbono o inoxidable'],
+  compat:['compatible','Línea "Sistemas de filtración autolimpiantes para agua y aceite" de la presentación a Tecpetrol.'],cot:COTIZAR_AGUA},
+ {id:'separadores-magneticos',cat:'filtros',name:'Separadores magnéticos',ill:'magnetico',
+  media:[{src:IMG.sep3,tag:'Equipo',cover:1},{src:IMG.sep1,tag:'Con izaje por tornillo'},{src:IMG.sep2,tag:'Instalación en planta',cover:1},{ill:'magnetico',tag:'Esquema'}],
+  short:'Barras magnéticas de alta intensidad que retienen partículas ferrosas del agua o del aceite.',
+  desc:'Carcasa de acero inoxidable con un paquete de barras magnéticas de neodimio. Las barras capturan óxido, limaduras y restos de desgaste que los filtros de malla no retienen. La tapa con tornillo de izaje permite retirar el paquete de barras y limpiarlo en pocos minutos.',
+  apps:['Agua de flowback y produced water con óxido y partículas metálicas','Protección de bombas de inyección y válvulas','Circuitos de aceite lubricante e hidráulico','Etapa previa a filtros de bolsa o cartucho'],
+  feats:['Barras de neodimio de alta intensidad','Carcasa en acero inoxidable','Conexiones bridadas','Tapa con izaje por tornillo','Baja pérdida de carga'],
+  compat:['nuevo','Línea nueva. No figura en la presentación a Tecpetrol.'],cot:COTIZAR_AGUA},
+ {id:'filtros-multimedia',cat:'filtros',name:'Filtros multimedia',ill:'multimedia',
+  media:[{src:IMG.mm2,tag:'Batería en planta',cover:1},{src:IMG.mm1,tag:'Batería de filtros',cover:1},{ill:'multimedia',tag:'Esquema'}],
+  short:'Lechos de antracita, arena y grava para bajar sólidos suspendidos y turbidez del agua.',
+  desc:'Recipientes con mantos filtrantes estratificados. Retienen sólidos finos y parte del hidrocarburo emulsionado. Se usan como etapa de pulido o como pretratamiento antes de membranas.',
+  apps:['Pulido de produced water para inyección','Pretratamiento de agua antes de ablandar u ósmosis','Agua de servicio en locación'],
+  feats:['Contralavado automático','Medios filtrantes intercambiables','Recipientes a presión','Configuración simple o en batería'],
+  compat:['parcial','Encaja en "Sistemas de filtración de agua" de la presentación. Falta definir proveedor de medios.'],cot:COTIZAR_AGUA},
+ {id:'filtros-tamiz',cat:'filtros',name:'Filtros tamiz y brush',ill:'tamiz',
+  media:[{src:IMG.tz1,tag:'Filtros tamiz automáticos',cover:1},{src:IMG.tz2,tag:'Interior · sistema de limpieza',cover:1},{src:IMG.tz3,tag:'Tamiz de ranura continua',cover:1},{ill:'tamiz',tag:'Esquema'}],
+  short:'Tamices con limpieza por cepillo o succión para proteger bombas e intercambiadores.',
+  desc:'Filtros de malla con limpieza mecánica por cepillo rotativo o boquillas de succión. Son una variante compacta de la línea autolimpiante para caudales chicos y medianos.',
+  apps:['Protección de bombas de transferencia','Agua de enfriamiento','Retención de sólidos gruesos antes de bolsas'],
+  feats:['Malla de acero inoxidable','Motor eléctrico o accionamiento manual','Bajo consumo de agua de lavado','Instalación en línea'],
+  compat:['compatible','Variante de la línea autolimpiante Boll & Kirch.'],cot:COTIZAR_AGUA},
+ {id:'baterias-filtros-bolsa',cat:'filtros',name:'Baterías de filtros bolsa',ill:'bolsas',
+  media:[{src:IMG.bolsa,tag:'Filtros multibolsa'},{ill:'bolsas',tag:'Esquema'}],
+  short:'Filtros multibolsa y baterías de carcasas porta-bolsa en acero inoxidable, en todas las medidas.',
+  desc:'Filtros multibolsa en acero inoxidable con tapa abisagrada de apertura rápida y conexiones bridadas. Se instalan solos o como carcasas porta-bolsa montadas sobre colector común. Se dimensionan según caudal y carga de sólidos. Se puede aislar una carcasa para cambiar la bolsa sin parar la batería.',
+  apps:['Filtrado final de agua de flowback','Filtrado de fluidos de completación','Químicos y aditivos de fractura'],
+  feats:['De 1 a 12 carcasas por batería','Tamaños de bolsa estándar #1 y #2','Tapa de apertura rápida','Manómetros de presión diferencial'],
+  compat:['compatible','Línea "Baterías de filtros bolsa de todas las medidas" de la presentación.'],cot:COTIZAR_AGUA},
+ {id:'cartuchos-medios',cat:'filtros',name:'Bolsas, cartuchos y medios filtrantes',ill:'cartuchos',
+  media:[{src:IMG.medios,tag:'Bolsas filtrantes'},{src:IMG.cons1,tag:'Cartuchos plisados'},{src:IMG.cons2,tag:'Cartuchos plisados'},{src:IMG.cons4,tag:'Elementos para aceite e hidráulica'},{src:IMG.cons3,tag:'Elementos de filtración fina'},{src:IMG.cons5,tag:'Cápsulas filtrantes'}],
+  short:'Bolsas, cartuchos plisados, elementos para aceite y cápsulas filtrantes, importados y nacionales.',
+  desc:'Provisión de consumibles de filtración, importados y nacionales, para equipos propios y de terceros: bolsas filtrantes, cartuchos plisados y bobinados, elementos para aceite, combustible e hidráulica, y cápsulas filtrantes. Stock de medidas habituales y equivalencias de marca.',
+  apps:['Reposición en baterías de bolsa','Cartuchos para pulido de agua','Medios para filtros multimedia'],
+  feats:['Grados de 1 a 200 µm','Polipropileno, poliéster y nylon','Equivalencias de marcas habituales','Entregas programadas'],
+  compat:['compatible','Línea "Filtros bolsa, cartuchos y medios filtrantes" de la presentación.'],cot:COTIZAR_AGUA},
+ {id:'filtros-aire-aceite',cat:'filtros',name:'Filtros de aire y aceite de reposición',ill:'aireaceite',
+  short:'Filtros de reposición para motores, compresores y bombas de equipos de campo.',
+  desc:'Provisión de filtros de aire y aceite de reposición para la flota de equipos de campo: motores diésel, compresores, power ends y unidades de bombeo.',
+  apps:['Equipos de fractura y cementación','Compresores de gas lift','Grupos electrógenos en locación'],
+  feats:['Equivalencias por número de parte','Originales y alternativos','Kits de mantenimiento por equipo','Entregas en base'],
+  compat:['propio','Está en la presentación. No tiene equivalente en la web de referencia.'],cot:COTIZAR_PIEZA},
+ {id:'conjunto-movil',cat:'filtros',name:'Skid móvil de filtración',ill:'skid',calc:1,
+  media:[{src:IMG.trailer,tag:'Filtración sobre acoplado'},{src:IMG.trailer2,tag:'Unidad con colectores de entrada y salida'},{ill:'skid',tag:'Esquema'}],
+  short:'Equipo de filtrado montado sobre trailer o skid para trasladar entre locaciones.',
+  desc:'Conjunto móvil con tanque pulmón, bomba y etapa de filtración montado sobre skid o trailer. Se conecta en locación para tratar el flowback en el pozo.',
+  apps:['Flowback en locación de pozo','Limpieza de piletas y tanques','Servicio temporario en baterías'],
+  feats:['Montaje sobre skid o trailer','Conexiones rápidas','Configuración según caudal','Opción con etapa de desarenado'],
+  compat:['nuevo','No figura en la presentación. Es una forma de entregar la línea de filtración como servicio.'],cot:COTIZAR_AGUA},
+ {id:'filtros-sumergibles',cat:'filtros',name:'Filtros de captación',ill:'sumergible',
+  short:'Filtros sumergibles para la toma de agua de río o pileta que abastece la fractura.',
+  desc:'Filtros de succión que se instalan en la toma de agua. Evitan el ingreso de sólidos gruesos y material vegetal a las bombas de captación de agua para fractura.',
+  apps:['Captación de agua de río para fractura','Succión desde piletas de acopio'],
+  feats:['Malla de acero inoxidable','Autolimpieza por contralavado opcional','Bajo mantenimiento'],
+  compat:['nuevo','No figura en la presentación. Aplica a la logística de agua de fractura.'],cot:COTIZAR_AGUA},
+ /* SISTEMAS */
+ {id:'tratamiento-flowback',cat:'sistemas',name:'Tratamiento de agua de flowback',ill:'tren',
+  media:[{src:IMG.trailer,tag:'Unidad móvil de filtración'},{src:IMG.skidb,tag:'Batería multibolsa y recipiente'},{ill:'tren',tag:'Esquema del proceso'}],
+  short:'Tren completo de recepción, desarenado, filtración y pulido para reusar el agua de retorno en fractura.',
+  desc:'Sistema integrado para el agua que retorna del pozo después de la fractura. Combina desarenado, separación magnética, filtros autolimpiantes y baterías de bolsa según la calidad de agua que exige el reúso.',
+  apps:['Reúso de agua en nuevas etapas de fractura','Reducción de volumen a disposición final','Menor consumo de agua dulce'],
+  feats:['Diseño por etapas según análisis de agua','Equipos fijos o móviles','Etapa de pulido final con bolsas o cartuchos','Puntos de muestreo entre etapas'],
+  compat:['compatible','Combina las líneas de filtración de la presentación con desarenado y separación magnética.'],cot:COTIZAR_AGUA},
+ {id:'proteccion-bombas',cat:'sistemas',name:'Protección de bombas de fractura',ill:'sumergible',
+  media:[{src:IMG.pump,tag:'Aplicación: bomba diésel de transferencia'}],
+  short:'Filtros de succión y en línea que protegen las bombas de captación y transferencia de agua para fractura.',
+  desc:'Las bombas que captan y transfieren agua en locación se dañan con arena, piedras, restos vegetales y partículas metálicas. Instalamos filtros de captación, tamices autolimpiantes y separadores magnéticos aguas arriba de cada bomba para alargar la vida útil de impulsores y sellos y evitar paradas no programadas.',
+  apps:['Bombas de captación de río o pileta','Bombas de transferencia a tanques de fractura','Bombas de alimentación de equipos de filtración','Recirculación de agua de flowback'],
+  feats:['Filtros de captación en la succión','Tamices autolimpiantes en línea','Separadores magnéticos para partículas ferrosas','Selección según caudal y conexión de cada bomba'],
+  compat:['nuevo','Aplicación de las líneas de filtración existentes.'],
+  cot:[['Bomba','Marca, modelo y caudal nominal.','m³/h · bbl/min'],['Conexiones','Diámetro de succión y descarga.','DN · pulgadas'],['Fluido','Agua dulce, flowback o produced water, con sólidos.','TSS ppm · arena'],['Operación','Horas de trabajo continuo y tipo de locación.','h/día · locación']]},
+ {id:'tratamiento-produced-water',cat:'sistemas',name:'Tratamiento de produced water',ill:'multimedia',
+  media:[{src:IMG.skidb,tag:'Batería multibolsa y recipiente'},{ill:'multimedia',tag:'Esquema'}],
+  short:'Filtración de agua de producción para reinyección o recuperación secundaria.',
+  desc:'Sistemas para bajar sólidos e hidrocarburo del agua de producción antes de reinyectarla. Protegen las bombas de inyección y evitan el taponamiento de la formación.',
+  apps:['Plantas de inyección de agua','Recuperación secundaria','Baterías y plantas de tratamiento de crudo'],
+  feats:['Filtración autolimpiante y multimedia','Pulido final con cartuchos','Opción de control de sales','Operación automática'],
+  compat:['compatible','Usa las líneas autolimpiante y de bolsas/cartuchos de la presentación.'],cot:COTIZAR_AGUA},
+ {id:'flotacion-daf',cat:'sistemas',name:'Flotación por aire disuelto (DAF)',ill:'tren',
+  media:[{src:IMG.daf1,tag:'Equipo DAF'},{src:IMG.daf2,tag:'DAF en acero inoxidable'},{src:IMG.dafp,tag:'Plano de dimensiones',contain:1}],
+  sel:'DAF',
+  short:'Separa hidrocarburo emulsionado, grasas y sólidos livianos del agua con microburbujas de aire. Modelos de 3 a 120 m³/h.',
+  desc:'El agua se mezcla con una corriente presurizada y saturada de aire. Al despresurizarse se forman microburbujas que arrastran a la superficie el aceite emulsionado y los sólidos livianos. Un barredor de cadena retira el lodo flotante y los sedimentos se purgan por el fondo.',
+  apps:['Produced water antes de filtración e inyección','Agua de flowback con hidrocarburo y sólidos finos','Efluentes de bases operativas y lavaderos de equipos','Pretratamiento antes de filtros multimedia'],
+  feats:['Saturador de aire a presión','Barredor superficial de cadena','Tolva de lodos y purga de fondo','Tablero de control local','Acero al carbono pintado o inoxidable'],
+  compat:['nuevo','Línea nueva. Cubre la planta de efluentes de la web de referencia.'],cot:COTIZAR_AGUA},
+ {id:'control-sales',cat:'sistemas',name:'Control de sales y deposición',ill:'osmosis',
+  short:'Ablandamiento y membranas para evitar incrustaciones y depósitos de sales en líneas y equipos.',
+  desc:'Sistemas de filtración de agua y control de deposición de sales. Incluyen ablandamiento y, cuando el agua lo requiere, ósmosis inversa para bajar dureza y sólidos disueltos.',
+  apps:['Agua para calderas y generadores de vapor','Agua de proceso en plantas','Prevención de incrustaciones en líneas'],
+  feats:['Ablandadores con regeneración automática','Módulos de ósmosis inversa','Pretratamiento multimedia','Monitoreo de dureza y TDS'],
+  compat:['compatible','Línea "Sistemas de filtración de agua y deposición de sales" de la presentación.'],cot:COTIZAR_AGUA},
+ {id:'dosificacion-quimica',cat:'sistemas',name:'Dosificación automática de químicos',ill:'polimero',
+  media:[{src:IMG.dos,tag:'Equipo de dosificación sobre skid'}],
+  short:'Tanques con agitador, bombas dosificadoras y tablero en una sola base, con control manual o automático. Para químicos líquidos.',
+  desc:'Equipos compactos que integran en una misma base los tanques de preparación con agitador, las bombas dosificadoras de precisión, válvulas, cañerías y el tablero de control. Se conectan a la línea principal formando un circuito de recirculación. En la versión automática, sensores en línea de pH y conductividad siguen la calidad del agua y ajustan la dosis en tiempo real.',
+  apps:['Inhibidores de incrustación y corrosión en agua de inyección','Biocidas y secuestrantes','Coagulantes y floculantes para DAF y efluentes','Ajuste de pH y agua de enfriamiento'],
+  feats:['Tanques en PE, acero al carbono o inoxidable','Bombas de diafragma mecánico, hidráulico o pistón','Control manual, por temporizador o por pH y conductividad','Diseño modular y ampliable','Base única, fácil de transportar e instalar'],
+  compat:['nuevo','Línea nueva. Complementa la dosificación de poliacrilamida.'],
+  cot:[['Producto químico','Nombre y propiedades del químico a dosificar.','Ficha de seguridad'],['Tanque','Volumen y material del tanque de preparación.','m³ · PE · AISI'],['Bomba dosificadora','Tipo, caudal y presión de inyección.','L/h · MPa'],['Control','Manual, por tiempo o automático por sensores.','pH · conductividad']]},
+ {id:'dosificacion-poliacrilamida',cat:'sistemas',name:'Preparación automática de polímero (PAM)',ill:'polimero',
+  short:'Equipo de tres tanques que prepara y dosifica poliacrilamida en forma continua, sin operador. Alternativa al dosificador de químicos.',
+  desc:'Prepara la solución de polímero a partir del polvo en forma continua. Un tornillo dosificador con reductor de precisión toma el polvo de la tolva, un pre-humectador lo dispersa en agua y la solución pasa por tres tanques con agitador: mezcla, maduración y almacenamiento. Desde ahí, bombas de diafragma la inyectan en el proceso. Es la alternativa al dosificador de químicos cuando el producto se recibe en polvo.',
+  apps:['Floculante para DAF y tratamiento de efluentes','Clarificación de agua de flowback y produced water','Aplicación de PAM sobre arena de fractura','Recuperación de petróleo con polímeros'],
+  feats:['Tolva con visor y medidor de nivel de polvo','Tornillo dosificador con reductor de precisión','Calefactor en la descarga contra apelmazamiento','Tres tanques con agitador: mezcla, maduración y almacenamiento','Línea de agua con filtro, electroválvula y caudalímetro','Tablero eléctrico, bombas y tamaños de tanque a elección'],
+  compat:['parcial','Figuraba "En estudio" en la presentación a Tecpetrol.'],cot:[['Polímero','Tipo de PAM y concentración de la solución.','% · aniónico/catiónico'],['Consumo','Caudal de solución o kg de polvo por hora.','L/h · kg/h'],['Agua','Calidad y presión del agua de preparación.','bar · TDS'],['Control','Manual o automático, señal desde el proceso.','4-20 mA · temporizador']]},
+ /* VALVULAS */
+ {id:'reconstruccion-valvulas',cat:'valvulas',name:'Reconstrucción de válvulas tapón',ill:'valvula',
+  media:[{src:IMG.v2,tag:'Válvula tapón con unión a golpe',cover:1},{src:IMG.v3,tag:'Válvula tapón con volante y reductor'},{src:IMG.v1,tag:'Válvulas en taller',cover:1},{ill:'valvula',tag:'Esquema'}],
+  short:'Recuperación de cuerpos de válvulas tapón TSI y FMC en medidas 1×1, 2×1, 2×2 y 3×3.',
+  desc:'Recuperación de cuerpos de válvulas tapón de alta presión usadas en fractura y flowback. Incluye inspección, recuperación de asientos y superficies de sello, y armado con kit nuevo.',
+  apps:['Líneas de fractura y flowback','Manifolds de alta presión','Equipos de cementación'],
+  feats:['Medidas 1×1, 2×1, 2×2 y 3×3','Marcas TSI y FMC','Recuperación de esclusas','Tratamientos superficiales según requerimiento'],
+  compat:['compatible','Línea "Reparación de válvulas" de la presentación.'],cot:COTIZAR_VALV},
+ {id:'kits-reparacion',cat:'valvulas',name:'Kits de reparación',ill:'kit',
+  short:'Kit émbolo + soft goods para válvulas TSI y FMC, listo para montar en campo o en taller.',
+  desc:'Repuestos para válvulas tapón 1×1, 2×1, 2×2 y 3×3: émbolos, insertos, sellos y soft goods. Se entregan en kit por válvula para simplificar el mantenimiento.',
+  apps:['Mantenimiento preventivo de flota de válvulas','Reparación en base de operaciones'],
+  feats:['Émbolo + soft goods','Compatibles TSI y FMC','Kits por medida','Trazabilidad por lote'],
+  compat:['compatible','"Kit de reparación émbolo + soft goods para válvulas TSI" de la presentación.'],cot:COTIZAR_VALV},
+ {id:'anillos-tratamientos',cat:'valvulas',name:'Anillos de sacrificio y tratamientos',ill:'kit',
+  short:'Anillos en acero inoxidable y metal duro, y tratamientos de tungsteno y titanio.',
+  desc:'Fabricación de anillos de sacrificio en acero inoxidable y metal duro. Tratamientos preventivos y correctivos (láser, baño, etc.) de tungsteno y titanio según el requerimiento técnico.',
+  apps:['Válvulas en servicio con arena','Zonas de alto desgaste por erosión'],
+  feats:['Acero inoxidable y metal duro','Recubrimiento láser','Baños de tungsteno y titanio','Según plano o muestra'],
+  compat:['compatible','Línea "Reparación de válvulas" de la presentación.'],cot:COTIZAR_PIEZA},
+ {id:'valvulas-gas-lift',cat:'valvulas',name:'Válvulas de gas lift',ill:'gaslift',
+  short:'Válvulas inyectoras R-1 operadas por presión y latches 1", 1 1/2", RK-2 y BK-2.',
+  desc:'Válvulas de levantamiento artificial por gas. La R-1 es una válvula inyectora operada por presión, construida en 316SS con Vitón, TC y neopreno. Se complementa con latches para mandriles de bolsillo lateral.',
+  apps:['Pozos con levantamiento artificial por gas','Reemplazo y reposición en mandriles'],
+  feats:['R-1 316SS · Vitón · orificio 0.250"','Latch 1" y 1 1/2"','Latch RK-2 y BK-2','Fabricación nacional'],
+  compat:['compatible','Línea "Válvulas Gas Lift" de la presentación.'],cot:COTIZAR_PIEZA},
+ /* OIL & GAS (Antares) */
+ {id:'orificios-calibrados',cat:'oilgas',name:'Orificios calibrados',ill:'orificio',
+  media:[{src:IMG.aorif,tag:'Portaorificios de tungsteno'},{src:IMG.orif,tag:'Portaorificio y choke',cover:1},{src:IMG.orif2,tag:'Portaorificio',cover:1},{ill:'orificio',tag:'Esquema'}],
+  short:'Componentes de tungsteno para control de presión, cabezales de pozo y conjuntos especiales. Tipos WOM, Cameron, OCT y otros.',
+  desc:'Familias de orificios calibrados, asientos, boquillas y componentes especiales para control de flujo y presión en pozos. Se fabrican en carburo de tungsteno por pulvimetalurgia de precisión, fijos o variables, en todas las medidas. Cada lote se controla con ensayos no destructivos.',
+  apps:['Choke manifolds de flowback y ensayos de pozo','Cabezales de pozo','Válvulas de control de caudal','Conjuntos especiales a medida'],
+  feats:['Tipos WOM, Cameron, OCT y otros','Asientos, boquillas, válvulas y componentes especiales','Fijos y variables, todas las medidas','Carburo de tungsteno sinterizado','Ensayos no destructivos'],
+  compat:['compatible','Línea "Consumibles" de la presentación a Tecpetrol.'],cot:COTIZAR_PIEZA},
+ {id:'picos-inyeccion',cat:'oilgas',name:'Picos de inyección y portapicos',ill:'pico',
+  short:'Picos de inyección y portapicos tipo Cameron, con insertos de metal duro.',
+  desc:'Picos de inyección y portapicos tipo Cameron. Algunas piezas llevan metal duro en su interior para soportar la erosión.',
+  apps:['Inyección de fluidos','Equipos de control de pozo'],
+  feats:['Tipo Cameron','Insertos de metal duro','Fabricación según muestra'],
+  compat:['compatible','Producto desarrollado para Antares SRL.'],cot:COTIZAR_PIEZA},
+ {id:'pistones-asientos',cat:'oilgas',name:'Pistones, válvulas y asientos',ill:'pistones',
+  media:[{src:IMG.apist,tag:'Pistones de metal duro'},{src:IMG.avalv,tag:'Compuerta de válvula'}],
+  short:'Pistones para bombeo de lodo, fractura y cementación, y válvulas, asientos y conjuntos calibrados para servicio severo.',
+  desc:'Pistones para sistemas de bombeo de lodo y conjuntos de alta presión, pensados para sellado, durabilidad y repetibilidad dimensional. Válvulas, asientos y conjuntos calibrados mecanizados para cierre y apoyo en condiciones severas, con terminaciones de precisión y alta resistencia al desgaste. Todas las piezas de la línea pasan ensayos no destructivos.',
+  apps:['Bombas de lodo','Bombas de fractura y cementación','Cierre y sellado en equipos Oil & Gas'],
+  feats:['Pistones, pistones de fractura y de cementación','Válvulas, asientos y conjuntos calibrados','Piezas especiales a medida','Ensayos no destructivos en cada pieza'],
+  compat:['propio','Línea de tungsteno y metal duro (Antares SRL).'],cot:COTIZAR_PIEZA},
+ {id:'kit-valvula-tapon',cat:'oilgas',name:'Kit de tapón e insertos para válvula tapón',ill:'kit',
+  media:[{src:IMG.kitt,tag:'Tapón, insertos y sellos'}],
+  short:'Tapón, insertos y juego de sellos para reparar válvulas tapón de alta presión 1×1, 2×1, 2×2 y 3×3.',
+  desc:'Kit de reparación para válvulas tapón de alta presión usadas en fractura y flowback. Incluye el tapón con su paso, los dos insertos (segmentos) que asientan contra él y el juego de sellos y o-rings. Tapón e insertos se fabrican en acero tratado con recubrimiento duro para resistir la erosión de la arena.',
+  apps:['Válvulas tapón en líneas de fractura','Manifolds de flowback y choke','Mantenimiento de flota de válvulas en base'],
+  feats:['Tapón con paso pleno','Par de insertos (segmentos)','Sellos y o-rings incluidos','Compatibles con válvulas TSI y FMC'],
+  compat:['compatible','Complementa la línea de reparación de válvulas de la presentación a Tecpetrol.'],cot:COTIZAR_VALV},
+ {id:'compuerta-asientos',cat:'oilgas',name:'Compuerta y asientos para válvula esclusa',ill:'kit',
+  media:[{src:IMG.comp,tag:'Compuerta y anillos de asiento'},{src:IMG.avalv,tag:'Compuerta tipo slab'}],
+  short:'Compuerta (gate) y anillos de asiento con superficies de sello rectificadas para válvulas esclusa de boca de pozo y fractura.',
+  desc:'Repuestos para válvulas esclusa (gate valves) de cabezales de pozo, árboles de fractura y manifolds. La compuerta y los anillos de asiento se mecanizan y rectifican para lograr el sello metal-metal, con recubrimiento de carburo de tungsteno en las caras de contacto para soportar arena y alta presión.',
+  apps:['Válvulas esclusa de cabezal de pozo','Árboles y manifolds de fractura','Reconstrucción de válvulas en taller'],
+  feats:['Compuerta tipo slab','Anillos de asiento rectificados','Recubrimiento de carburo de tungsteno','Fabricación según medida y presión de trabajo'],
+  compat:['propio','Línea de tungsteno y metal duro.'],cot:COTIZAR_VALV},
+ {id:'productos-sinterizados',cat:'oilgas',name:'Productos sinterizados',ill:'orificio',
+  short:'Barras, insertos, bujes y piezas especiales de metal duro en bruto.',
+  desc:'Productos de metal duro sinterizado en bruto, para fabricar herramientas y componentes de desgaste. Se suministran en formatos estándar o como piezas especiales con geometrías complejas a medida.',
+  apps:['Base para herramientas y componentes','Herramientas de corte','Componentes de desgaste','Geometrías complejas a medida'],
+  feats:['Barras sinterizadas en bruto','Insertos en bruto','Bujes en bruto','Piezas especiales'],
+  compat:['propio','Línea de tungsteno y metal duro.'],cot:COTIZAR_PIEZA},
+ {id:'herramientas-metal-duro',cat:'oilgas',name:'Herramientas de metal duro',ill:'herramienta',
+  short:'Mechas, fresas y escariadores integrales, insertos de corte, cuchillas circulares y rebarbadores.',
+  desc:'Herramientas integrales de metal duro para corte, perforación y mecanizado de precisión. Incluye herramientas para procesos de alambre y corte industrial.',
+  apps:['Corte y perforación de alta precisión','Mecanizado y acabado con tolerancias micrométricas','Corte industrial y procesos de alambre'],
+  feats:['Mechas y fresas integrales','Escariadores de alta precisión','Insertos de corte intercambiables','Cuchillas circulares, rebarbadores y enderezadores de alambre'],
+  compat:['propio','Línea de tungsteno y metal duro.'],cot:COTIZAR_PIEZA},
+ {id:'servicios-metal-duro',cat:'oilgas',name:'Reafilado, corte por hilo y asistencia',ill:'herramienta',
+  short:'Reafilado de herramientas, corte por hilo (EDM) para metal duro y aceros templados, y asistencia técnica.',
+  desc:'Servicios para extender la vida útil de las herramientas y fabricar geometrías complejas. El corte por hilo trabaja metal duro y aceros templados sin esfuerzos mecánicos y con tolerancias exigentes.',
+  apps:['Recuperación de geometría y filo','Geometrías complejas sin esfuerzos mecánicos','Diagnóstico y selección de solución'],
+  feats:['Reafilado de herramientas de corte','Corte por hilo (EDM)','Tolerancias exigentes','Asistencia técnica y seguimiento'],
+  compat:['propio','Servicios de la línea de tungsteno.'],cot:COTIZAR_PIEZA},
+ /* DESARROLLOS */
+ {id:'componentes-bes',cat:'desarrollos',name:'Componentes para bombas BES',ill:'bes',
+  short:'Más de 70 componentes de bombas electrosumergibles, protectores de cable y motor lead protectors.',
+  desc:'Desarrollo y fabricación de componentes para bombas electrosumergibles. Incluye ESP cable protectors 2 3/8" y 2 7/8" con canal para flat cable y control lines, y motor lead protectors para motores serie 300 y 400.',
+  apps:['Pozos con bombeo electrosumergible','Protección de cable y líneas de control'],
+  feats:['+70 ítems desarrollados','Cable protectors 2 3/8" y 2 7/8"','Motor lead protector series 300 y 400','Upper casing, bodies, heads y labyrinth tubes'],
+  compat:['propio','Desarrollos propios para operadoras y fabricantes de BES.'],cot:COTIZAR_PIEZA},
+ {id:'anclas-packers',cat:'desarrollos',name:'Anclas, packers y plunger lift',ill:'herramienta',
+  short:'Componentes de anclas, packers, plunger lift y gas lift fabricados en Argentina.',
+  desc:'Fabricación de componentes de anclas y packers, de plunger lift y de gas lift. En desarrollo: válvula tipo IPO para Vaca Muerta.',
+  apps:['Completación de pozos','Levantamiento artificial'],
+  feats:['Fabricación nacional','Producción en serie','Válvula tipo IPO en desarrollo'],
+  compat:['propio','Desarrollos propios.'],cot:COTIZAR_PIEZA},
+ {id:'kits-pistones',cat:'desarrollos',name:'Repuestos para bombas de fractura',ill:'fluidend',
+  media:[{ill:'fluidend',tag:'Despiece del fluid end'},{src:IMG.plunger,tag:'Pistón (plunger)'},{ill:'pistones',tag:'Kit de pistones'}],
+  short:'Pistones (plungers), empaquetaduras, válvulas y asientos para el fluid end de bombas de fractura y cementación.',
+  desc:'Repuestos para el extremo hidráulico (fluid end) de bombas de fractura y cementación. Fabricamos pistones (plungers) con superficie de alta dureza y rectificado fino para que la empaquetadura dure más, y entregamos kits completos por bomba.',
+  apps:['Bombas de fractura Gardner Denver y SPM','Bombas de cementación','Mantenimiento preventivo de flota de bombas'],
+  feats:['Pistones (plungers) con recubrimiento duro y rectificado','Kits de pistones por 5 unidades (fractura) y 3 unidades (cementación)','Empaquetaduras, válvulas y asientos de reposición','Fabricación según plano o muestra'],
+  compat:['propio','Desarrollos propios.'],cot:COTIZAR_PIEZA},
+ {id:'repuestos-coiled-tubing',cat:'desarrollos',name:'Repuestos para coiled tubing',ill:'herramienta',
+  short:'Mordazas, patines, rolos y bujes guía para equipos de coiled tubing de origen canadiense.',
+  desc:'Repuestos para equipos de coiled tubing: mordazas, patines, rolos y bujes de aluminio guía con centros de acero tratado.',
+  apps:['Unidades de coiled tubing'],
+  feats:['Mordazas y patines','Rolos','Bujes de aluminio con centro de acero tratado'],
+  compat:['propio','Desarrollos propios.'],cot:COTIZAR_PIEZA},
+ {id:'bombas-dosificadoras',cat:'desarrollos',name:'Bombas dosificadoras y registradores',ill:'polimero',
+  short:'Componentes de bombas dosificadoras de químicos y de registradores de presión y temperatura.',
+  desc:'Componentes para bombas dosificadoras de químicos, con mejora de diseño hecha junto al cliente para bajar costos. También componentes para registradores de presión y temperatura.',
+  apps:['Dosificación de químicos en pozo','Registro de presión y temperatura'],
+  feats:['Rediseño junto al cliente','Reducción de costos de producción','Fabricación en serie'],
+  compat:['propio','Desarrollos propios.'],cot:COTIZAR_PIEZA},
+ {id:'tapon-soluble',cat:'desarrollos',name:'Tapón soluble para fractura',ill:'herramienta',
+  short:'Tapón soluble tipo MVP para casing 5". En desarrollo.',
+  desc:'Desarrollo de tapón soluble para fractura tipo MVP, para casing de 5".',
+  apps:['Fractura multietapa'],feats:['Casing 5"','Tipo MVP','En desarrollo'],
+  compat:['propio','Figura como "En desarrollo" en la presentación.'],cot:COTIZAR_PIEZA},
+ /* MÓDULOS */
+ {id:'modulos-habitables',cat:'modulos',name:'Módulos habitables y oficinas',ill:'herramienta',
+  media:[{src:IMG.mod1,tag:'Módulo terminado sobre skid',cover:1},{src:IMG.mod7,tag:'Sala de reuniones',cover:1},{src:IMG.mod3,tag:'Dormitorio',cover:1},{src:IMG.mod4,tag:'Cocina y comedor',cover:1},{src:IMG.mod5,tag:'Cocina',cover:1},{src:IMG.mod8,tag:'Estructura de acero',cover:1},{src:IMG.mod2,tag:'Chasis skid y estructura',cover:1},{src:IMG.mod6,tag:'Techo a dos aguas',cover:1}],
+  short:'Dormitorios, oficinas, comedores y salas de reunión sobre chasis skid, listos para trasladar en camión a yacimientos petroleros y mineros.',
+  desc:'Módulos construidos sobre un chasis tipo skid con patín de arrastre y barra de tiro. La estructura es de perfiles de acero soldados con arriostramiento en cruz y techo a dos aguas. Se entregan terminados en planta, con instalación eléctrica, climatización, aberturas y amoblamiento, para trasladarlos en camión y dejarlos operativos al llegar a la locación. Cada módulo se arma según el uso: dormitorio, oficina, sala de reuniones, cocina y comedor, o una combinación.',
+  apps:['Campamentos en yacimientos de petróleo y gas','Campamentos y oficinas en proyectos mineros','Oficinas de locación y de company man','Obradores, comedores y salas de reunión en obra'],
+  feats:['Chasis skid con patín de arrastre para mover el módulo en locación','Transporte sobre camión carretón o semirremolque','Estructura de acero soldado con arriostramiento en cruz','Paneles aislados y cielorraso modular','Aire acondicionado, calefacción e iluminación','Detector de humo y matafuego','Distribución interior y amoblamiento a medida'],
+  configs:[['Dormitorio','Camas simples o cuchetas, mesas de luz, placard, aire acondicionado y calefactor.',IMG.mod3],['Cocina y comedor','Mesada de acero inoxidable, anafe eléctrico, campana, heladera y mesa para el equipo.',IMG.mod4],['Oficina y sala de reuniones','Mesa de reunión o puestos de trabajo, iluminación pareja y ventanales amplios.',IMG.mod7],['Estructura y chasis','Esqueleto de acero sobre skid, fabricado y pintado en planta antes de cerrar el módulo.',IMG.mod8]],
+  compat:['nuevo','Línea de módulos habitables y oficinas para locación.'],cot:COTIZAR_MOD}
+];
+const BY=Object.fromEntries(P_.map(p=>[p.id,p]));
+const CATS={
+ filtros:{name:'Filtros',page:'filtracion',label:'Filtración'},
+ sistemas:{name:'Sistemas de tratamiento',page:'filtracion',label:'Filtración'},
+ valvulas:{name:'Válvulas y repuestos',page:'valvulas',label:'Válvulas'},
+ oilgas:{name:'Orificios calibrados y tungsteno',page:'oil-gas',label:'Tungsteno'},
+ desarrollos:{name:'Desarrollos a medida',page:'desarrollos',label:'Desarrollos'},
+ modulos:{name:'Módulos para locación',page:'modulos-habitables',label:'Módulos'}};
+const of=c=>P_.filter(p=>p.cat===c);
+const APPS=[
+ {id:'fractura',k:'Completación',name:'Fractura hidráulica',d:'Protección de bombas, captación y filtrado de agua, válvulas de alta presión, kits de pistones y tapones.'},
+ {id:'flowback',k:'Agua',name:'Flowback',d:'Desarenado, filtración y reúso del agua de retorno. Orificios calibrados para choke.'},
+ {id:'produced-water',k:'Agua',name:'Produced water',d:'Filtración para reinyección y control de sales en plantas de tratamiento.'},
+ {id:'levantamiento',k:'Producción',name:'Levantamiento artificial',d:'Componentes BES, válvulas de gas lift, latches y plunger lift.'},
+ {id:'coiled-tubing',k:'Servicios',name:'Coiled tubing y cementación',d:'Repuestos para unidades de coiled tubing y kits para bombas de cementación.'},
+ {id:'mantenimiento',k:'Mantenimiento',name:'Mantenimiento de flota',d:'Reconstrucción de válvulas, filtros de aire y aceite, y repuestos a medida.'}];
+const MARCAS={
+ bollfilter:{name:'BOLLFILTER',full:'Boll & Kirch Filterbau GmbH',origin:'Alemania',
+  lead:'Filtros automáticos de contralavado, filtros simplex y duplex, y elementos filtrantes para agua y aceite.',
+  intro:'Grupo Tecnoil es representante oficial de BOLLFILTER. Boll & Kirch Filterbau diseña y fabrica en Alemania sistemas de filtración industrial con una red internacional de agencias y filiales. Su línea para Oil & Gas abarca filtración de agua de inyección, agua de mar, combustibles y aceites lubricantes en plantas, plataformas y buques.',
+  lines:[['Filtros automáticos','Tipo 6.19','Contralavado automático sin interrupción de caudal. Para agua de inyección, agua de mar y aceites.'],
+   ['Filtros de contralavado','Tipo BFD · BFD-P','Filtros de contralavado simples y duplex para servicio continuo.'],
+   ['Filtros duplex','Tipo 2.04.5','Dos cámaras con conmutación para cambiar el elemento sin parar la línea.'],
+   ['Filtros simplex','Tipo 1.12.2','Filtración de protección para combustibles, aceites y agua de servicio.'],
+   ['Dispositivos de limpieza','Tipo 5.04','Equipos para limpiar elementos filtrantes y prolongar su vida útil.'],
+   ['Elementos filtrantes','Repuestos originales','Elementos de reposición para equipos BOLLFILTER instalados.']],
+  facts:[['Materiales','Acero al carbono con revestimiento de goma, SMO, Duplex y Super Duplex. Internos en Monel, SMO y Duplex.'],
+   ['Normas','Diseño según ASME VIII div. 1 con estampa U.'],
+   ['Aprobaciones','TÜV, CCS, ABS, NKK y MRS.']],
+  apps:['Agua de producción para inyección','Agua de mar y agua de servicio','Aceite lubricante y combustibles','Protección de bombas e intercambiadores'],
+  rel:['filtros-autolimpiantes','filtros-tamiz','tratamiento-produced-water'],
+  photo:IMG.boll1,
+  web:'https://www.bollfilter.com'},
+ transfil:{name:'TRANSFIL',full:'Trans-Fil S.R.L. · Argentina',origin:'Argentina',
+  lead:'Filtración de fluidos industriales, manejo de viruta y lavadoras industriales.',
+  intro:'Grupo Tecnoil es representante oficial de TRANSFIL Argentina. Empresa familiar fundada en 1987 que diseña y fabrica equipos para filtrar fluidos industriales, manejar viruta metálica y lavar piezas en procesos de fabricación.',
+  lines:[['Filtración de fluidos','Refrigerantes y aceites','Equipos para filtrar fluidos de mecanizado y aceites de proceso.'],
+   ['Manejo de viruta','Transporte y separación','Sistemas para transportar y separar viruta metálica del fluido.'],
+   ['Lavadoras industriales','Lavado de piezas','Máquinas de lavado para etapas de fabricación y mantenimiento.']],
+  facts:[['Desde','1987, empresa familiar argentina.'],['Fabricación','Diseño y fabricación nacional a medida de cada cliente.'],['Presencia','Oficinas y representaciones en Latinoamérica, España y China.']],
+  apps:['Talleres de mecanizado de piezas petroleras','Mantenimiento de equipos en base','Recuperación de aceites y refrigerantes'],
+  rel:['separadores-magneticos','baterias-filtros-bolsa','cartuchos-medios'],
+  web:''}};
+const CLIENTES=['Pan American Energy','Novomet','Weatherford','Halliburton','Edge S.A.','Altos Technologies','Geopatagonia','San Antonio Internacional','Antares SRL','Flowback'];
+const STATUS={compatible:'En línea Tecpetrol',parcial:'Compatible parcial',nuevo:'Nuevo para O&G',propio:'Línea propia',no:'No aplica'};
+
+/* ---------- navegación ---------- */
+const lk=p=>`<a href="#${p.id}">${p.name}</a>`;
+const NAV=[
+ {h:'inicio',t:'Inicio'},
+ {h:'filtracion',t:'Filtración',mega:[['Filtros',of('filtros')],['Sistemas',of('sistemas')],['Marcas representadas',[{id:'bollfilter',name:'BOLLFILTER'},{id:'transfil',name:'TRANSFIL Argentina'}]],['Herramientas',[{id:'disenador',name:'Diseñador 3D de sistemas'},{id:'flotacion-daf',name:'Selector de modelos DAF'},{id:'conjunto-movil',name:'Configurador de unidad móvil'}]]]},
+ {h:'valvulas',t:'Válvulas',mega:[['Válvulas y repuestos',of('valvulas')]]},
+ {h:'oil-gas',t:'Tungsteno',mega:[['Orificios calibrados y tungsteno',of('oilgas')]]},
+ {h:'desarrollos',t:'Desarrollos',mega:[['Ingeniería y fabricación',of('desarrollos')]]},
+ {h:'modulos-habitables',t:'Módulos'},
+ {h:'aplicaciones',t:'Aplicaciones',mega:[['Aplicaciones',APPS.map(a=>({id:'aplicaciones',name:a.name}))]]},
+ {h:'nosotros',t:'Nosotros'},{h:'contacto',t:'Contacto'}];
+document.getElementById('nav').innerHTML=NAV.map(n=>`<div class="item"><a href="#${n.h}" data-h="${n.h}">${n.t}${n.mega?'<i class="car"></i>':''}</a>${n.mega?`<div class="mega">${n.mega.map(([h,l])=>`<div class="col"><h5>${h}</h5>${l.map(lk).join('')}</div>`).join('')}</div>`:''}</div>`).join('');
+document.getElementById('mnavIn').innerHTML=NAV.map(n=>n.mega?`<details><summary>${n.t}</summary><a href="#${n.h}">Ver todo</a>${n.mega.map(([h,l])=>`<h5>${h}</h5>${l.map(lk).join('')}`).join('')}</details>`:`<a href="#${n.h}">${n.t}</a>`).join('')+`<a class="btn" href="#contacto">Consulta técnica</a>`;
+const burger=document.getElementById('burger'),mnav=document.getElementById('mnav');
+burger.onclick=()=>{const o=mnav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+document.getElementById('ftop').innerHTML=`
+ <div><div class="fbrand"><img src="assets/img/img-ac66d61980.png" alt=""><span class="wordmark">TECN<em>OIL</em></span></div>
+ <p>Grupo Tecnoil S.A.S. Soluciones metalmecánicas, filtración y repuestos para la industria petrolera argentina.</p>
+ <p style="margin-top:10px;display:flex;flex-direction:column;gap:2px"><span>Ventas · +54 9 229 457-8780</span><span class="mail">ventas@tecnoil-nqn.com</span><span class="mail">ingenieria@tecnoil-nqn.com</span><span class="mail">administracion@tecnoil-nqn.com</span></p><p style="margin-top:8px">LinkedIn · <span class="ph">[a completar]</span></p></div>
+ <div><h6>Filtración</h6>${of('filtros').slice(0,6).map(lk).join('')}</div>
+ <div><h6>Sistemas</h6>${of('sistemas').map(lk).join('')}</div>
+ <div><h6>Válvulas y O&G</h6>${of('valvulas').map(lk).join('')}${of('oilgas').slice(0,2).map(lk).join('')}</div>
+ <div><h6>Compañía</h6><a href="#bollfilter">BOLLFILTER</a><a href="#transfil">TRANSFIL Argentina</a><a href="#nosotros">Nosotros</a><a href="#desarrollos">Desarrollos</a><a href="#modulos-habitables">Módulos habitables</a><a href="#aplicaciones">Aplicaciones</a><a href="#contacto">Contacto</a><a href="#estructura">Política de privacidad</a></div>`;
+
+/* ---------- vistas ---------- */
+const card=p=>`<a class="card" href="#${p.id}">${p.media?media({...p.media[0],tag:''}):ill(p.ill)}<div class="body"><h3>${p.name}</h3><p>${p.short}</p></div></a>`;
+const sectors=()=>`<div class="sectors">${APPS.map(a=>`<a class="sector" href="#aplicaciones"><span class="eyebrow">${a.k}</span><h3>${a.name}</h3><p>${a.d}</p><span class="go">Ver aplicación →</span></a>`).join('')}</div>`;
+const contactBand=()=>`<section class="contact-band"><div class="wrap"><div><span class="eyebrow" style="color:#8EC3F2">Consulta técnica</span><h2 style="margin-top:10px">Consulte con nuestro equipo técnico</h2><p>Envíenos el caudal, el análisis de agua o el plano de la pieza. Le respondemos con una propuesta técnica y comercial.</p><a class="btn" href="#contacto">Iniciar consulta técnica</a></div>
+ <div class="cinfo"><div><small>Ventas</small><span class="mail">+54 9 229 457-8780</span><span class="mail">ventas@tecnoil-nqn.com</span></div><div><small>Ingeniería</small><span class="mail">+54 9 351 312-4004</span><span class="mail">ingenieria@tecnoil-nqn.com</span></div><div><small>Administración</small><span class="mail">+54 9 351 642-4701</span><span class="mail">administracion@tecnoil-nqn.com</span></div><div><small>Planta y oficinas</small><span class="ph">[dirección a completar]</span></div></div></div></section>`;
+const crumbs=a=>`<div class="wrap crumbs"><a href="#inicio">Inicio</a>${a.map(([t,h])=>`<i>/</i>${h?`<a href="#${h}">${t}</a>`:`<span>${t}</span>`}`).join('')}</div>`;
+const phero=(e,h,p)=>`<section class="phero"><div class="wrap"><span class="eyebrow">${e}</span><h1>${h}</h1><p>${p}</p></div></section>`;
+const secGrid=(e,h,p,list,more)=>`<div class="sh"><div class="l1"><span class="eyebrow">${e}</span><h2>${h}</h2>${p?`<p>${p}</p>`:''}</div>${more||''}</div><div class="grid">${list.map(card).join('')}</div>`;
+
+const marcasBlk=()=>`<div class="sh"><div class="l1"><span class="eyebrow">Representaciones</span><h2>Marcas que representamos</h2><p>Somos representantes oficiales de dos fabricantes de filtración. Asesoramos, cotizamos y damos soporte local.</p></div></div>
+ <div class="mk">${Object.entries(MARCAS).map(([k,m])=>`<a href="#${k}"><span class="wm">${m.name}<small>${m.origin}</small></span><b>Representante oficial</b><p>${m.lead}</p></a>`).join('')}</div>`;
+function brandPage(k){const m=MARCAS[k];
+ return crumbs([['Filtración','filtracion'],[m.name]])+`<section class="phero"><div class="wrap"><span class="badge">Representante oficial</span><h1>${m.name}</h1><p>${m.full}. ${m.lead}</p></div></section>
+ <section class="blk"><div class="wrap"><div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:48px" class="bgrid"><div><h2 style="font-size:34px;text-transform:uppercase">La marca</h2><p style="color:var(--muted);margin-top:14px;max-width:62ch">${m.intro}</p>${m.web?`<p style="margin-top:16px"><a class="more" href="${m.web}" target="_blank" rel="noopener">Sitio del fabricante ↗</a></p>`:''}</div>
+  <div class="prod" style="display:block">${m.photo?`<div style="margin-bottom:24px">${photo(m.photo,m.name)}</div>`:''}<h4>Aplicaciones en Oil &amp; Gas</h4><ul>${m.apps.map(a=>`<li>${a}</li>`).join('')}</ul></div></div></div></section>
+ <section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Productos</span><h2>Líneas ${m.name}</h2></div></div><div class="plines">${m.lines.map(([h,c,p])=>`<div><code>${c}</code><h3>${h}</h3><p>${p}</p></div>`).join('')}</div>
+  <div class="facts" style="margin-top:28px">${m.facts.map(([b,s])=>`<div><b>${b}</b><span>${s}</span></div>`).join('')}</div></div></section>
+ <section class="blk"><div class="wrap">${secGrid('Equipos relacionados','Cómo lo aplicamos','',m.rel.map(i=>BY[i]).filter(Boolean))}</div></section>`+contactBand()}
+const SLIDES=[
+ ['Filtración de agua','Filtros multimedia','Baterías de filtros de antracita, arena y grava para pulido de produced water y pretratamiento de agua.',{src:IMG.mm2,cover:1},'filtros-multimedia'],
+ ['Separación magnética','Separadores magnéticos','Retienen óxido y partículas ferrosas del agua y del aceite antes de filtros, bombas y válvulas.',{src:IMG.sep3,cover:1},'separadores-magneticos'],
+ ['Filtración industrial','Filtros autolimpiantes para agua y aceite','Equipos BOLLFILTER con limpieza automática para flowback, produced water y agua de captación.',{src:IMG.boll2,cover:1},'filtros-autolimpiantes'],
+ ['Agua de flowback','Tratamiento de agua de flowback','Unidades móviles de filtración para reusar el agua de retorno en nuevas etapas de fractura.',{src:IMG.trailer},'tratamiento-flowback'],
+ ['Válvulas','Reconstrucción de válvulas tapón','Recuperación de cuerpos TSI y FMC 1×1, 2×1, 2×2 y 3×3, kits émbolo + soft goods y anillos de sacrificio.',{src:IMG.v2,cover:1},'reconstruccion-valvulas'],
+ ['Módulos para locación','Módulos habitables y oficinas','Dormitorios, oficinas y comedores sobre chasis skid, trasladables en camión a yacimientos petroleros y mineros.',{src:IMG.mod1,cover:1},'modulos-habitables'],
+ ['Desarrollos','Componentes BES a medida','Más de 70 componentes de bombas electrosumergibles desarrollados y fabricados en Argentina.','bes','componentes-bes']];
+let slideIx=0,timer=null;
+function home(){return `
+ <section class="hero" aria-roledescription="carrusel"><div class="wrap">${SLIDES.map((s,i)=>`<div class="slide${i===0?' on':''}"><div class="txt"><span class="eyebrow">${s[0]}</span><h2>${s[1]}</h2><p>${s[2]}</p><div class="ctas"><a class="btn btn-red" href="#${s[4]}">Ver equipo</a><a class="btn btn-ghost" href="#contacto">Consulta técnica</a></div></div>${typeof s[3]==='object'?media(s[3]):ill(s[3])}</div>`).join('')}</div>
+ <div class="dots"><div class="wrap">${SLIDES.map((s,i)=>`<button class="${i===0?'on':''}" data-i="${i}"><span>${s[1]}</span></button>`).join('')}</div></div></section>
+ <section class="blk intro"><div class="wrap"><div><span class="eyebrow">Grupo Tecnoil S.A.S.</span><h1 style="margin-top:10px">Filtración, válvulas y piezas metalmecánicas para la industria petrolera</h1>
+  <p>Fabricamos, reconstruimos y comercializamos equipos para operadoras y empresas de servicios petroleros. Seleccionamos cada equipo según el caudal, la calidad del agua, la presión de trabajo y el destino del fluido.</p></div>
+  <div class="quick"><a href="#separadores-magneticos">Separadores magnéticos</a><a href="#filtros-autolimpiantes">Filtros autolimpiantes</a><a href="#tratamiento-flowback">Tratamiento de flowback</a><a href="#reconstruccion-valvulas">Reconstrucción de válvulas</a><a href="#modulos-habitables">Módulos habitables y oficinas</a></div></div></section>
+ <section class="stats"><div class="wrap"><div class="stat"><b>+15</b><span>años de obras y desarrollos</span></div><div class="stat"><b>+70</b><span>componentes BES desarrollados</span></div><div class="stat"><b>4</b><span>medidas de válvula tapón</span></div><div class="stat"><b>+10</b><span>empresas del sector atendidas</span></div></div></section>
+ <section class="blk"><div class="wrap">${marcasBlk()}</div></section>
+ <section class="blk alt"><div class="wrap"><div class="spot">${photo(IMG.sep3,'',1)}<div class="txt"><span class="eyebrow">Nuevo en filtración</span><h2>Separadores magnéticos</h2><p>Retienen óxido y partículas ferrosas que los filtros de malla dejan pasar. Protegen bombas, válvulas y filtros finos aguas abajo.</p><ul><li>Barras de neodimio de alta intensidad</li><li>Carcasa de acero inoxidable bridada</li><li>Limpieza rápida con tapa de izaje</li></ul><a class="btn btn-red" href="#separadores-magneticos">Ver equipo</a></div></div></div></section>
+ <section class="blk"><div class="wrap">${secGrid('Filtración','Filtros industriales','Equipos para agua de flowback, produced water, agua de captación y aceite. Representantes oficiales de BOLLFILTER y TRANSFIL Argentina.',of('filtros').slice(0,6),'<a class="more" href="#filtracion">Ver todos los filtros →</a>')}</div></section>
+ <section class="blk"><div class="wrap"><a class="d3band" href="#disenador"><div><span class="eyebrow">Nuevo · Diseñador 3D</span><h2>Diseñá tu sistema de filtración</h2><p>Elegí recipientes multibolsa, filtros grandes, separador magnético y bomba sobre skid o acoplado. Mirá el equipo en 3D y pedí la cotización con un clic.</p></div><span class="btn btn-red">Abrir diseñador</span></a></div></section>
+ <section class="blk"><div class="wrap"><div class="spot">${photo(IMG.mod1,'',1)}<div class="txt"><span class="eyebrow">Módulos para locación</span><h2>Módulos habitables y oficinas</h2><p>Dormitorios, oficinas, comedores y salas de reunión para yacimientos petroleros y mineros. Salen terminados de planta y llegan en camión listos para usar.</p><ul><li>Chasis skid con patín de arrastre</li><li>Estructura de acero soldado</li><li>Climatización, electricidad y amoblamiento incluidos</li></ul><a class="btn btn-red" href="#modulos-habitables">Ver módulos</a></div></div></div></section>
+ <section class="blk alt"><div class="wrap">${secGrid('Sistemas','Sistemas de tratamiento de agua','Soluciones completas que combinan varias etapas de filtración según el destino del agua.',of('sistemas').slice(0,3),'<a class="more" href="#filtracion">Ver todos los sistemas →</a>')}</div></section>
+ <section class="blk"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Otras líneas</span><h2>Válvulas, consumibles y desarrollos</h2></div></div>
+  <div class="lines"><a href="#valvulas"><h3>Válvulas</h3><p>Reconstrucción de válvulas tapón TSI y FMC, kits de reparación y válvulas de gas lift.</p><span>Ver línea →</span></a><a href="#oil-gas"><h3>Tungsteno</h3><p>Orificios calibrados WOM, Cameron y OCT, pistones, asientos y herramientas de metal duro.</p><span>Ver línea →</span></a><a href="#desarrollos"><h3>Desarrollos</h3><p>Componentes BES, kits de pistones y piezas a medida desde plano o muestra.</p><span>Ver línea →</span></a></div></div></section>
+ <section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Aplicaciones</span><h2>Dónde trabajan nuestros equipos</h2><p>Del agua de captación a la producción del pozo.</p></div></div>${sectors()}</div></section>
+ <section class="blk"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Clientes</span><h2>Empresas que confían en Grupo Tecnoil</h2></div></div><div class="clients">${CLIENTES.map(c=>`<div class="client">${c}</div>`).join('')}</div></div></section>
+ ${contactBand()}`}
+function startSlider(){clearInterval(timer);slideIx=0;const go=i=>{const s=document.querySelectorAll('.slide'),d=document.querySelectorAll('.dots button');if(!s.length)return;slideIx=(i+s.length)%s.length;s.forEach((e,k)=>e.classList.toggle('on',k===slideIx));d.forEach((e,k)=>e.classList.toggle('on',k===slideIx))};
+ document.querySelectorAll('.dots button').forEach(b=>b.onclick=()=>{go(+b.dataset.i);clearInterval(timer)});
+ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)timer=setInterval(()=>go(slideIx+1),6500)}
+
+const GAMA=[
+ ['Oil & Gas',['Orificios calibrados · WOM, Cameron, OCT','Asientos y boquillas','Pistones de lodo, fractura y cementación','Válvulas, asientos y conjuntos calibrados','Kits de válvula tapón','Compuertas y asientos de esclusa']],
+ ['Productos sinterizados',['Barras en bruto','Insertos en bruto','Bujes en bruto','Piezas especiales']],
+ ['Herramientas',['Mechas integrales','Fresas integrales','Escariadores','Insertos de corte']],
+ ['Otros productos',['Enderezadores de alambre','Cuchillas circulares','Rebarbadores']],
+ ['Servicios',['Reafilado de herramientas','Corte por hilo (EDM)','Asistencia técnica']]];
+const gamaBlk=()=>`<section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Gama completa</span><h2>Metal duro y tungsteno</h2></div></div><div class="gama">${GAMA.map(([h,l])=>`<div><h4>${h}</h4><ul>${l.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div></div></section>`;
+function catPage(key){
+ if(key==='filtracion')return crumbs([['Filtración']])+phero('Filtración','Filtros y sistemas de tratamiento de agua para Oil & Gas','Equipos para agua de flowback, produced water, agua de captación y aceite de proceso. Representantes oficiales de BOLLFILTER y TRANSFIL Argentina, y proveedores de consumibles importados y nacionales.')+
+  `<section class="blk"><div class="wrap">${secGrid('Filtros','Filtros industriales','',of('filtros'))}</div></section><section class="blk alt"><div class="wrap">${secGrid('Sistemas','Sistemas de tratamiento','',of('sistemas'))}</div></section><section class="blk"><div class="wrap">${marcasBlk()}</div></section>`+contactBand();
+ const m={valvulas:['valvulas','Válvulas','Reconstrucción y repuestos de válvulas para petróleo y gas','Recuperación de válvulas tapón TSI y FMC 1×1, 2×1, 2×2 y 3×3, kits de reparación, anillos de sacrificio, tratamientos de tungsteno y titanio, y válvulas de gas lift.'],
+  'oil-gas':['oilgas','Tungsteno','Orificios calibrados y piezas de tungsteno','Orificios calibrados, pistones, válvulas y asientos, productos sinterizados y herramientas de metal duro. Fabricados por pulvimetalurgia de precisión.'],
+  desarrollos:['desarrollos','Desarrollos','Ingeniería y fabricación de piezas a medida','Desarrollamos componentes a partir de un plano o una muestra para operadoras, fabricantes de equipos y empresas de servicios.']}[key];
+ return crumbs([[m[1]]])+phero(m[1],m[2],m[3])+`<section class="blk"><div class="wrap">${key==='oil-gas'?`<div class="spot" style="margin-bottom:32px">${photo(IMG.aog,'')}<div class="txt"><span class="eyebrow">Línea Oil &amp; Gas · Antares SRL</span><h2>Soluciones certificadas para control de presión y extracción</h2><p>Orificios calibrados, pistones, válvulas y asientos de metal duro para cabezales de pozo, bombas y conjuntos de alta presión. Comercializamos la línea de Antares SRL, fabricante con certificación ISO 9001:2015.</p><ul><li>Todas las piezas pasan ensayos no destructivos</li><li>Orificios tipo WOM, Cameron y OCT</li><li>Piezas especiales según plano o muestra</li></ul></div></div>`:''}<div class="grid">${of(m[0]).map(card).join('')}</div></div></section>`+(key==='oil-gas'?gamaBlk():'')+contactBand()}
+
+function selector(){return `<div class="sel"><div class="sel-h"><div><span class="eyebrow">Selección de modelo</span><h3>Modelos DAF estándar</h3></div>
+ <label class="sel-q">Caudal requerido<span><input id="dafq" type="number" min="1" max="500" step="1" value="20" inputmode="numeric"> m³/h</span></label></div>
+ <div class="sel-chips" role="group" aria-label="Modelos">${DAF.map((m,i)=>`<button type="button" data-i="${i}">${m[1]}<small>m³/h</small></button>`).join('')}</div>
+ <div class="sel-body"><div class="sel-spec" id="dafspec"></div><div class="sel-plano">${photo(IMG.dafp,'',0,0,1)}<p>L, W y H: largo, ancho y alto totales. L1, W1 y H1: medidas del tanque.</p></div></div></div>`}
+function dafSpec(i,note){const m=DAF[i];
+ document.querySelectorAll('.sel-chips button').forEach((b,k)=>b.classList.toggle('on',k===i));
+ document.getElementById('dafspec').innerHTML=`<div class="sel-model"><b>${m[0]}</b><span>${m[1]} m³/h</span></div>${note?`<p class="sel-note">${note}</p>`:''}
+ <dl><dt>Entrada</dt><dd>${m[2]}</dd><dt>Salida</dt><dd>${m[3]}</dd><dt>Lodos</dt><dd>${m[4]}</dd><dt>Venteo</dt><dd>${m[5]}</dd>
+ <dt>L / L1</dt><dd>${m[6]} m</dd><dt>W / W1</dt><dd>${m[7]} m</dd><dt>H / H1</dt><dd>${m[8]} m</dd>
+ <dt>Peso vacío</dt><dd>${m[9].toLocaleString('es-AR')} kg</dd><dt>Peso en operación</dt><dd>${m[10].toLocaleString('es-AR')} kg</dd></dl>`}
+function dafPick(q){if(!(q>0))return;let i=DAF.findIndex(m=>m[1]>=q);
+ if(i<0){dafSpec(DAF.length-1,`Para ${q} m³/h se combinan equipos en paralelo. Consúltenos.`);return}
+ dafSpec(i,DAF[i][1]===q?'':`Modelo más chico que cubre ${q} m³/h.`)}
+/* ---- calculadora skid móvil ---- */
+const FLUIDOS={agua:['Agua dulce de captación',1],produced:['Produced water',0.6],flowback:['Flowback con sólidos',0.45]};
+const MICRONES=[[1,0.35],[5,0.55],[10,0.7],[25,0.85],[50,1],[100,1.15]];
+const DN=[80,100,150,200,250,300];
+function skidCalc(){return `<div class="sel calc"><div class="sel-h"><div><span class="eyebrow">Configurador</span><h3>Dimensioná tu unidad móvil</h3></div></div>
+ <div class="calc-in">
+  <label>Caudal<span><input id="cq" type="number" min="5" max="600" step="5" value="120" inputmode="numeric"> m³/h</span></label>
+  <label>Fluido<select id="cf">${Object.entries(FLUIDOS).map(([k,v])=>`<option value="${k}"${k==='flowback'?' selected':''}>${v[0]}</option>`).join('')}</select></label>
+  <label>Grado de filtración<select id="cm">${MICRONES.map(([m])=>`<option value="${m}"${m===25?' selected':''}>${m} µm</option>`).join('')}</select></label>
+  <label class="chk"><input id="cr" type="checkbox" checked> Recipiente en espera para cambio de bolsas</label>
+ </div>
+ <div class="sel-body"><div class="sel-spec" id="cout"></div><div class="sel-plano"><div class="calc-svg" id="csvg"></div><p>Esquema a escala relativa. Se actualiza con el caudal.</p></div></div>
+ <p class="calc-note">Estimación preliminar con bolsas tamaño #2 y recipientes multibolsa de 8 bolsas. El diseño final depende del análisis de agua.</p></div>`}
+function calcRun(){
+ const q=Math.max(1,+document.getElementById('cq').value||0),f=FLUIDOS[document.getElementById('cf').value][1],
+  mu=+document.getElementById('cm').value,mf=MICRONES.find(x=>x[0]===mu)[1],red=document.getElementById('cr').checked;
+ const perBag=20*f*mf, bags=Math.ceil(q/perBag), vessels=Math.ceil(bags/8), total=vessels+(red?1:0);
+ const units=Math.ceil(total/6), perUnit=Math.ceil(total/units);
+ const len=perUnit<=2?6:perUnit<=4?9:12, axles=perUnit<=2?1:perUnit<=4?2:3;
+ const v=2.5, dmm=Math.sqrt(4*(q/units)/3600/(Math.PI*v))*1000, dn=DN.find(x=>x>=dmm)||300;
+ document.getElementById('cout').innerHTML=`<div class="sel-model"><b>${total} recipientes</b><span>${units>1?units+' unidades':'1 unidad'}</span></div>
+ <dl><dt>Caudal por bolsa</dt><dd>${perBag.toFixed(1)} m³/h</dd><dt>Bolsas en servicio</dt><dd>${bags}</dd>
+ <dt>Recipientes de 8 bolsas</dt><dd>${vessels}${red?' + 1 en espera':''}</dd><dt>Unidades móviles</dt><dd>${units} × ${perUnit} recipientes</dd>
+ <dt>Largo de acoplado</dt><dd>${len} m</dd><dt>Ejes</dt><dd>${axles===1?'Simple':axles===2?'Tándem':'Triple'}</dd>
+ <dt>Colector sugerido</dt><dd>DN${dn}</dd></dl>`;
+ // svg
+ const Wd=60+len*42, H=150, n=perUnit, x0=24;
+ const VW=60+12*42+40; let s=`<svg viewBox="0 0 ${VW} ${H+20}" role="img" aria-label="Esquema de la unidad móvil">`;
+ s+=`<line class="g" x1="0" y1="${H}" x2="${VW}" y2="${H}"/>`;
+ s+=`<rect class="f l" x="${x0}" y="104" width="${Wd-x0}" height="12" rx="2"/><line class="l" x1="${x0}" y1="110" x2="4" y2="122"/>`;
+ const vw=Math.min(40,(Wd-x0-70)/n-10);
+ for(let i=0;i<n;i++){const vx=x0+20+i*(vw+10);s+=`<rect class="f l" x="${vx}" y="44" width="${vw}" height="60" rx="8"/><rect class="f l" x="${vx+4}" y="36" width="${vw-8}" height="9" rx="2"/>${(red&&i===n-1&&units===1)?`<rect class="s" x="${vx}" y="44" width="${vw}" height="60" rx="8"/>`:''}`}
+ const mx=x0+20, mw=n*(vw+10)-10; s+=`<rect class="f l" x="${mx-6}" y="88" width="${mw+12}" height="9" rx="4"/>`;
+ const bx=x0+20+n*(vw+10); if(bx+34<Wd) s+=`<rect class="f l" x="${bx}" y="70" width="34" height="34" rx="3"/>`;
+ const ax=Wd-40; for(let a=0;a<axles;a++){const cx=ax-a*30;s+=`<circle class="f l" cx="${cx}" cy="128" r="12"/><circle class="s" cx="${cx}" cy="128" r="5"/>`}
+ s+=`<line class="l d" x1="${x0}" y1="${H+12}" x2="${Wd}" y2="${H+12}"/><text class="t" x="${(x0+Wd)/2}" y="${H+9}" text-anchor="middle">${len} m</text></svg>`;
+ document.getElementById('csvg').innerHTML=s}
+/* ---- diseñador 3D ---- */
+let D3=null;
+const CFG={base:'trailer',bolsas:4,bpv:8,grandes:1,tipo:'multimedia',mag:true,bomba:true,color:'azul'};
+const D3COL={azul:[0x1f6fbf,0.25,0.55],gris:[0x8a96a3,0.3,0.6],acero:[0xc9cfd6,0.75,0.32]};
+const segBtns=(id,opts,val)=>`<div class="seg" id="${id}" role="group">${opts.map(([v,l])=>`<button type="button" data-v="${v}" class="${String(v)===String(val)?'on':''}">${l}</button>`).join('')}</div>`;
+function designPage(){
+ return crumbs([['Filtración','filtracion'],['Diseñador 3D']])+phero('Diseñador 3D','Diseñá tu sistema de filtración','Combiná recipientes multibolsa, filtros grandes, separador magnético y bomba sobre skid o acoplado. El modelo y la estimación se actualizan al instante.')+
+ `<section class="blk"><div class="wrap"><div class="d3">
+  <div class="d3-ctl">
+   <div class="fld"><span>Base</span>${segBtns('d-base',[['skid','Skid fijo'],['trailer','Acoplado']],CFG.base)}</div>
+   <div class="fld"><span>Recipientes multibolsa</span><div class="step"><button type="button" id="d-bm" aria-label="Quitar recipiente">−</button><b id="d-bn">${CFG.bolsas}</b><button type="button" id="d-bp" aria-label="Agregar recipiente">+</button></div></div>
+   <div class="fld"><span>Bolsas por recipiente</span>${segBtns('d-bpv',[[4,'4'],[8,'8'],[12,'12']],CFG.bpv)}</div>
+   <div class="fld"><span>Filtros grandes</span>${segBtns('d-gr',[[0,'Ninguno'],[1,'Uno'],[2,'Dos']],CFG.grandes)}</div>
+   <div class="fld"><span>Tipo de filtro grande</span>${segBtns('d-tipo',[['multimedia','Multimedia'],['auto','Autolimpiante']],CFG.tipo)}</div>
+   <div class="fld chks"><label><input type="checkbox" id="d-mag" ${CFG.mag?'checked':''}> Separador magnético</label><label><input type="checkbox" id="d-bomba" ${CFG.bomba?'checked':''}> Bomba de alimentación</label></div>
+   <div class="fld"><span>Color de equipos</span>${segBtns('d-col',[['azul','Azul'],['gris','Gris'],['acero','Acero']],CFG.color)}</div>
+  </div>
+  <div class="d3-view"><div id="d3c" class="d3-canvas"><p class="d3-load">Cargando modelo 3D…</p></div><div class="d3-hint">Arrastrá para girar · rueda o pellizco para acercar</div></div>
+ </div>
+ <div class="d3-sum" id="d3s"></div>
+ <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap"><button type="button" class="btn btn-red" id="d-quote">Pedir cotización de esta configuración</button></div>
+ <p class="calc-note" style="padding:12px 0 0;border:0">Estimación preliminar para agua con sólidos de fractura. El diseño final depende del análisis de agua y de las condiciones de operación.</p>
+ </div></section>`+contactBand()}
+function d3Calc(){
+ const nb=CFG.bolsas*CFG.bpv, stages=[];
+ if(CFG.mag) stages.push(['Separador magnético',150]);
+ if(CFG.grandes) stages.push([CFG.tipo==='auto'?'Filtros autolimpiantes':'Filtros multimedia',CFG.grandes*(CFG.tipo==='auto'?80:40)]);
+ if(CFG.bolsas) stages.push(['Batería multibolsa',nb*12]);
+ const q=stages.length?Math.min(...stages.map(s=>s[1])):0;
+ const cols=Math.ceil(CFG.bolsas/2), Lb=CFG.bolsas?cols*1.0+0.5:0, Lg=CFG.grandes*(CFG.tipo==='auto'?1.1:2.1);
+ const L=Math.max(3,(CFG.bomba?1.6:0)+(CFG.mag?0.9:0)+Lb+Lg+0.8);
+ const kg=Math.round((CFG.bolsas*(260+CFG.bpv*12)+CFG.grandes*(CFG.tipo==='auto'?650:2400)+(CFG.mag?150:0)+(CFG.bomba?950:0)+(CFG.base==='trailer'?1800+L*90:L*120))/50)*50;
+ return {nb,stages,q,L,cols,Lb,Lg,kg}}
+function d3Summary(){const c=d3Calc();
+ document.getElementById('d3s').innerHTML=`<div class="d3-k"><div><small>Caudal estimado</small><b>${c.q?Math.round(c.q):'—'} m³/h</b></div><div><small>Bolsas en servicio</small><b>${c.nb}</b></div><div><small>Largo de la base</small><b>${c.L.toFixed(1)} m</b></div><div><small>Peso vacío aprox.</small><b>${c.kg.toLocaleString('es-AR')} kg</b></div></div>
+ ${c.stages.length?`<p class="d3-st">${c.stages.map(s=>`${s[0]}: ${Math.round(s[1])} m³/h`).join(' · ')}${c.stages.length>1?' · El caudal lo limita la etapa más chica.':''}</p>`:'<p class="d3-st">Agregá al menos un equipo de filtración.</p>'}`}
+function d3Text(){const c=d3Calc();
+ return `Configuración del diseñador 3D:\n- Base: ${CFG.base==='trailer'?'acoplado':'skid fijo'} (${c.L.toFixed(1)} m)\n- Recipientes multibolsa: ${CFG.bolsas} de ${CFG.bpv} bolsas\n- Filtros grandes: ${CFG.grandes} ${CFG.tipo==='auto'?'autolimpiantes':'multimedia'}\n- Separador magnético: ${CFG.mag?'sí':'no'}\n- Bomba de alimentación: ${CFG.bomba?'sí':'no'}\n- Caudal estimado: ${Math.round(c.q)} m³/h`}
+function d3Dispose(){if(!D3)return;cancelAnimationFrame(D3.raf);try{D3.ro.disconnect()}catch(e){}D3.scene.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose())});D3.renderer.dispose();D3=null}
+function d3Init(){
+ const el=document.getElementById('d3c'); if(!el)return;
+ if(typeof THREE==='undefined'||!THREE.OrbitControls){el.innerHTML='<p class="d3-load">No se pudo cargar el visor 3D. Revisá la conexión y recargá la página.</p>';return}
+ el.innerHTML='';
+ const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});
+ renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+ renderer.outputEncoding=THREE.sRGBEncoding;
+ el.appendChild(renderer.domElement);
+ const scene=new THREE.Scene(); scene.background=new THREE.Color(0xe9eef3); scene.fog=new THREE.Fog(0xe9eef3,30,70);
+ const cam=new THREE.PerspectiveCamera(38,1,0.1,200);
+ scene.add(new THREE.HemisphereLight(0xffffff,0xb8c2cc,0.85));
+ const sun=new THREE.DirectionalLight(0xffffff,0.9); sun.position.set(8,14,9); sun.castShadow=true; sun.shadow.mapSize.set(2048,2048);
+ const sc=sun.shadow.camera; sc.left=-14;sc.right=14;sc.top=14;sc.bottom=-14;sc.near=1;sc.far=50; scene.add(sun);
+ const fill=new THREE.DirectionalLight(0xdfe8f2,0.35); fill.position.set(-8,6,-6); scene.add(fill);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(120,120),new THREE.MeshStandardMaterial({color:0xdde3e9,roughness:0.95}));
+ ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
+ const grid=new THREE.GridHelper(60,60,0xc5ced8,0xd3dae2); grid.position.y=0.002; scene.add(grid);
+ const controls=new THREE.OrbitControls(cam,renderer.domElement); controls.enableDamping=true; controls.dampingFactor=0.08;
+ controls.maxPolarAngle=Math.PI*0.49; controls.minDistance=3; controls.maxDistance=40; controls.autoRotate=true; controls.autoRotateSpeed=0.7;
+ controls.addEventListener('start',()=>{controls.autoRotate=false});
+ D3={renderer,scene,cam,controls,group:null,raf:0,ro:null,el};
+ const size=()=>{const w=el.clientWidth||600,h=el.clientHeight||420;renderer.setSize(w,h,false);renderer.domElement.style.width='100%';renderer.domElement.style.height='100%';cam.aspect=w/h;cam.updateProjectionMatrix()};
+ try{D3.ro=new ResizeObserver(size);D3.ro.observe(el)}catch(e){window.addEventListener('resize',size)}
+ size(); d3Build(true);
+ const loop=()=>{D3.raf=requestAnimationFrame(loop);controls.update();renderer.render(scene,cam)}; loop()}
+function d3Build(resetCam){
+ if(!D3){d3Summary();return} const {scene,cam,controls}=D3;
+ if(D3.group){scene.remove(D3.group);D3.group.traverse(o=>{if(o.geometry)o.geometry.dispose()})}
+ const g=new THREE.Group(); D3.group=g; scene.add(g);
+ const c=d3Calc(), L=c.L, Wd=2.4, trailer=CFG.base==='trailer', y0=trailer?1.05:0.28;
+ const [col,met,rou]=D3COL[CFG.color];
+ const M={eq:new THREE.MeshStandardMaterial({color:col,metalness:met,roughness:rou}),
+  frame:new THREE.MeshStandardMaterial({color:0x14365a,metalness:0.3,roughness:0.55}),
+  steel:new THREE.MeshStandardMaterial({color:0xd3d8de,metalness:0.85,roughness:0.28}),
+  dark:new THREE.MeshStandardMaterial({color:0x2a2e33,metalness:0.2,roughness:0.7}),
+  tire:new THREE.MeshStandardMaterial({color:0x1b1c1e,roughness:0.9}),
+  rim:new THREE.MeshStandardMaterial({color:0xb9bfc6,metalness:0.6,roughness:0.35}),
+  valve:new THREE.MeshStandardMaterial({color:0x2a7fd4,metalness:0.2,roughness:0.5}),
+  red:new THREE.MeshStandardMaterial({color:0xb3122a,roughness:0.5}),
+  media:new THREE.MeshStandardMaterial({color:0x1f6fbf,metalness:0.25,roughness:0.55})};
+ const add=(geo,mat,x,y,z,rx,ry,rz)=>{const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);if(rx)m.rotation.x=rx;if(ry)m.rotation.y=ry;if(rz)m.rotation.z=rz;m.castShadow=true;m.receiveShadow=true;g.add(m);return m};
+ const box=(w,h,d,mat,x,y,z)=>add(new THREE.BoxGeometry(w,h,d),mat,x,y,z);
+ const cyl=(r,h,mat,x,y,z,rx,rz,seg)=>add(new THREE.CylinderGeometry(r,r,h,seg||28),mat,x,y,z,rx,0,rz);
+ const pipeX=(x1,x2,y,z,r,mat)=>{if(x2-x1<=0.01)return;cyl(r,x2-x1,mat||M.steel,(x1+x2)/2,y,z,0,Math.PI/2,16)};
+ const pipeY=(x,y1,y2,z,r)=>cyl(r,y2-y1,M.steel,x,(y1+y2)/2,z,0,0,16);
+ const pipeZ=(x,y,z1,z2,r)=>cyl(r,Math.abs(z2-z1),M.steel,x,y,(z1+z2)/2,Math.PI/2,0,16);
+ const flangeX=(x,y,z,r)=>cyl(r*1.7,0.05,M.steel,x,y,z,0,Math.PI/2,20);
+ const x0=-L/2;
+ // ---- base
+ [-Wd/2+0.12,Wd/2-0.12].forEach(z=>box(L,0.22,0.16,M.frame,0,y0-0.11,z));
+ for(let x=x0+0.15;x<=L/2-0.1;x+=1.0) box(0.12,0.16,Wd-0.2,M.frame,x,y0-0.12,0);
+ box(L,0.04,Wd,new THREE.MeshStandardMaterial({color:0x5d6772,metalness:0.4,roughness:0.6}),0,y0+0.02,0);
+ if(trailer){
+  const ax=c.L>8.5?3:2, ac=L/2-1.6;
+  [-0.55,0.55].forEach(z=>box(L*0.92,0.3,0.14,M.frame,0.1,y0-0.35,z));
+  for(let i=0;i<ax;i++){const x=ac-i*1.25;
+   cyl(0.06,Wd+0.1,M.dark,x,0.48,0,Math.PI/2,0,12);
+   [-1,1].forEach(s=>{const z=s*(Wd/2+0.05);
+    cyl(0.48,0.32,M.tire,x,0.48,z,Math.PI/2,0,32);
+    cyl(0.29,0.34,M.rim,x,0.48,z,Math.PI/2,0,24);
+    cyl(0.09,0.36,M.dark,x,0.48,z,Math.PI/2,0,12)})}
+  [-1,1].forEach(s=>box(ax*1.25+0.4,0.06,0.42,M.frame,ac-(ax-1)*0.625,1.0,s*(Wd/2+0.05)));
+  // tongue + hitch + jack
+  const tx=x0-1.3; const tg=new THREE.Shape(); tg.moveTo(0,-0.9);tg.lineTo(1.4,-0.1);tg.lineTo(1.4,0.1);tg.lineTo(0,0.9);tg.lineTo(0.12,0.9);tg.lineTo(1.5,0.12);tg.lineTo(1.5,-0.12);tg.lineTo(0.12,-0.9);
+  const tm=add(new THREE.ExtrudeGeometry(tg,{depth:0.14,bevelEnabled:false}),M.frame,x0+0.1,y0-0.2,0,Math.PI/2,0,Math.PI);
+  box(0.3,0.12,0.2,M.dark,tx-0.05,y0-0.17,0);
+  cyl(0.05,y0-0.1,M.dark,x0-0.6,(y0-0.1)/2,0.5,0,0,10); box(0.25,0.03,0.25,M.dark,x0-0.6,0.02,0.5);
+  // lights
+  [-1,1].forEach(s=>box(0.04,0.08,0.22,M.red,L/2+0.02,y0-0.05,s*(Wd/2-0.2)));
+ } else {
+  [-1,1].forEach(s=>[x0+0.3,L/2-0.3].forEach(x=>box(0.18,y0-0.15,0.18,M.frame,x,(y0-0.15)/2,s*(Wd/2-0.2))));
+ }
+ // ---- components along x
+ let x=x0+0.45; const yc=y0+0.04, hdrY=yc+0.38;
+ const mainR=0.11;
+ const conns=[];
+ if(CFG.bomba){ // diesel pump
+  box(1.3,0.08,0.9,M.dark,x+0.6,yc+0.04,0);
+  box(0.75,0.6,0.62,M.dark,x+0.42,yc+0.4,0);
+  box(0.5,0.35,0.5,new THREE.MeshStandardMaterial({color:0x8a1d1d,roughness:0.6}),x+0.42,yc+0.88,0);
+  cyl(0.3,0.25,M.eq,x+1.05,yc+0.45,0,0,Math.PI/2,28);
+  cyl(0.06,0.5,M.steel,x+0.25,yc+1.15,0.18,0,0,10);
+  conns.push(x+1.25); x+=1.6}
+ if(CFG.mag){
+  cyl(0.24,0.55,M.steel,x+0.4,yc+0.55,0); cyl(0.3,0.06,M.steel,x+0.4,yc+0.85,0);
+  for(let k=0;k<6;k++){const a=k/6*Math.PI*2;cyl(0.025,0.12,M.steel,x+0.4+Math.cos(a)*0.28,yc+0.92,Math.sin(a)*0.28,0,0,8)}
+  [-1,1].forEach(s=>box(0.06,0.3,0.06,M.steel,x+0.4+s*0.15,yc+0.15,0));
+  conns.push(x+0.4); x+=0.9}
+ if(CFG.bolsas){
+  const hB=0.75+0.22*(CFG.bpv/4), rB=0.3+0.03*(CFG.bpv/4), zr=[-0.55,0.55];
+  const xs=x+0.25, xe=x+c.Lb-0.25;
+  zr.forEach(z=>{pipeX(xs,xe,yc+0.32,z*1.55>0?1.0:-1.0,0.08)});
+  for(let i=0;i<CFG.bolsas;i++){const ci=Math.floor(i/2), z=zr[i%2], vx=x+0.5+ci*1.0;
+   [0,1,2].forEach(k=>{const a=k/3*Math.PI*2+0.5;cyl(0.03,0.5,M.steel,vx+Math.cos(a)*rB*0.8,yc+0.25,z+Math.sin(a)*rB*0.8,0,0,8)});
+   cyl(rB,hB,M.eq,vx,yc+0.5+hB/2,z,0,0,32);
+   const dome=add(new THREE.SphereGeometry(rB,28,12,0,Math.PI*2,0,Math.PI/2),M.eq,vx,yc+0.5+hB,z); dome.scale.y=0.45;
+   cyl(rB+0.04,0.05,M.steel,vx,yc+0.5+hB,z);
+   for(let k=0;k<6;k++){const a=k/6*Math.PI*2;box(0.05,0.1,0.05,M.steel,vx+Math.cos(a)*(rB+0.05),yc+0.5+hB+0.02,z+Math.sin(a)*(rB+0.05))}
+   const bz=z<0?-1.0:1.0; pipeZ(vx,yc+0.32,z,bz,0.06); pipeY(vx,yc+0.32,yc+0.6,z,0.06);
+   const lid=new THREE.TorusGeometry(0.09,0.015,8,20); add(lid,M.steel,vx,yc+0.5+hB+rB*0.45+0.06,z,0,0,0)}
+  conns.push(x+c.Lb/2); x+=c.Lb}
+ if(CFG.grandes){
+  for(let i=0;i<CFG.grandes;i++){
+   if(CFG.tipo==='multimedia'){const r=0.82,h=1.55,vx=x+1.05;
+    [0,1,2,3].forEach(k=>{const a=k/4*Math.PI*2+Math.PI/4;cyl(0.06,0.6,M.steel,vx+Math.cos(a)*r*0.75,yc+0.3,Math.sin(a)*r*0.75,0,0,10)});
+    cyl(r,h,M.eq,vx,yc+0.6+h/2,0,0,0,40);
+    const d1=add(new THREE.SphereGeometry(r,36,14,0,Math.PI*2,0,Math.PI/2),M.eq,vx,yc+0.6+h,0); d1.scale.y=0.42;
+    const d2=add(new THREE.SphereGeometry(r,36,14,0,Math.PI*2,Math.PI/2,Math.PI/2),M.eq,vx,yc+0.6,0); d2.scale.y=0.42;
+    pipeY(vx-r-0.18,yc+0.35,yc+0.6+h,0.3,0.07); pipeY(vx-r-0.32,yc+0.35,yc+0.6+h*0.9,-0.25,0.07);
+    pipeX(vx-r-0.18,vx-r+0.05,yc+0.6+h*0.92,0.3,0.07);
+    [0.5,1.1].forEach(yy=>box(0.14,0.14,0.14,M.valve,vx-r-0.18,yc+yy,0.3));
+    cyl(0.13,0.06,M.steel,vx,yc+0.6+h+r*0.42+0.03,0);
+    x+=2.1}
+   else {const r=0.3,h=1.5,vx=x+0.55;
+    box(0.5,0.08,0.5,M.frame,vx,yc+0.04,0);
+    cyl(r+0.08,0.25,M.eq,vx,yc+0.3,0); cyl(r,h,M.eq,vx,yc+0.42+h/2,0);
+    cyl(r+0.06,0.06,M.eq,vx,yc+0.9,0); cyl(r+0.06,0.06,M.eq,vx,yc+0.42+h,0);
+    const dd=add(new THREE.SphereGeometry(r,24,10,0,Math.PI*2,0,Math.PI/2),M.eq,vx,yc+0.42+h,0); dd.scale.y=0.5;
+    cyl(0.13,0.35,M.eq,vx,yc+0.42+h+0.3,0); box(0.2,0.25,0.2,M.dark,vx,yc+0.42+h+0.58,0);
+    cyl(0.12,0.4,M.eq,vx-r-0.15,yc+0.45,0,0,Math.PI/2); flangeX(vx-r-0.35,yc+0.45,0,0.12);
+    cyl(0.12,0.4,M.eq,vx+r+0.15,yc+1.4,0,0,Math.PI/2); flangeX(vx+r+0.35,yc+1.4,0,0.12);
+    box(0.12,0.12,0.12,M.valve,vx+0.2,yc+0.2,0.3);
+    x+=1.1}
+   conns.push(x-0.6)}}
+ // main header connecting everything
+ if(conns.length>1) pipeX(Math.min(...conns),Math.max(...conns),hdrY,0,mainR);
+ if(conns.length){flangeX(x0+0.2,hdrY,0,mainR); pipeX(x0+0.2,Math.min(...conns),hdrY,0,mainR); flangeX(Math.max(...conns)+0.4,hdrY,0,mainR); pipeX(Math.max(...conns),Math.max(...conns)+0.4,hdrY,0,mainR)}
+ // railing on trailer
+ if(trailer){const ry=y0+1.05;[-1,1].forEach(s=>{pipeX(x0+0.1,L/2-0.1,ry,s*(Wd/2-0.04),0.025,M.frame);pipeX(x0+0.1,L/2-0.1,ry-0.5,s*(Wd/2-0.04),0.02,M.frame);
+   for(let px=x0+0.1;px<=L/2;px+=1.2) cyl(0.025,1.05,M.frame,px,y0+0.52,s*(Wd/2-0.04),0,0,8)})}
+ if(resetCam){cam.position.set(L*0.55+3,L*0.35+3.2,L*0.55+5.5);controls.target.set(0,y0+0.7,0);controls.update()}
+ else controls.target.set(0,y0+0.7,0);
+ d3Summary()}
+function d3Wire(){
+ const seg=(id,key,num)=>{const el=document.getElementById(id);if(!el)return;el.querySelectorAll('button').forEach(b=>b.onclick=()=>{CFG[key]=num?+b.dataset.v:b.dataset.v;el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));d3Build(key==='base')})};
+ seg('d-base','base');seg('d-bpv','bpv',1);seg('d-gr','grandes',1);seg('d-tipo','tipo');seg('d-col','color');
+ const bn=document.getElementById('d-bn');
+ document.getElementById('d-bm').onclick=()=>{CFG.bolsas=Math.max(0,CFG.bolsas-1);bn.textContent=CFG.bolsas;d3Build(false)};
+ document.getElementById('d-bp').onclick=()=>{CFG.bolsas=Math.min(12,CFG.bolsas+1);bn.textContent=CFG.bolsas;d3Build(false)};
+ document.getElementById('d-mag').onchange=e=>{CFG.mag=e.target.checked;d3Build(false)};
+ document.getElementById('d-bomba').onchange=e=>{CFG.bomba=e.target.checked;d3Build(false)};
+ document.getElementById('d-quote').onclick=()=>{window.__cfgText=d3Text();location.hash='contacto'};
+ d3Summary(); d3Init()}
+
+function prodPage(p){const c=CATS[p.cat];const rel=of(p.cat).filter(x=>x.id!==p.id).slice(0,3);
+ return crumbs([[c.label,c.page],[p.name]])+phero(c.name,p.name,p.short)+
+ `<section class="blk"><div class="wrap"><div class="prod"><div><div id="pm">${p.media?media(p.media[0]):ill(p.ill)}</div>${p.media&&p.media.length>1?`<div class="thumbs">${p.media.map((m,i)=>`<button type="button" data-m="${i}" class="${i?'':'on'}" aria-label="${m.tag}">${media(m)}</button>`).join('')}</div>`:''}</div>
+  <div><h2>Descripción</h2><p class="lead">${p.desc}</p>
+  <div class="cols"><div><h4>Aplicaciones</h4><ul>${p.apps.map(a=>`<li>${a}</li>`).join('')}</ul></div><div><h4>Características</h4><ul>${p.feats.map(a=>`<li>${a}</li>`).join('')}</ul></div></div>
+  <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-red" href="#contacto">Solicitar cotización</a><span class="btn btn-ghost" style="color:var(--muted);cursor:default">Ficha técnica PDF · próximamente</span></div></div></div>
+  ${p.sel?selector():''}${p.calc?skidCalc()+`<a class="d3band" style="margin-top:22px" href="#disenador"><div><span class="eyebrow">Diseñador 3D</span><h2>Armá tu configuración en 3D</h2><p>Sumá recipientes, filtros grandes y bomba, y mirá el equipo desde todos los ángulos.</p></div><span class="btn btn-red">Abrir diseñador</span></a>`:''}
+  </div></section>
+ ${p.configs?`<section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Configuraciones</span><h2>Un módulo para cada uso</h2><p>Se combinan en un mismo módulo o se arman por separado para formar un campamento.</p></div></div><div class="cfg">${p.configs.map(([t,d,src])=>`<div>${photo(src,'',1)}<b>${t}</b><p>${d}</p></div>`).join('')}</div></div></section>`:''}
+ ${rel.length?`<section class="blk alt"><div class="wrap">${secGrid('Relacionados','Otros equipos de la línea','',rel)}</div></section>`:''}
+ <section class="blk"><div class="wrap"><div class="specs" style="margin-top:0"><div class="specs-h">Datos necesarios para cotizar</div><div class="specs-g">${p.cot.map(([b,s,c])=>`<div><b>${b}</b><span>${s}</span><code>${c}</code></div>`).join('')}</div></div></div></section>`+contactBand()}
+
+function appsPage(){return crumbs([['Aplicaciones']])+phero('Aplicaciones','Equipos por aplicación','Cómo se combinan nuestras líneas en cada etapa de la vida del pozo.')+
+ `<section class="blk"><div class="wrap">${sectors()}</div></section>`+contactBand()}
+function aboutPage(){return crumbs([['Nosotros']])+phero('Nosotros','Más de 15 años de obras y desarrollos a medida','Grupo Tecnoil S.A.S. ofrece soluciones metalmecánicas para la industria: filtración, reparación de válvulas, consumibles, módulos para locación y desarrollo de piezas a medida.')+
+ `<section class="blk"><div class="wrap intro" style="padding:0"><div class="wrap" style="padding:0;display:grid;grid-template-columns:1.2fr 1fr;gap:48px"><div><h2 style="font-size:34px;text-transform:uppercase">Quiénes somos</h2><p style="color:var(--muted);margin-top:14px;max-width:62ch">Hace más de 15 años que hacemos obras y desarrollamos productos a medida para distintas áreas de la industria: petróleo y gas, minería y plantas industriales. Cada trabajo parte de una necesidad concreta del cliente, ya sea un plano, una muestra o un problema de operación, y lo llevamos desde la ingeniería hasta la fabricación, el montaje y la puesta en marcha.</p><p style="color:var(--muted);margin-top:14px;max-width:62ch">Hoy contamos con dos instalaciones principales y con oficinas y representantes técnicos en Córdoba, Neuquén y San Juan. Eso nos permite estar cerca de los yacimientos y de las obras: relevamos en campo, acompañamos la instalación y damos seguimiento técnico después de la entrega.</p><p style="color:var(--muted);margin-top:14px;max-width:62ch">Trabajamos con operadoras, fabricantes de equipos y empresas de servicios. Desarrollamos componentes junto al cliente, mejorando diseños y bajando costos de producción.</p></div><div class="quick"><a href="#filtracion">Filtración</a><a href="#valvulas">Válvulas</a><a href="#oil-gas">Oil & Gas</a><a href="#desarrollos">Desarrollos</a><a href="#modulos-habitables">Módulos</a></div></div></div></section>
+ <section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Presencia</span><h2>Dónde estamos</h2><p>Dos instalaciones principales y oficinas con representantes técnicos en tres provincias.</p></div></div><div class="sedes"><div><span class="eyebrow">Oficina y representación técnica</span><h3>Córdoba</h3><p>Atención a la industria y a las obras del centro del país.</p></div><div><span class="eyebrow">Oficina y representación técnica</span><h3>Neuquén</h3><p>Atención a operadoras y empresas de servicios de la cuenca neuquina y Vaca Muerta.</p></div><div><span class="eyebrow">Oficina y representación técnica</span><h3>San Juan</h3><p>Atención a proyectos mineros y obras industriales de la región de Cuyo.</p></div></div></div></section>
+ <section class="blk"><div class="wrap">${marcasBlk()}</div></section>
+ <section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Clientes</span><h2>Empresas que confían en Grupo Tecnoil</h2></div></div><div class="clients">${CLIENTES.map(c=>`<div class="client">${c}</div>`).join('')}</div></div></section>`+contactBand()}
+function contactPage(){const inds=['Operadora','Empresa de servicios','Fractura / completación','Flowback','Tratamiento de agua','Fabricante de equipos','Otra'];
+ return crumbs([['Contacto']])+phero('Contacto','Solicitar cotización técnica','Complete el formulario con los datos de su aplicación. Atendemos operaciones en toda la Argentina.')+
+ `<section class="blk"><div class="wrap cgrid"><form class="q" id="qf" novalidate>
+  <label>Nombre completo<input id="f-nom" required autocomplete="name"></label><label>Empresa<input id="f-emp" autocomplete="organization"></label>
+  <label>Cargo<input id="f-car"></label><label>Provincia / país<input id="f-pais" value="Argentina"></label>
+  <label>Email<input id="f-mail" type="email" required autocomplete="email"></label><label>Teléfono<input id="f-tel" type="tel" autocomplete="tel"></label>
+  <label>Tipo de empresa<select id="f-ind">${inds.map(i=>`<option>${i}</option>`).join('')}</select></label>
+  <label>Equipo o línea<select id="f-eq"><option>Filtración</option><option>Sistemas de tratamiento</option><option>Válvulas y repuestos</option><option>Orificios y tungsteno</option><option>Desarrollo a medida</option><option>Módulos habitables y oficinas</option></select></label>
+  <label class="full">Consulta técnica<textarea id="f-msg" placeholder="Caudal, calidad de agua, medida de válvula, plano o muestra…"></textarea></label>
+  <p class="note full">Sus datos se usan solo para responder esta consulta.</p>
+  <div class="full"><button class="btn btn-red" type="submit">Enviar consulta</button></div><div id="qok" class="okmsg" hidden></div></form>
+  <div class="side"><div><small>Ventas</small><span class="mail">+54 9 229 457-8780</span><span class="mail">ventas@tecnoil-nqn.com</span></div><div><small>Ingeniería</small><span class="mail">+54 9 351 312-4004</span><span class="mail">ingenieria@tecnoil-nqn.com</span></div><div><small>Administración</small><span class="mail">+54 9 351 642-4701</span><span class="mail">administracion@tecnoil-nqn.com</span></div><div><small>WhatsApp</small><span class="mail">+54 9 229 457-8780</span></div><div><small>Planta y oficinas</small><span class="phx">[dirección a completar]</span></div></div></div></section>
+ <section class="blk alt"><div class="wrap"><div class="specs" style="margin-top:0"><div class="specs-h">Datos necesarios para cotizar</div><div class="specs-g">${COTIZAR_AGUA.map(([b,s,c])=>`<div><b>${b}</b><span>${s}</span><code>${c}</code></div>`).join('')}</div></div></div></section>`}
+
+function structPage(){const rows=[
+ ['Filtros autolimpiantes','Sistemas autolimpiantes agua y aceite (Boll & Kirch)','compatible'],
+ ['Filtro brush / Filtros tamiz / Rotativo tamiz','Sistemas autolimpiantes (variantes)','compatible'],
+ ['Cartucho y bolsa','Baterías de filtros bolsa · Filtros bolsa, cartuchos y medios','compatible'],
+ ['Ósmosis inversa · Ablandamiento','Filtración de agua y deposición de sales','compatible'],
+ ['Filtros multimedia','Filtración de agua (pretratamiento / pulido)','parcial'],
+ ['Preparación de polímeros','Aplicación automática de poliacrilamida (en estudio)','parcial'],
+ ['(sin equivalente)','Separadores magnéticos','nuevo'],
+ ['Hidrociclones · Multiciclones desarenadores','Retirado del catálogo por decisión comercial','no'],
+ ['Conjunto móvil','Sin línea. Skid de filtración para locación','nuevo'],
+ ['Filtros sumergibles · Filtros de anillos','Sin línea. Captación de agua para fractura','nuevo'],
+ ['Planta de efluentes','Flotación por aire disuelto (DAF), 3 a 120 m³/h','nuevo'],
+ ['(sin equivalente)','Filtros de aire y aceite de reposición','propio'],
+ ['(sin equivalente)','Módulos habitables y oficinas sobre skid','nuevo'],
+ ['Planta agua potable · Concentrador purificador','No se incluye en esta etapa','no'],
+ ['Clarificador de relaves mineros · sectores aceitero, alimenticio y minero','No aplica a Oil & Gas','no']];
+ return crumbs([['Estructura del sitio']])+phero('Borrador interno','Estructura del sitio y compatibilidad de productos','Esta página no se publica. Resume cómo se tradujo la estructura de la web de referencia a Grupo Tecnoil.')+
+ `<section class="blk"><div class="wrap"><div class="note-int">Antes de publicar: reemplazar ilustraciones por fotos propias, completar contacto e historia, y confirmar con cada cliente el permiso para mostrar su nombre.</div>
+ <div class="sh"><div class="l1"><span class="eyebrow">Mapa del sitio</span><h2>Equivalencia de menús</h2></div></div>
+ <div class="tree"><div><h4>Filtros → Filtración</h4><ul>${of('filtros').map(p=>`<li>${p.name}</li>`).join('')}</ul></div><div><h4>Sistemas → Filtración</h4><ul>${of('sistemas').map(p=>`<li>${p.name}</li>`).join('')}</ul></div><div><h4>Nuevos menús</h4><ul><li>Válvulas (${of('valvulas').length})</li><li>Oil & Gas · Antares (${of('oilgas').length})</li><li>Desarrollos (${of('desarrollos').length})</li></ul></div><div><h4>Industrias → Aplicaciones</h4><ul>${APPS.map(a=>`<li>${a.name}</li>`).join('')}</ul></div></div>
+ <div class="sh" style="margin-top:56px"><div class="l1"><span class="eyebrow">Compatibilidad</span><h2>Web de referencia vs. presentación a Tecpetrol</h2></div></div>
+ <div class="tbl"><table><thead><tr><th>Equipo en web de referencia</th><th>Línea en presentación TECNOIL</th><th>Estado</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b>${r[0]}</b></td><td>${r[1]}</td><td><span class="chip c-${r[2]}">${STATUS[r[2]]}</span></td></tr>`).join('')}</tbody></table></div></div></section>`}
+
+/* ---------- router ---------- */
+const app=document.getElementById('app');
+function route(){const h=(location.hash||'#inicio').slice(1)||'inicio';let html;
+ clearInterval(timer); d3Dispose();
+ if(h==='inicio')html=home();
+ else if(['filtracion','valvulas','oil-gas','desarrollos'].includes(h))html=catPage(h);
+ else if(h==='aplicaciones')html=appsPage();
+ else if(h==='nosotros')html=aboutPage();
+ else if(h==='contacto')html=contactPage();
+ else if(h==='estructura')html=structPage();
+ else if(MARCAS[h])html=brandPage(h);
+ else if(h==='disenador')html=designPage();
+ else if(BY[h])html=prodPage(BY[h]);
+ else html=home();
+ app.innerHTML=html;
+ const top=BY[h]?CATS[BY[h].cat].page:((MARCAS[h]||h==='disenador')?'filtracion':h);
+ document.querySelectorAll('nav.main>.item>a').forEach(a=>a.classList.toggle('on',a.dataset.h===top));
+ mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');
+ if(h==='inicio'||!h)startSlider();
+ document.querySelectorAll('.thumbs button').forEach(b=>b.onclick=()=>{const p=BY[h];document.getElementById('pm').innerHTML=media(p.media[+b.dataset.m]);document.querySelectorAll('.thumbs button').forEach(x=>x.classList.toggle('on',x===b))});
+ if(BY[h]&&BY[h].sel){document.querySelectorAll('.sel-chips button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;document.getElementById('dafq').value=DAF[i][1];dafSpec(i)});const q=document.getElementById('dafq');q.oninput=()=>dafPick(+q.value);dafPick(+q.value)}
+ if(BY[h]&&BY[h].calc){['cq','cf','cm','cr'].forEach(id=>{const e=document.getElementById(id);e.oninput=calcRun;e.onchange=calcRun});calcRun()}
+ if(h==='disenador')d3Wire();
+ const f=document.getElementById('qf');
+ if(f&&window.__cfgText){document.getElementById('f-msg').value=window.__cfgText;window.__cfgText=''}
+ if(f)f.addEventListener('submit',e=>{e.preventDefault();const ok=document.getElementById('qok');
+  const n=document.getElementById('f-nom').value.trim(),m=document.getElementById('f-mail').value.trim();
+  if(!n||!m.includes('@')){ok.hidden=false;ok.style.background='var(--warn-bg)';ok.style.color='var(--warn)';ok.textContent='Complete nombre y un email válido para enviar la consulta.';return}
+  ok.hidden=false;ok.style.background='';ok.style.color='';const eq=document.getElementById('f-eq').value;const dest=/Desarrollo|tungsteno/i.test(eq)?'ingenieria@tecnoil-nqn.com':'ventas@tecnoil-nqn.com';ok.textContent='Vista previa del formulario. En el sitio publicado, esta consulta llegará a '+dest+'.'});
+ window.scrollTo(0,0)}
+window.addEventListener('hashchange',route);route();
+</script>
+
+</body>
+</html>
