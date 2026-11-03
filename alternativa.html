@@ -336,6 +336,55 @@ footer .bottom{border-top:1px solid #1B3350;padding-block:18px;display:flex;just
 @media (max-width:900px){.d3{grid-template-columns:1fr}.d3-ctl{border-right:0;border-bottom:1px solid var(--line)}.d3-canvas{min-height:380px}.d3-k{grid-template-columns:1fr 1fr}.d3-k div:nth-child(2){border-right:0}.d3-k div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
 .cinfo div,.side div{display:flex;flex-direction:column;gap:2px}
 .mail{user-select:all;overflow-wrap:anywhere;font-family:var(--f-mono);font-size:.92em}
+.sp-head{display:flex;flex-direction:column;gap:16px;margin-bottom:20px}
+.sp-head h2{font-size:clamp(30px,3.6vw,44px);text-transform:uppercase}
+.sp-head p{color:var(--muted);margin-top:8px}
+.sp-apps{display:flex;flex-wrap:wrap;gap:6px}
+.sp-apps button{font:inherit;font-size:13px;padding:6px 11px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;cursor:pointer}
+.sp-apps button.on{background:var(--red);border-color:var(--red);color:#fff}
+.sp-body{display:grid;grid-template-columns:1fr;border:1px solid var(--line);background:var(--surface)}
+.sp-chart{overflow-x:auto;padding:14px;border-bottom:1px solid var(--line)}
+.sp-svg{display:block;min-width:720px;width:100%;height:auto;font-family:var(--f-body)}
+.sp-h{fill:url(#spg-h)}.sp-ht{fill:#fff;font-size:11px;font-weight:600}.sp-hs{fill:#DCEBFA;font-size:10px}.sp-hv{fill:#fff;font-size:11px;font-family:var(--f-mono)}.sp-hl{fill:#fff;font-size:11px;font-weight:600}
+.sp-g{stroke:var(--line);stroke-width:1}.sp-sep{stroke:var(--line);stroke-width:1}
+.sp-sec{fill:var(--red-ink);font-size:11.5px;font-weight:600}.sp-hint{fill:var(--muted);font-size:10px;font-style:italic}
+.sp-mat rect{fill:url(#spg-m);cursor:pointer;filter:url(#spf)}.sp-mat text{fill:#fff;font-size:10px;pointer-events:none}
+.sp-mat.on rect{fill:#E0A100;filter:url(#spglow)}.sp-mat:hover rect{fill:#8E99A6}
+.sp-proc{fill:url(#spg-p);filter:url(#spf)}.sp-pt{fill:#fff;font-size:10.5px;font-weight:600}
+.sp-ser rect{fill:url(#spg-s);cursor:pointer;transition:opacity .2s,transform .2s;filter:url(#spf)}.sp-ser text{fill:#fff;font-size:10.5px;pointer-events:none}
+.sp-ser:hover rect{fill:url(#spg-on)}.sp-ser.on rect{fill:url(#spg-on);stroke:#E0A100;stroke-width:2;filter:url(#spglow)}.sp-ser.dim{opacity:.22}
+.sp-ser:focus-visible,.sp-mat:focus-visible{outline:none}.sp-ser:focus-visible rect,.sp-mat:focus-visible rect{stroke:#E0A100;stroke-width:2}
+.sp-panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);min-width:0}
+.sp-panel .photo{border-bottom:0!important;border-right:1px solid var(--line);aspect-ratio:auto;min-height:280px}
+.sp-panel .sp-empty{grid-column:1/-1}
+.sp-panel .photo img{object-position:100% 50%}
+.sp-panel .photo{border-bottom:1px solid var(--line)}
+.sp-info{padding:18px 20px 22px;display:flex;flex-direction:column;gap:8px}
+.sp-info h3{font-size:24px;text-transform:uppercase}.sp-info p{color:var(--muted);font-size:14.5px}
+.sp-info h4{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--red-ink);font-weight:500;margin:8px 0 0}
+.sp-tags{display:flex;flex-wrap:wrap;gap:6px}.sp-tags span{font-size:12.5px;padding:3px 9px;background:var(--bg);border:1px solid var(--line);border-radius:999px}
+.sp-btns{display:flex;gap:16px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.sp-empty{padding:28px 22px;display:flex;flex-direction:column;gap:8px;justify-content:center;height:100%}
+.sp-empty b{font-family:var(--f-display);font-size:22px;text-transform:uppercase}.sp-empty p{color:var(--muted);font-size:14.5px}
+.bag-in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 24px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.bag-in .fld[hidden]{display:none}
+.bag-reset{color:var(--ink);border-color:var(--line);font-size:15px;padding:9px 14px}
+.bag-reset:hover{border-color:var(--red);color:var(--red-ink);background:transparent}
+.bag-in .seg button:disabled{opacity:.35;cursor:not-allowed}
+.bag-out .d3-k{border-bottom:1px solid var(--line)}
+.bag-svg{background:var(--ill-bg);padding:14px;overflow-x:auto}
+.bag-svg svg{display:block;width:100%;min-width:480px;height:auto;max-height:640px}
+.bag-svg .l{fill:none;stroke:var(--ill-line);stroke-width:1.6}.bag-svg .f{fill:var(--ill-fill)}.bag-svg .s2{fill:var(--ill-grid)}
+.bag-svg .a.ao{stroke:#E08A00}.bag-svg .bagc{fill:#fff;stroke:var(--red);stroke-width:1.4}.bag-svg .a{fill:none;stroke:var(--red);stroke-width:2.4}
+.bag-svg .t{fill:var(--ill-txt);font-family:var(--f-mono);font-size:10px}.bag-svg .g{stroke:var(--ill-line);opacity:.4}
+.bag tbody tr.on td{background:var(--new-bg)}
+@media (max-width:980px){.sp-panel{grid-template-columns:1fr}.sp-panel .photo{border-right:0;aspect-ratio:3/2;min-height:0}.bag-in{grid-template-columns:1fr}}
+.bag-view{position:relative;border-bottom:1px solid var(--line)}
+.bag-3d{width:100%;height:440px;background:#e9eef3;display:flex;align-items:center;justify-content:center}
+.bag-3d canvas{display:block;touch-action:none}
+.bag-tog{position:absolute;top:12px;right:12px;z-index:2;background:var(--surface)}
+.bag-view .d3-hint{z-index:2}
+@media (max-width:700px){.bag-3d{height:340px}}
 .lines{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
 .lines a{padding:24px 24px 26px 0;text-decoration:none;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line);min-width:0}
 .lines a+a{padding-left:24px;border-left:1px solid var(--line)}
@@ -622,7 +671,7 @@ function media(m){return m.src?photo(m.src,m.tag,m.cover,m.pos,m.contain):ill(m.
 function ill(k,tag){return `<div class="ill"><svg viewBox="0 0 400 260" role="img" aria-label="${tag||'Ilustración técnica'}">${(ILL[k]||ILL.herramienta)()}</svg>${tag?`<span class="tag">${tag}</span>`:''}</div>`}
 
 /* ---------- contenido ---------- */
-const IMG={aorif:'assets/img/aorif-7370f6ceb6.jpg',apist:'assets/img/apist-4573d0ff60.jpg',avalv:'assets/img/avalv-4379ca24be.jpg',aog:'assets/img/aog-e174789bae.jpg',mod1:'assets/img/mod1-5fa17d3553.jpg',mod2:'assets/img/mod2-87486e9f54.jpg',mod3:'assets/img/mod3-bf3001c8e8.jpg',mod4:'assets/img/mod4-16b87d6543.jpg',mod5:'assets/img/mod5-c4546917ca.jpg',mod6:'assets/img/mod6-42a1cf4021.jpg',mod7:'assets/img/mod7-cb14f28d4a.jpg',mod8:'assets/img/mod8-e8fd223a8f.jpg',kitt:'assets/img/kitt-9715c0fc25.jpg',comp:'assets/img/comp-42a51e1a3c.jpg',plunger:'assets/img/plunger-c96cc51adb.jpg',dos:'assets/img/dos-85b48c4473.jpg',trailer2:'assets/img/trailer2-597a7e4d1b.jpg',cons1:'assets/img/cons1-9c471be070.jpg',cons2:'assets/img/cons2-56a13b2828.jpg',cons3:'assets/img/cons3-e36684c72d.jpg',cons4:'assets/img/cons4-1543f18c0f.jpg',cons5:'assets/img/cons5-b8d47adfcf.jpg',skidb:'assets/img/skidb-76da37f977.jpg',trailer:'assets/img/trailer-92281d929a.jpg',sep1:'assets/img/sep1-b8eef0c4f5.jpg',sep2:'assets/img/sep2-71fd1bd2fe.jpg',sep3:'assets/img/sep3-7f66411bea.jpg',mm1:'assets/img/mm1-2118e8b65f.jpg',mm2:'assets/img/mm2-20662ad1ad.jpg',pump:'assets/img/pump-1a0b7021db.jpg',boll1:'assets/img/boll1-76a4495512.jpg',boll2:'assets/img/boll2-d6557b4293.jpg',bolsa:'assets/img/bolsa-7b50e3c3af.jpg',v1:'assets/img/v1-a95ca51098.jpg',v2:'assets/img/v2-61b274764c.jpg',v3:'assets/img/v3-721a1468c3.jpg',tz1:'assets/img/tz1-8356b6ae9c.jpg',tz2:'assets/img/tz2-376d0d4ab5.jpg',tz3:'assets/img/tz3-4860783f3e.jpg',daf1:'assets/img/daf1-9ef36cb259.jpg',daf2:'assets/img/daf2-2e35ad3d09.jpg',dafp:'assets/img/dafp-a97f0aba2f.png',medios:'assets/img/medios-fe92b18405.jpg',orif:'assets/img/orif-95e53d2189.jpg',orif2:'assets/img/orif2-3f7aeeff85.jpg'};
+const IMG={sdf:'assets/img/sdf-d44edd6e9f.jpg',sxf:'assets/img/sxf-669b36095e.jpg',sgfk:'assets/img/sgfk-6946a1e232.jpg',sgfx:'assets/img/sgfx-6d98ded98b.jpg',stf:'assets/img/stf-dddcefd908.jpg',smf:'assets/img/smf-ee04e111e6.jpg',saf:'assets/img/saf-62a95ead93.jpg',sbf:'assets/img/sbf-eb0419422e.jpg',scf:'assets/img/scf-71c7a7d150.jpg',ssf:'assets/img/ssf-43ef0d109e.jpg',smg:'assets/img/smg-af4452850c.jpg',bdup:'assets/img/bdup-10faca1088.jpg',aorif:'assets/img/aorif-7370f6ceb6.jpg',apist:'assets/img/apist-4573d0ff60.jpg',avalv:'assets/img/avalv-4379ca24be.jpg',aog:'assets/img/aog-e174789bae.jpg',mod1:'assets/img/mod1-5fa17d3553.jpg',mod2:'assets/img/mod2-87486e9f54.jpg',mod3:'assets/img/mod3-bf3001c8e8.jpg',mod4:'assets/img/mod4-16b87d6543.jpg',mod5:'assets/img/mod5-c4546917ca.jpg',mod6:'assets/img/mod6-42a1cf4021.jpg',mod7:'assets/img/mod7-cb14f28d4a.jpg',mod8:'assets/img/mod8-e8fd223a8f.jpg',kitt:'assets/img/kitt-9715c0fc25.jpg',comp:'assets/img/comp-42a51e1a3c.jpg',plunger:'assets/img/plunger-c96cc51adb.jpg',dos:'assets/img/dos-85b48c4473.jpg',trailer2:'assets/img/trailer2-597a7e4d1b.jpg',cons1:'assets/img/cons1-9c471be070.jpg',cons2:'assets/img/cons2-56a13b2828.jpg',cons3:'assets/img/cons3-e36684c72d.jpg',cons4:'assets/img/cons4-1543f18c0f.jpg',cons5:'assets/img/cons5-b8d47adfcf.jpg',skidb:'assets/img/skidb-76da37f977.jpg',trailer:'assets/img/trailer-92281d929a.jpg',sep1:'assets/img/sep1-b8eef0c4f5.jpg',sep2:'assets/img/sep2-71fd1bd2fe.jpg',sep3:'assets/img/sep3-7f66411bea.jpg',mm1:'assets/img/mm1-2118e8b65f.jpg',mm2:'assets/img/mm2-20662ad1ad.jpg',pump:'assets/img/pump-1a0b7021db.jpg',boll1:'assets/img/boll1-76a4495512.jpg',boll2:'assets/img/boll2-d6557b4293.jpg',bolsa:'assets/img/bolsa-7b50e3c3af.jpg',v1:'assets/img/v1-a95ca51098.jpg',v2:'assets/img/v2-61b274764c.jpg',v3:'assets/img/v3-721a1468c3.jpg',tz1:'assets/img/tz1-8356b6ae9c.jpg',tz2:'assets/img/tz2-376d0d4ab5.jpg',tz3:'assets/img/tz3-4860783f3e.jpg',daf1:'assets/img/daf1-9ef36cb259.jpg',daf2:'assets/img/daf2-2e35ad3d09.jpg',dafp:'assets/img/dafp-a97f0aba2f.png',medios:'assets/img/medios-fe92b18405.jpg',orif:'assets/img/orif-95e53d2189.jpg',orif2:'assets/img/orif2-3f7aeeff85.jpg'};
 const DAF=[
  ['TF-003',3,'DN50','DN50','DN100','DN100','3.7/2.8','2.4/1.16','2.2/1.7',1500,5000],
  ['TF-005',5,'DN80','DN80','DN100','DN80','4/3','2.4/1.16','2.2/1.7',1600,7000],
@@ -688,8 +737,8 @@ const P_=[
   apps:['Protección de bombas de transferencia','Agua de enfriamiento','Retención de sólidos gruesos antes de bolsas'],
   feats:['Malla de acero inoxidable','Motor eléctrico o accionamiento manual','Bajo consumo de agua de lavado','Instalación en línea'],
   compat:['compatible','Variante de la línea autolimpiante Boll & Kirch.'],cot:COTIZAR_AGUA},
- {id:'baterias-filtros-bolsa',cat:'filtros',name:'Baterías de filtros bolsa',ill:'bolsas',
-  media:[{src:IMG.bolsa,tag:'Filtros multibolsa'},{ill:'bolsas',tag:'Esquema'}],
+ {id:'baterias-filtros-bolsa',cat:'filtros',name:'Baterías de filtros bolsa',ill:'bolsas',bag:1,
+  media:[{src:IMG.bolsa,tag:'Filtros multibolsa'},{src:IMG.bdup,tag:'Batería duplex con válvulas de conmutación'},{ill:'bolsas',tag:'Esquema'}],
   short:'Filtros multibolsa y baterías de carcasas porta-bolsa en acero inoxidable, en todas las medidas.',
   desc:'Filtros multibolsa en acero inoxidable con tapa abisagrada de apertura rápida y conexiones bridadas. Se instalan solos o como carcasas porta-bolsa montadas sobre colector común. Se dimensionan según caudal y carga de sólidos. Se puede aislar una carcasa para cambiar la bolsa sin parar la batería.',
   apps:['Filtrado final de agua de flowback','Filtrado de fluidos de completación','Químicos y aditivos de fractura'],
@@ -948,7 +997,7 @@ const STATUS={compatible:'En línea Tecpetrol',parcial:'Compatible parcial',nuev
 const lk=p=>`<a href="#${p.id}">${p.name}</a>`;
 const NAV=[
  {h:'inicio',t:'Inicio'},
- {h:'filtracion',t:'Filtración',mega:[['Filtros',of('filtros')],['Sistemas',of('sistemas')],['Marcas representadas',[{id:'bollfilter',name:'BOLLFILTER'},{id:'transfil',name:'TRANSFIL Argentina'}]],['Herramientas',[{id:'disenador',name:'Diseñador 3D de sistemas'},{id:'flotacion-daf',name:'Selector de modelos DAF'},{id:'conjunto-movil',name:'Configurador de unidad móvil'}]]]},
+ {h:'filtracion',t:'Filtración',mega:[['Filtros',of('filtros')],['Sistemas',of('sistemas')],['Marcas representadas',[{id:'bollfilter',name:'BOLLFILTER'},{id:'transfil',name:'TRANSFIL Argentina'}]],['Herramientas',[{id:'espectro',name:'Espectro de filtración'},{id:'disenador',name:'Diseñador 3D de sistemas'},{id:'flotacion-daf',name:'Selector de modelos DAF'},{id:'conjunto-movil',name:'Configurador de unidad móvil'}]]]},
  {h:'valvulas',t:'Válvulas',mega:[['Válvulas y repuestos',of('valvulas')]]},
  {h:'oil-gas',t:'Tungsteno',mega:[['Orificios calibrados y tungsteno',of('oilgas')]]},
  {h:'desarrollos',t:'Desarrollos',mega:[['Ingeniería y fabricación',of('desarrollos')]]},
@@ -1026,7 +1075,7 @@ const GAMA=[
 const gamaBlk=()=>`<section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Gama completa</span><h2>Metal duro y tungsteno</h2></div></div><div class="gama">${GAMA.map(([h,l])=>`<div><h4>${h}</h4><ul>${l.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div></div></section>`;
 function catPage(key){
  if(key==='filtracion')return crumbs([['Filtración']])+phero('Filtración','Filtros y sistemas de tratamiento de agua para Oil & Gas','Equipos para agua de flowback, produced water, agua de captación y aceite de proceso. Representantes oficiales de BOLLFILTER y TRANSFIL Argentina, y proveedores de consumibles importados y nacionales.')+
-  `<section class="blk"><div class="wrap">${secGrid('Filtros','Filtros industriales','',of('filtros'))}</div></section><section class="blk alt"><div class="wrap">${secGrid('Sistemas','Sistemas de tratamiento','',of('sistemas'))}</div></section><section class="blk"><div class="wrap">${marcasBlk()}</div></section>`+contactBand();
+  `<section class="blk"><div class="wrap">${secGrid('Filtros','Filtros industriales','',of('filtros'))}</div></section><section class="blk alt"><div class="wrap">${specBlock()}</div></section><section class="blk alt"><div class="wrap">${secGrid('Sistemas','Sistemas de tratamiento','',of('sistemas'))}</div></section><section class="blk"><div class="wrap">${marcasBlk()}</div></section>`+contactBand();
  const m={valvulas:['valvulas','Válvulas','Reconstrucción y repuestos de válvulas para petróleo y gas','Recuperación de válvulas tapón TSI y FMC 1×1, 2×1, 2×2 y 3×3, kits de reparación, anillos de sacrificio, tratamientos de tungsteno y titanio, y válvulas de gas lift.'],
   'oil-gas':['oilgas','Tungsteno','Orificios calibrados y piezas de tungsteno','Orificios calibrados, pistones, válvulas y asientos, productos sinterizados y herramientas de metal duro. Fabricados por pulvimetalurgia de precisión.'],
   desarrollos:['desarrollos','Desarrollos','Ingeniería y fabricación de piezas a medida','Desarrollamos componentes a partir de un plano o una muestra para operadoras, fabricantes de equipos y empresas de servicios.']}[key];
@@ -1099,7 +1148,7 @@ function designPage(){
    <div class="fld chks"><label><input type="checkbox" id="d-mag" ${CFG.mag?'checked':''}> Separador magnético</label><label><input type="checkbox" id="d-bomba" ${CFG.bomba?'checked':''}> Bomba de alimentación</label></div>
    <div class="fld"><span>Color de equipos</span>${segBtns('d-col',[['azul','Azul'],['gris','Gris'],['acero','Acero']],CFG.color)}</div>
   </div>
-  <div class="d3-view"><div id="d3c" class="d3-canvas"><p class="d3-load">Cargando modelo 3D…</p></div><div class="d3-hint">Arrastrá para girar · rueda o pellizco para acercar</div></div>
+  <div class="d3-view"><div id="d3c" class="d3-canvas"><p class="d3-load">Cargando modelo 3D…</p></div><div class="d3-hint">Vista isométrica · arrastrá para girar · rueda para acercar</div></div>
  </div>
  <div class="d3-sum" id="d3s"></div>
  <div style="margin-top:18px;display:flex;gap:12px;flex-wrap:wrap"><button type="button" class="btn btn-red" id="d-quote">Pedir cotización de esta configuración</button></div>
@@ -1265,13 +1314,258 @@ function d3Wire(){
  document.getElementById('d-quote').onclick=()=>{window.__cfgText=d3Text();location.hash='contacto'};
  d3Summary(); d3Init()}
 
+/* ---- espectro de filtración ---- */
+const SPX=(x)=>Math.pow(10,(x-190)/82.5-2); // convierte posición del cuadro original a µm
+const SP_MAT=[['Negro de humo',230,300],['Pigmento de pintura',300,383],['Pelo',469,542],['Pirolizado',153,219],['Levaduras',395,481],['Arena',516,640],['Virus',188,271],['Bacterias',292,466],['Humo de tabaco',212,333],['Ceniza de carbón',392,520],['Sílice coloidal',184,290],['Glóbulos rojos',420,470],['Polen',470,517],['Albúmina',163,269],['Harina',383,528]];
+const SP_PROC=[['Microfiltración',259,452],['Filtración de partículas',386,700]];
+const SP_APPS=['Prefiltración','Filtración final','Por lotes','Circulación','Proceso continuo','Clarificación','Esterilización','Filtración con torta','Alto contenido de sólidos','Filtración superficial','Filtración en profundidad','Partículas ferrosas'];
+const SP_FL=['Agua','Aceite','Químicos'];
+const SER=[
+ {k:'df',n:'Filtro autolimpiante de raspado',r:[460,700],img:'SDF',d:'Cuchillas o cepillos raspan en forma continua la superficie del elemento filtrante. Ideal para fluidos viscosos, con mucha carga de sólidos o partículas blandas.',a:[0,1,2,3,4,9],f:[0,1,2]},
+ {k:'xf',n:'Filtro de contralavado automático',r:[460,700],img:'SXF',d:'Varios elementos filtrantes se limpian uno por vez con contraflujo, sin cortar el caudal. Para agua de proceso, refrigerantes y agua de inyección.',a:[0,1,3,4,9],f:[0]},
+ {k:'gfk',n:'Filtro autolimpiante por succión',r:[443,597],img:'SGFK',d:'Boquillas de succión barren la malla y extraen los sólidos con una pequeña purga. Alto caudal con muy poca agua de lavado.',a:[0,1,3,4,9],f:[0]},
+ {k:'gfx',n:'Filtro autolimpiante por inyección',r:[403,700],img:'SGFX',d:'Variante del filtro por succión con inyección de agua a presión para limpiar mallas finas o fluidos con sólidos adherentes.',a:[0,1,2,3,4,9],f:[0,1,2]},
+ {k:'tf',n:'Sistema de filtros de vela automático',r:[322,700],img:'STF',d:'Velas filtrantes con formación de torta y descarga automática. Para filtración fina, clarificación y alto contenido de sólidos.',a:[0,1,2,3,4,5,6,7,8,9,10],f:[0,1,2]},
+ {k:'mf',n:'Filtro autolimpiante modular',r:[486,700],img:'SMF',d:'Módulos de filtración en paralelo con limpieza automática secuencial. Escalable para caudales muy altos.',a:[0,1,3,4,9],f:[0,1]},
+ {k:'af',n:'Filtro autolimpiante Bernoulli',r:[537,700],img:'SAF',d:'Limpieza por efecto Bernoulli con un disco que acelera el flujo sobre la malla. Bajo mantenimiento para agua de enfriamiento y captación.',a:[0,3,4,5,9],f:[0]},
+ {k:'bf',n:'Sistema de filtros bolsa',r:[322,700],img:'SBF',d:'Carcasas de una o varias bolsas filtrantes descartables. Económico, sin riesgo de contaminación y con amplia gama de grados de filtración.',a:[0,1,2,3,5,9,10],f:[0,1,2],link:'baterias-filtros-bolsa'},
+ {k:'cf',n:'Sistema de filtros de cartucho',r:[239,700],img:'SCF',d:'Carcasas con cartuchos plisados, bobinados o sinterizados. Para filtración fina y final, hasta el rango de microfiltración.',a:[0,1,2,3,5,6,9,10],f:[0,1,2],link:'cartuchos-medios'},
+ {k:'sf',n:'Filtro canasto',r:[486,700],img:'SSF',d:'Canastos de chapa perforada o malla para retener sólidos gruesos y proteger bombas, toberas, intercambiadores y válvulas.',a:[0,2,3,9],f:[0,1,2],link:'filtros-tamiz'},
+ {k:'mg',n:'Trampa magnética',r:null,img:'SMG',d:'Barras de imanes de alta intensidad (más de 12.000 gauss) que retienen partículas ferrosas antes de los filtros.',a:[0,2,3,11],f:[0,1,2],link:'separadores-magneticos'}];
+let SPsel=null,SPapp=null,SPmat=null;
+const fmtUm=v=>v>=1000?(v/1000).toLocaleString('es-AR',{maximumFractionDigits:1})+' mm':v>=1?Math.round(v)+' µm':v.toLocaleString('es-AR',{maximumSignificantDigits:1})+' µm';
+function specSVG(){
+ const X0=150,W=760,dec=W/6,X=v=>X0+(Math.log10(v)+2)*dec, px=x=>X(SPX(x));
+ const rows=[]; let y=78; let s='';
+ // header
+ s+=`<rect class="sp-h" x="0" y="0" width="${X0+W+30}" height="58"/>`;
+ [['Microscopio electrónico',0.01,0.3],['Microscopio óptico',0.3,30],['A simple vista',30,10000]].forEach(([t,a,b])=>s+=`<text class="sp-ht" x="${(X(a)+X(b))/2}" y="18" text-anchor="middle">${t}</text>`);
+ [['Rango molecular',0.01,0.1],['Macromolecular',0.1,3],['Micropartículas',3,100],['Macropartículas',100,10000]].forEach(([t,a,b])=>s+=`<text class="sp-hs" x="${(X(a)+X(b))/2}" y="36" text-anchor="middle">${t}</text>`);
+ [0.01,0.1,1,10,100,1000,10000].forEach(v=>{s+=`<text class="sp-hv" x="${X(v)}" y="53" text-anchor="${v===10000?'end':'middle'}">${v.toLocaleString('es-AR')}</text>`});
+ s+=`<text class="sp-hl" x="10" y="53">Micrones (µm)</text>`;
+ const grid=()=>[0.01,0.1,1,10,100,1000,10000].map(v=>`<line class="sp-g" x1="${X(v)}" y1="58" x2="${X(v)}" y2="${HH}" />`).join('');
+ // materials
+ const matRows=[[0,1,2],[3,4,5],[6,7],[8,9],[10,11,12],[13,14]];
+ let sec=`<text class="sp-sec" x="10" y="${y+12}">Tamaño de</text><text class="sp-sec" x="10" y="${y+27}">materiales</text><text class="sp-sec" x="10" y="${y+42}">comunes</text>`;
+ matRows.forEach(r=>{r.forEach(i=>{const [n,a,b]=SP_MAT[i],x1=px(a),x2=Math.min(px(b),X0+W);s+=`<g class="sp-mat${SPmat===i?' on':''}" data-m="${i}" tabindex="0" role="button"><rect x="${x1}" y="${y}" width="${x2-x1}" height="16" rx="8"/><text x="${(x1+x2)/2}" y="${y+12}" text-anchor="middle">${n}</text></g>`});y+=21});
+ s+=sec; y+=12; s+=`<line class="sp-sep" x1="0" y1="${y-6}" x2="${X0+W}" y2="${y-6}"/>`;
+ s+=`<text class="sp-sec" x="10" y="${y+16}">Proceso de</text><text class="sp-sec" x="10" y="${y+31}">filtración</text>`;
+ SP_PROC.forEach(([n,a,b],i)=>{const x1=px(a),x2=Math.min(px(b),X0+W);s+=`<rect class="sp-proc" x="${x1}" y="${y+i*22}" width="${x2-x1}" height="17" rx="8.5"/><text class="sp-pt" x="${(x1+x2)/2}" y="${y+i*22+12.5}" text-anchor="middle">${n}</text>`});
+ y+=56; s+=`<line class="sp-sep" x1="0" y1="${y-6}" x2="${X0+W}" y2="${y-6}"/>`;
+ s+=`<text class="sp-sec" x="10" y="${y+16}">Nuestras</text><text class="sp-sec" x="10" y="${y+31}">soluciones</text><text class="sp-hint" x="10" y="${y+50}">Tocá una barra</text>`;
+ const mv=SPmat!==null?Math.sqrt(SPX(SP_MAT[SPmat][1])*SPX(SP_MAT[SPmat][2])):null;
+ SER.forEach(o=>{const x1=o.r?px(o.r[0]):X0+6,x2=o.r?Math.min(px(o.r[1]),X0+W):X0+W;
+  const fit=(SPapp===null||o.a.includes(SPapp))&&(mv===null||(o.r&&SPX(o.r[0])<=mv));
+  s+=`<g class="sp-ser${SPsel===o.k?' on':''}${fit?'':' dim'}" data-k="${o.k}" tabindex="0" role="button" aria-label="${o.n}"><rect x="${x1}" y="${y}" width="${x2-x1}" height="19" rx="9.5"/><text x="${o.r?x2-10:X0+W-10}" y="${y+13.5}" text-anchor="end">${o.n}${o.r?' · desde '+fmtUm(SPX(o.r[0])):' · partículas ferrosas'}</text></g>`; y+=24});
+ const HH=y+6;
+ const defs=`<defs><linearGradient id="spg-h" x1="0" x2="1"><stop offset="0" stop-color="#14365A"/><stop offset="1" stop-color="#1F6FBF"/></linearGradient><linearGradient id="spg-s" x1="0" x2="1"><stop offset="0" stop-color="#5BA3EA"/><stop offset="1" stop-color="#1F6FBF"/></linearGradient><linearGradient id="spg-on" x1="0" x2="1"><stop offset="0" stop-color="#1F6FBF"/><stop offset="1" stop-color="#0E2236"/></linearGradient><linearGradient id="spg-m" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#C3CBD4"/><stop offset="1" stop-color="#9AA5B1"/></linearGradient><linearGradient id="spg-p" x1="0" x2="1"><stop offset="0" stop-color="#8EC3F2"/><stop offset="1" stop-color="#5B9BD9"/></linearGradient><filter id="spf" x="-5%" y="-40%" width="110%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="1.6" flood-color="#0E2236" flood-opacity=".28"/></filter><filter id="spglow" x="-5%" y="-80%" width="110%" height="260%"><feDropShadow dx="0" dy="0" stdDeviation="3" flood-color="#E0A100" flood-opacity=".9"/></filter></defs>`;
+ return `<svg viewBox="0 0 ${X0+W+30} ${HH}" class="sp-svg" role="img" aria-label="Espectro de filtración">${defs}${grid()}${s}</svg>`}
+function specPanel(){
+ const o=SER.find(x=>x.k===SPsel);
+ if(!o) return `<div class="sp-empty"><b>Elegí un tipo de filtro</b><p>Tocá una barra de "Nuestras soluciones" para ver la ficha. También podés filtrar por aplicación o tocar un material para ver qué equipos lo retienen.</p></div>`;
+ return `${photo(IMG[o.img.toLowerCase()],'')}<div class="sp-info"><span class="eyebrow">${o.r?'Retiene desde <span style="text-transform:none">'+fmtUm(SPX(o.r[0]))+'</span>':'Separación magnética'}</span><h3>${o.n}</h3><p>${o.d}</p>
+ <h4>Aplicaciones</h4><div class="sp-tags">${o.a.map(i=>`<span>${SP_APPS[i]}</span>`).join('')}</div>
+ <h4>Fluidos</h4><div class="sp-tags">${o.f.map(i=>`<span>${SP_FL[i]}</span>`).join('')}</div>
+ <div class="sp-btns"><a class="btn btn-red" href="#contacto">Consultar este filtro</a>${o.link?`<a class="more" href="#${o.link}">Ver equipo →</a>`:''}</div></div>`}
+function specBlock(){return `<div class="sp"><div class="sp-head"><div class="l1"><span class="eyebrow">Selector de filtración</span><h2>Espectro de filtración</h2><p>Compará el tamaño de la partícula que querés retener con el rango de cada tipo de filtro.</p></div>
+ <div class="sp-apps" role="group" aria-label="Aplicación"><button type="button" data-a="" class="${SPapp===null?'on':''}">Todas</button>${SP_APPS.map((t,i)=>`<button type="button" data-a="${i}" class="${SPapp===i?'on':''}">${t}</button>`).join('')}</div></div>
+ <div class="sp-body"><div class="sp-chart" id="spc">${specSVG()}</div><div class="sp-panel" id="spp">${specPanel()}</div></div></div>`}
+function specRender(){const c=document.getElementById('spc');if(!c)return;c.innerHTML=specSVG();document.getElementById('spp').innerHTML=specPanel();
+ document.querySelectorAll('.sp-apps button').forEach(b=>b.classList.toggle('on',b.dataset.a===(SPapp===null?'':String(SPapp))));specWire()}
+function specWire(){
+ document.querySelectorAll('.sp-ser').forEach(g=>{const f=()=>{SPsel=g.dataset.k;specRender()};g.onclick=f;g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}}});
+ document.querySelectorAll('.sp-mat').forEach(g=>{const f=()=>{const i=+g.dataset.m;SPmat=SPmat===i?null:i;specRender()};g.onclick=f;g.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f()}}});
+ document.querySelectorAll('.sp-apps button').forEach(b=>b.onclick=()=>{SPapp=b.dataset.a===''?null:+b.dataset.a;specRender()})}
+function specPage(){return crumbs([['Filtración','filtracion'],['Espectro de filtración']])+`<section class="blk"><div class="wrap">${specBlock()}</div></section>`+contactBand()}
+
+/* ---- batería de filtros bolsa en 3D ---- */
+let BG3=null;
+function bg3Dispose(){if(!BG3)return;cancelAnimationFrame(BG3.raf);try{BG3.ro.disconnect()}catch(e){}BG3.scene.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material)(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>m.dispose())});BG3.renderer.dispose();BG3=null}
+function bg3Init(){
+ const el=document.getElementById('bg-3d'); if(!el)return false;
+ if(typeof THREE==='undefined'||!THREE.OrbitControls) return false;
+ el.innerHTML='';
+ const renderer=new THREE.WebGLRenderer({antialias:true});
+ renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; renderer.outputEncoding=THREE.sRGBEncoding;
+ el.appendChild(renderer.domElement);
+ const scene=new THREE.Scene(); scene.background=new THREE.Color(0xe9eef3); scene.fog=new THREE.Fog(0xe9eef3,18,45);
+ const cam=new THREE.OrthographicCamera(-5,5,5,-5,0.1,200);
+ scene.add(new THREE.HemisphereLight(0xffffff,0xaeb8c4,0.9));
+ const sun=new THREE.DirectionalLight(0xffffff,0.85); sun.position.set(5,9,7); sun.castShadow=true; sun.shadow.mapSize.set(2048,2048);
+ Object.assign(sun.shadow.camera,{left:-8,right:8,top:8,bottom:-8,near:1,far:30}); scene.add(sun);
+ const rim=new THREE.DirectionalLight(0xcfe0f2,0.45); rim.position.set(-6,4,-5); scene.add(rim);
+ const ground=new THREE.Mesh(new THREE.PlaneGeometry(80,80),new THREE.MeshStandardMaterial({color:0xdde3e9,roughness:0.95}));
+ ground.rotation.x=-Math.PI/2; ground.receiveShadow=true; scene.add(ground);
+ const grid=new THREE.GridHelper(40,80,0xc9d2db,0xd5dce3); grid.position.y=0.002; scene.add(grid);
+ const controls=new THREE.OrbitControls(cam,renderer.domElement); controls.enableDamping=true; controls.dampingFactor=0.08;
+ controls.maxPolarAngle=Math.PI*0.48; controls.minZoom=0.5; controls.maxZoom=4; controls.autoRotate=false; controls.enablePan=false;
+ BG3={renderer,scene,cam,controls,group:null,raf:0,ro:null,first:true,f:3};
+ const size=()=>{const w=el.clientWidth||600,h=el.clientHeight||380;renderer.setSize(w,h,false);renderer.domElement.style.width='100%';renderer.domElement.style.height='100%';const a=w/h,f=BG3.f;cam.left=-f*a;cam.right=f*a;cam.top=f;cam.bottom=-f;cam.updateProjectionMatrix()};
+ BG3.size=size;
+ try{BG3.ro=new ResizeObserver(size);BG3.ro.observe(el)}catch(e){window.addEventListener('resize',size)}
+ size();
+ const loop=()=>{BG3.raf=requestAnimationFrame(loop);controls.update();renderer.render(scene,cam)};loop();
+ return true}
+function bg3Label(txt,col){const cv=document.createElement('canvas');cv.width=512;cv.height=128;const x=cv.getContext('2d');
+ x.fillStyle='rgba(255,255,255,0.92)';const r=28;x.beginPath();x.moveTo(r,8);x.arcTo(504,8,504,120,r);x.arcTo(504,120,8,120,r);x.arcTo(8,120,8,8,r);x.arcTo(8,8,504,8,r);x.fill();
+ x.fillStyle=col;x.font='bold 56px Arial,Helvetica,sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(txt,256,68);
+ const tx=new THREE.CanvasTexture(cv);tx.encoding=THREE.sRGBEncoding;const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tx,depthTest:false,transparent:true}));sp.renderOrder=10;return sp}
+function bg3Build(c){
+ if(!BG3)return; const {scene,cam,controls}=BG3;
+ if(BG3.group){scene.remove(BG3.group);BG3.group.traverse(o=>{if(o.geometry)o.geometry.dispose();if(o.material&&o.material.map)o.material.map.dispose()})}
+ const g=new THREE.Group(); BG3.group=g; scene.add(g);
+ const std=(o)=>new THREE.MeshStandardMaterial(o);
+ const M={ss:std({color:0xd9dee4,metalness:0.8,roughness:0.24}),ssd:std({color:0xa9b1ba,metalness:0.85,roughness:0.3}),
+  beam:std({color:0x1b5fa6,metalness:0.35,roughness:0.45}),beamD:std({color:0x154a82,metalness:0.35,roughness:0.5}),
+  deck:std({color:0x58636f,metalness:0.55,roughness:0.6}),pad:std({color:0x2b3138,roughness:0.8}),
+  valve:std({color:0x1f4f8f,roughness:0.45,metalness:0.2}),handle:std({color:0x22262b,roughness:0.6}),
+  bag:std({color:0xf4f6f8,roughness:0.95}),ring:std({color:0xc9372c,roughness:0.6}),
+  spare:std({color:0xb9d3ee,metalness:0.6,roughness:0.3}),aIn:std({color:0x1f6fbf,roughness:0.4,emissive:0x0a2a50}),aOut:std({color:0xe08a00,roughness:0.4,emissive:0x4a2c00})};
+ const add=(geo,mat,x,y,z,rx,ry,rz)=>{const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);m.rotation.set(rx||0,ry||0,rz||0);m.castShadow=true;m.receiveShadow=true;g.add(m);return m};
+ const cyl=(r,h,mat,x,y,z,rx,rz,seg)=>add(new THREE.CylinderGeometry(r,r,h,seg||32),mat,x,y,z,rx,0,rz);
+ const box=(w,h,d,mat,x,y,z)=>add(new THREE.BoxGeometry(w,h,d),mat,x,y,z);
+ const flangeX=(x,y,z,r,blind)=>{cyl(r*1.75,0.045,M.ssd,x,y,z,0,Math.PI/2,32);for(let k=0;k<8;k++){const a=k/8*Math.PI*2;cyl(0.012,0.07,M.handle,x,y+Math.cos(a)*r*1.45,z+Math.sin(a)*r*1.45,0,Math.PI/2,8)}if(blind)cyl(r*1.75,0.03,M.ss,x+(blind>0?0.03:-0.03),y,z,0,Math.PI/2,32)};
+ const arrowX=(x,y,z,dir,mat,len)=>{const sh=cyl(0.045,len,mat,x+dir*len/2,y,z,0,Math.PI/2,16);const cn=add(new THREE.ConeGeometry(0.11,0.24,24),mat,x+dir*(len+0.12),y,z,0,0,dir>0?-Math.PI/2:Math.PI/2);return cn};
+ const arrowZ=(x,y,z,dir,mat)=>{add(new THREE.ConeGeometry(0.045,0.1,16),mat,x,y,z,dir>0?Math.PI/2:-Math.PI/2,0,0)};
+ const bph=c.bph, sz=BB.size, bagL={1:0.42,2:0.81,3:0.2,4:0.355}[sz], bagR=(sz<=2?0.09:0.0525);
+ const per=bph<=1?1:bph<=2?2:bph<=4?2:bph<=6?3:4, rowsN=Math.ceil(bph/per);
+ const R=bph===1?bagR+0.07:Math.max(bagR*per,bagR*rowsN)+0.12;
+ const n=c.nTot, PER=6, nRows=Math.ceil(n/PER), perRow=Math.ceil(n/nRows);
+ const y0=0.2, H=bagL+0.22, legH=0.5, gap=Math.max(2*R+0.5,0.9);
+ const zIn=R+0.42, yIn=y0+legH+0.16, yOut=y0+legH+H-0.12, rowGap=2*zIn+0.9;
+ const pipeR=Math.min(0.15,0.05+c.dn/2800/Math.sqrt(nRows));
+ const x0=-(perRow-1)*gap/2, xs=x0-R-0.55, xe=x0+(perRow-1)*gap+R+0.55;
+ const L=xe-xs+0.3, Wd=(nRows-1)*rowGap+2*zIn+0.7;
+ // ---- base skid
+ const bH=0.16,bW=0.12;
+ [-Wd/2+bW/2,Wd/2-bW/2].forEach(z=>{box(L,bH,bW,M.beam,0,bH/2+0.03,z);box(L,0.02,bW+0.06,M.beamD,0,bH+0.03,z);box(L,0.02,bW+0.06,M.beamD,0,0.04,z)});
+ [-L/2+bW/2,L/2-bW/2].forEach(x=>box(bW,bH,Wd-2*bW,M.beam,x,bH/2+0.03,0));
+ for(let i=0;i<perRow;i++){const x=x0+i*gap;box(0.08,bH*0.85,Wd-2*bW,M.beamD,x,bH*0.85/2+0.03,0)}
+ for(let r=0;r<nRows;r++){const zc=-(nRows-1)*rowGap/2+r*rowGap;[zc+zIn,zc-zIn].forEach(z=>box(L-2*bW,bH*0.7,0.07,M.beamD,0,bH*0.35+0.03,z))}
+ const dk=box(L-0.02,0.025,Wd-0.02,M.deck,0,bH+0.045,0); dk.castShadow=false;
+ [[-1,-1],[-1,1],[1,-1],[1,1]].forEach(([sx,sz2])=>{box(0.2,0.03,0.2,M.pad,sx*(L/2-0.1),0.015,sz2*(Wd/2-0.1));
+  add(new THREE.TorusGeometry(0.06,0.018,10,20),M.beamD,sx*(L/2+0.02),bH+0.02,sz2*(Wd/2-0.18),0,Math.PI/2,0)});
+ // ---- rows
+ let idx=0;
+ for(let r=0;r<nRows;r++){
+  const cnt=Math.min(perRow,n-idx), zc=-(nRows-1)*rowGap/2+r*rowGap, zI=zc+zIn, zO=zc-zIn;
+  // headers
+  cyl(pipeR,xe-xs,M.ss,(xs+xe)/2,yIn,zI,0,Math.PI/2); cyl(pipeR,xe-xs,M.ss,(xs+xe)/2,yOut,zO,0,Math.PI/2);
+  flangeX(xs,yIn,zI,pipeR); flangeX(xe,yIn,zI,pipeR,1); flangeX(xs,yOut,zO,pipeR,-1); flangeX(xe,yOut,zO,pipeR);
+  // supports
+  [xs+0.25,xe-0.25].forEach(x=>{cyl(0.035,yIn-pipeR-(bH+0.06),M.ssd,x,(yIn-pipeR+bH+0.06)/2,zI,0,0,12);box(0.18,0.03,0.12,M.ssd,x,yIn-pipeR-0.015,zI);
+   cyl(0.035,yOut-pipeR-(bH+0.06),M.ssd,x,(yOut-pipeR+bH+0.06)/2,zO,0,0,12);box(0.18,0.03,0.12,M.ssd,x,yOut-pipeR-0.015,zO);box(0.16,0.02,0.16,M.ssd,x,bH+0.07,zI);box(0.16,0.02,0.16,M.ssd,x,bH+0.07,zO)});
+  // arrows + labels per line
+  arrowX(xs-0.62,yIn,zI,1,M.aIn,0.38); arrowX(xe+0.06,yOut,zO,1,M.aOut,0.38);
+  const lb=nRows>1?' · L'+(r+1):'';
+  const s1=bg3Label('ENTRADA'+lb,'#1F6FBF'); s1.position.set(xs-0.5,yIn+0.32,zI); s1.scale.set(0.9,0.225,1); g.add(s1);
+  const s2=bg3Label('SALIDA'+lb,'#C77800'); s2.position.set(xe+0.45,yOut+0.32,zO); s2.scale.set(0.9,0.225,1); g.add(s2);
+  for(let i=0;i<cnt;i++,idx++){
+   const x=x0+i*gap, spare=c.nTot>c.n&&idx===n-1, body=spare?M.spare:M.ss, open=idx===0, yb=y0+legH;
+   for(let k=0;k<3;k++){const a=k/3*Math.PI*2+Math.PI/6,lx=x+Math.cos(a)*R*0.85,lz=zc+Math.sin(a)*R*0.85;cyl(0.03,legH+0.02,M.ssd,lx,y0+legH/2,lz,0,0,10);box(0.1,0.015,0.1,M.ssd,lx,y0+0.01,lz)}
+   cyl(R,H,body,x,yb+H/2,zc); const bot=add(new THREE.SphereGeometry(R,32,12,0,Math.PI*2,Math.PI/2,Math.PI/2),body,x,yb,zc); bot.scale.y=0.35;
+   cyl(0.03,0.12,M.ssd,x,yb-R*0.35-0.05,zc,0,0,10);
+   cyl(R+0.035,0.05,M.ssd,x,yb+H,zc);
+   const lid=new THREE.Group(); const lm=new THREE.Mesh(new THREE.SphereGeometry(R+0.02,32,12,0,Math.PI*2,0,Math.PI/2),body); lm.scale.y=0.32; lm.castShadow=true; lid.add(lm);
+   lid.add(new THREE.Mesh(new THREE.CylinderGeometry(R+0.035,R+0.035,0.04,32),M.ssd));
+   for(let k=0;k<6;k++){const a=k/6*Math.PI*2;const e=new THREE.Mesh(new THREE.TorusGeometry(0.035,0.01,8,16),M.ssd);e.position.set(Math.cos(a)*(R+0.03),0.05,Math.sin(a)*(R+0.03));lid.add(e)}
+   if(open){lid.position.set(x-R,yb+H+0.02,zc);lid.children.forEach(ch=>ch.position.x+=R);lid.rotation.z=1.15}else lid.position.set(x,yb+H+0.02,zc);
+   g.add(lid);
+   for(let j=0;j<bph;j++){const col=j%per,row=Math.floor(j/per);
+    const bx=x+(bph===1?0:(col-(per-1)/2)*bagR*2.05), bz=zc+(bph===1?0:(row-(rowsN-1)/2)*bagR*2.05);
+    if(open)cyl(bagR*0.92,bagL*0.35,M.bag,bx,yb+H-bagL*0.175+0.05,bz,0,0,20);
+    add(new THREE.TorusGeometry(bagR*0.9,0.012,8,24),M.ring,bx,yb+H+0.005,bz,Math.PI/2,0,0)}
+   // branches with valves and flow arrows
+   const bl=zIn-R; const br=pipeR*0.7;
+   cyl(br,bl,M.ss,x,yIn,zc+R+bl/2,Math.PI/2,0); box(0.1,0.17,0.1,M.valve,x,yIn,zc+R+bl*0.45); box(0.24,0.025,0.04,M.handle,x+0.09,yIn+0.11,zc+R+bl*0.45);
+   cyl(br*1.6,0.03,M.ssd,x,yIn,zc+R+0.02,Math.PI/2,0); arrowZ(x,yIn+br+0.07,zc+R+bl*0.75,-1,M.aIn);
+   cyl(br,bl,M.ss,x,yOut,zc-R-bl/2,Math.PI/2,0); box(0.1,0.17,0.1,M.valve,x,yOut,zc-R-bl*0.45); box(0.24,0.025,0.04,M.handle,x+0.09,yOut+0.11,zc-R-bl*0.45);
+   cyl(br*1.6,0.03,M.ssd,x,yOut,zc-R-0.02,Math.PI/2,0); arrowZ(x,yOut+br+0.07,zc-R-bl*0.75,-1,M.aOut);
+   cyl(0.035,0.012,M.handle,x+R*0.7,yb+H+0.14,zc+R*0.2,Math.PI/2,0,16); cyl(0.008,0.12,M.ssd,x+R*0.7,yb+H+0.07,zc+R*0.2,0,0,8);
+  }}
+ const span=Math.max(L+1.6,Wd*0.95,y0+legH+H+0.8);
+ BG3.f=span*0.6; BG3.size();
+ cam.position.set(20,20*0.82,20); cam.zoom=1; cam.updateProjectionMatrix();
+ controls.target.set(0,(y0+legH+H)/2,0); controls.update()}
+
+/* ---- armador de baterías de filtros bolsa ---- */
+const BAGS={1:{n:'Tamaño #1',d:'7,06" / 180 mm',l:'16,5" / 420 mm',a:0.25,q:20,g:90},2:{n:'Tamaño #2',d:'7,06" / 180 mm',l:'32,0" / 810 mm',a:0.50,q:40,g:180},3:{n:'Tamaño #3',d:'4,12" / 105 mm',l:'8,0" / 200 mm',a:0.09,q:6,g:26},4:{n:'Tamaño #4',d:'4,12" / 105 mm',l:'14,0" / 355 mm',a:0.15,q:12,g:50}};
+const MIC=[[50,1],[40,0.9],[30,0.8],[20,0.7],[10,0.55],[5,0.4]];
+const BPH=[1,2,3,4,6,8,12];
+const BB={size:2,mic:25,mode:'q',q:120,bph:4,n:3,spare:true};
+BB.mic=20;
+const BB0=JSON.parse(JSON.stringify(BB));
+function bagCalc(){const s=BAGS[BB.size],f=MIC.find(m=>m[0]===BB.mic)[1],qb=s.q*f;
+ let bph=BB.size>2?1:BB.bph,n;
+ if(BB.mode==='q'){const bags=Math.ceil(BB.q/qb);n=Math.ceil(bags/bph)}else n=BB.n;
+ const nTot=n+(BB.spare?1:0),bags=n*bph,q=bags*qb,area=bags*s.a;
+ const dn=[50,80,100,150,200,250,300,350,400].find(d=>Math.PI*(d/2000)**2*2.5*3600>=q)||400;
+ return {s,f,qb,bph,n,nTot,bags,q,area,dn}}
+function bagSVG(c){
+ const PER=6,n=c.nTot,nRows=Math.ceil(n/PER),perRow=Math.ceil(n/nRows),gap=92,vw=58,RH=300,W=Math.max(560,140+perRow*gap);
+ let s=`<svg viewBox="0 0 ${W} ${RH*nRows+(nRows>1?20:0)}" role="img" aria-label="Esquema de la batería">`,idx=0;
+ for(let r=0;r<nRows;r++){
+  const cnt=Math.min(perRow,n-idx),oy=r*RH,x0=W/2-((perRow-1)*gap)/2,yT=70+oy,yB=210+oy,H=RH;
+  const xa=x0-60,xb=x0+(cnt-1)*gap+60;
+  if(nRows>1)s+=`<text class="t" x="8" y="${oy+16}">LÍNEA ${r+1}</text>`;
+  s+=`<line class="g" x1="0" y1="${oy+H-14}" x2="${W}" y2="${oy+H-14}"/>`;
+  s+=`<rect class="f l" x="${xa}" y="${yB+28}" width="${xb-xa}" height="14" rx="7"/><rect class="f l" x="${xa}" y="${yT-26}" width="${xb-xa}" height="14" rx="7"/>`;
+  s+=`<path class="a" d="M${xa-34} ${yB+35} L${xa-4} ${yB+35} M${xa-12} ${yB+29} L${xa-4} ${yB+35} L${xa-12} ${yB+41}"/><text class="t" x="${xa-34}" y="${yB+58}">ENTRADA</text>`;
+  s+=`<path class="a ao" d="M${xb+4} ${yT-19} L${xb+34} ${yT-19} M${xb+26} ${yT-25} L${xb+34} ${yT-19} L${xb+26} ${yT-13}"/><text class="t" x="${xb+34}" y="${yT-32}" text-anchor="end">SALIDA</text>`;
+  for(let i=0;i<cnt;i++,idx++){const x=x0+i*gap,sp=c.nTot>c.n&&idx===n-1;
+   s+=`<line class="l" x1="${x}" y1="${yB+28}" x2="${x}" y2="${yB+6}"/><line class="l" x1="${x}" y1="${yT-12}" x2="${x}" y2="${yT}"/>`;
+   s+=`<path class="a" d="M${x-4} ${yB+22} L${x} ${yB+14} L${x+4} ${yB+22}"/><path class="a ao" d="M${x-4} ${yT-4} L${x} ${yT-12} L${x+4} ${yT-4}"/>`;
+   s+=`<rect class="${sp?'s2':'f'} l" x="${x-vw/2}" y="${yT}" width="${vw}" height="${yB-yT}" rx="12"/>`;
+   s+=`<rect class="f l" x="${x-vw/2-4}" y="${yT-6}" width="${vw+8}" height="10" rx="3"/>`;
+   const k=c.bph,cols=k<=2?k:k<=4?2:k<=6?3:4,rows=Math.ceil(k/cols),cw=(vw-12)/cols,ch=Math.min(cw,(yB-yT-40)/Math.max(rows,1));
+   for(let j=0;j<k;j++){const cx=x-vw/2+6+cw*(j%cols)+cw/2,cy=yT+18+ch*Math.floor(j/cols)+ch/2;s+=`<circle class="bagc" cx="${cx}" cy="${cy}" r="${Math.min(cw,ch)/2-2}"/>`}
+   s+=`<line class="l" x1="${x-vw/2+8}" y1="${yB}" x2="${x-vw/2+4}" y2="${oy+H-14}"/><line class="l" x1="${x+vw/2-8}" y1="${yB}" x2="${x+vw/2-4}" y2="${oy+H-14}"/>`;
+   s+=`<text class="t" x="${x}" y="${oy+H-20}" text-anchor="middle">${sp?'RESERVA':'R'+(idx+1)}</text>`}}
+ return s+'</svg>'}
+function bagBuilder(){
+ const sz=Object.entries(BAGS).map(([k,v])=>`<button type="button" data-v="${k}" class="${+k===BB.size?'on':''}">#${k}</button>`).join('');
+ return `<div class="sel bag" id="bag-wrap"><div class="sel-h"><div><span class="eyebrow">Armador de baterías</span><h3>Armá tu batería de filtros bolsa</h3></div><button type="button" class="btn btn-ghost bag-reset" id="bg-reset">↺ Restablecer</button></div>
+ <div class="bag-in">
+  <div class="fld"><span>Tamaño de bolsa</span><div class="seg" id="bg-size">${sz}</div></div>
+  <div class="fld"><span>Grado de filtración</span><div class="seg" id="bg-mic">${MIC.map(([m])=>`<button type="button" data-v="${m}" class="${m===BB.mic?'on':''}">${m} µm</button>`).join('')}</div></div>
+  <div class="fld"><span>Bolsas por recipiente</span><div class="seg" id="bg-bph">${BPH.map(b=>`<button type="button" data-v="${b}" class="${b===BB.bph?'on':''}">${b}</button>`).join('')}</div></div>
+  <div class="fld"><span>Calcular por</span><div class="seg" id="bg-mode"><button type="button" data-v="q" class="${BB.mode==='q'?'on':''}">Caudal requerido</button><button type="button" data-v="n" class="${BB.mode==='n'?'on':''}">Cantidad de recipientes</button></div></div>
+  <div class="fld" id="bg-qf"><span>Caudal requerido</span><label class="sel-q" style="flex-direction:row;align-items:center"><span><input id="bg-q" type="number" min="1" max="2000" step="5" value="${BB.q}" inputmode="numeric"> m³/h</span></label></div>
+  <div class="fld" id="bg-nf"><span>Recipientes en servicio</span><div class="step"><button type="button" id="bg-nm" aria-label="Quitar">−</button><b id="bg-nn">${BB.n}</b><button type="button" id="bg-np" aria-label="Agregar">+</button></div></div>
+  <div class="fld chks"><label><input type="checkbox" id="bg-sp" ${BB.spare?'checked':''}> Recipiente de reserva para cambiar bolsas sin parar</label></div>
+ </div>
+ <div class="bag-out"><div class="d3-k" id="bg-k"></div><div class="bag-view"><div class="seg bag-tog" id="bg-view"><button type="button" data-v="3d" class="on">Vista 3D</button><button type="button" data-v="plano">Esquema</button></div><div class="bag-3d" id="bg-3d"><p class="d3-load">Cargando modelo 3D…</p></div><div class="bag-svg" id="bg-svg" hidden></div><div class="d3-hint">Arrastrá para girar · rueda o pellizco para acercar</div></div><p class="calc-note" id="bg-note"></p></div>
+ <div class="tbl" style="margin:0;border:0;border-top:1px solid var(--line)"><table><thead><tr><th>Tamaño</th><th>Diámetro</th><th>Longitud</th><th>Superficie filtrante</th><th>Caudal máx.</th><th>Caudal máx. (GPM)</th></tr></thead><tbody>${Object.entries(BAGS).map(([k,v])=>`<tr class="${+k===BB.size?'on':''}"><td><b>${v.n}</b></td><td>${v.d}</td><td>${v.l}</td><td>~${v.a.toLocaleString('es-AR')} m²</td><td><b>${v.q} m³/h</b></td><td>~${v.g} GPM</td></tr>`).join('')}</tbody></table></div></div>`}
+function bagRun(){const c=bagCalc();
+ document.getElementById('bg-k').innerHTML=`<div><small>Caudal aproximado</small><b>${Math.round(c.q).toLocaleString('es-AR')} m³/h</b></div><div><small>Bolsas en servicio</small><b>${c.bags}</b></div><div><small>Recipientes</small><b>${c.n}${c.nTot>c.n?' + 1':''}</b></div><div><small>Colector sugerido</small><b>DN${c.dn}</b></div>`;
+ document.getElementById('bg-svg').innerHTML=bagSVG(c);
+ bg3Build(c);
+ document.getElementById('bg-note').textContent=(c.nTot>6?`Se arma en ${Math.ceil(c.nTot/6)} líneas en paralelo de hasta 6 recipientes. `:'')+`Cada bolsa ${c.s.n} a ${BB.mic} µm maneja unos ${c.qb.toLocaleString('es-AR',{maximumFractionDigits:1})} m³/h (${Math.round(c.f*100)} % del caudal máximo en agua limpia). Superficie filtrante total: ${c.area.toLocaleString('es-AR',{maximumFractionDigits:2})} m². Valores orientativos: el caudal real depende de la viscosidad y la carga de sólidos.${BB.size>2?' Las bolsas #3 y #4 se usan en recipientes de una bolsa.':''}`;
+ document.getElementById('bg-qf').hidden=BB.mode!=='q';document.getElementById('bg-nf').hidden=BB.mode!=='n';
+ document.querySelectorAll('#bg-bph button').forEach(b=>{b.disabled=BB.size>2&&b.dataset.v!=='1';b.classList.toggle('on',+b.dataset.v===(BB.size>2?1:BB.bph))});
+ document.querySelectorAll('.bag tbody tr').forEach((r,i)=>r.classList.toggle('on',i+1===BB.size))}
+function bagWire(){
+ const seg=(id,key,num)=>{document.querySelectorAll('#'+id+' button').forEach(b=>b.onclick=()=>{if(b.disabled)return;BB[key]=num?+b.dataset.v:b.dataset.v;document.querySelectorAll('#'+id+' button').forEach(x=>x.classList.toggle('on',x===b));bagRun()})};
+ seg('bg-size','size',1);seg('bg-mic','mic',1);seg('bg-bph','bph',1);seg('bg-mode','mode');
+ const q=document.getElementById('bg-q');q.oninput=()=>{BB.q=Math.max(1,+q.value||1);bagRun()};
+ const nn=document.getElementById('bg-nn');
+ document.getElementById('bg-nm').onclick=()=>{BB.n=Math.max(1,BB.n-1);nn.textContent=BB.n;bagRun()};
+ document.getElementById('bg-np').onclick=()=>{BB.n=Math.min(30,BB.n+1);nn.textContent=BB.n;bagRun()};
+ document.getElementById('bg-sp').onchange=e=>{BB.spare=e.target.checked;bagRun()};
+ document.getElementById('bg-reset').onclick=()=>{Object.assign(BB,JSON.parse(JSON.stringify(BB0)));const w=document.getElementById('bag-wrap');bg3Dispose();w.outerHTML=bagBuilder();bagWire()};
+ const ok=bg3Init(); const v3=document.getElementById('bg-3d'),vs=document.getElementById('bg-svg'),tog=document.getElementById('bg-view');
+ const show=m=>{v3.hidden=m!=='3d';vs.hidden=m==='3d';tog.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.v===m));document.querySelector('.bag-view .d3-hint').hidden=m!=='3d'};
+ tog.querySelectorAll('button').forEach(b=>b.onclick=()=>show(b.dataset.v));
+ if(!ok){tog.hidden=true;show('plano')}
+ bagRun()}
+
 function prodPage(p){const c=CATS[p.cat];const rel=of(p.cat).filter(x=>x.id!==p.id).slice(0,3);
  return crumbs([[c.label,c.page],[p.name]])+phero(c.name,p.name,p.short)+
  `<section class="blk"><div class="wrap"><div class="prod"><div><div id="pm">${p.media?media(p.media[0]):ill(p.ill)}</div>${p.media&&p.media.length>1?`<div class="thumbs">${p.media.map((m,i)=>`<button type="button" data-m="${i}" class="${i?'':'on'}" aria-label="${m.tag}">${media(m)}</button>`).join('')}</div>`:''}</div>
   <div><h2>Descripción</h2><p class="lead">${p.desc}</p>
   <div class="cols"><div><h4>Aplicaciones</h4><ul>${p.apps.map(a=>`<li>${a}</li>`).join('')}</ul></div><div><h4>Características</h4><ul>${p.feats.map(a=>`<li>${a}</li>`).join('')}</ul></div></div>
   <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-red" href="#contacto">Solicitar cotización</a><span class="btn btn-ghost" style="color:var(--muted);cursor:default">Ficha técnica PDF · próximamente</span></div></div></div>
-  ${p.sel?selector():''}${p.calc?skidCalc()+`<a class="d3band" style="margin-top:22px" href="#disenador"><div><span class="eyebrow">Diseñador 3D</span><h2>Armá tu configuración en 3D</h2><p>Sumá recipientes, filtros grandes y bomba, y mirá el equipo desde todos los ángulos.</p></div><span class="btn btn-red">Abrir diseñador</span></a>`:''}
+  ${p.bag?bagBuilder():''}${p.sel?selector():''}${p.calc?skidCalc()+`<a class="d3band" style="margin-top:22px" href="#disenador"><div><span class="eyebrow">Diseñador 3D</span><h2>Armá tu configuración en 3D</h2><p>Sumá recipientes, filtros grandes y bomba, y mirá el equipo desde todos los ángulos.</p></div><span class="btn btn-red">Abrir diseñador</span></a>`:''}
   </div></section>
  ${p.configs?`<section class="blk alt"><div class="wrap"><div class="sh"><div class="l1"><span class="eyebrow">Configuraciones</span><h2>Un módulo para cada uso</h2><p>Se combinan en un mismo módulo o se arman por separado para formar un campamento.</p></div></div><div class="cfg">${p.configs.map(([t,d,src])=>`<div>${photo(src,'',1)}<b>${t}</b><p>${d}</p></div>`).join('')}</div></div></section>`:''}
  ${rel.length?`<section class="blk alt"><div class="wrap">${secGrid('Relacionados','Otros equipos de la línea','',rel)}</div></section>`:''}
@@ -1324,7 +1618,7 @@ function structPage(){const rows=[
 /* ---------- router ---------- */
 const app=document.getElementById('app');
 function route(){const h=(location.hash||'#inicio').slice(1)||'inicio';let html;
- clearInterval(timer); d3Dispose();
+ clearInterval(timer); d3Dispose(); bg3Dispose();
  if(h==='inicio')html=home();
  else if(['filtracion','valvulas','oil-gas','desarrollos'].includes(h))html=catPage(h);
  else if(h==='aplicaciones')html=appsPage();
@@ -1333,15 +1627,18 @@ function route(){const h=(location.hash||'#inicio').slice(1)||'inicio';let html;
  else if(h==='estructura')html=structPage();
  else if(MARCAS[h])html=brandPage(h);
  else if(h==='disenador')html=designPage();
+ else if(h==='espectro')html=specPage();
  else if(BY[h])html=prodPage(BY[h]);
  else html=home();
  app.innerHTML=html;
- const top=BY[h]?CATS[BY[h].cat].page:((MARCAS[h]||h==='disenador')?'filtracion':h);
+ const top=BY[h]?CATS[BY[h].cat].page:((MARCAS[h]||h==='disenador'||h==='espectro')?'filtracion':h);
  document.querySelectorAll('nav.main>.item>a').forEach(a=>a.classList.toggle('on',a.dataset.h===top));
  mnav.classList.remove('open');burger.setAttribute('aria-expanded','false');
  if(h==='inicio'||!h)startSlider();
  document.querySelectorAll('.thumbs button').forEach(b=>b.onclick=()=>{const p=BY[h];document.getElementById('pm').innerHTML=media(p.media[+b.dataset.m]);document.querySelectorAll('.thumbs button').forEach(x=>x.classList.toggle('on',x===b))});
  if(BY[h]&&BY[h].sel){document.querySelectorAll('.sel-chips button').forEach(b=>b.onclick=()=>{const i=+b.dataset.i;document.getElementById('dafq').value=DAF[i][1];dafSpec(i)});const q=document.getElementById('dafq');q.oninput=()=>dafPick(+q.value);dafPick(+q.value)}
+ if(BY[h]&&BY[h].bag)bagWire();
+ if(document.getElementById('spc'))specWire();
  if(BY[h]&&BY[h].calc){['cq','cf','cm','cr'].forEach(id=>{const e=document.getElementById(id);e.oninput=calcRun;e.onchange=calcRun});calcRun()}
  if(h==='disenador')d3Wire();
  const f=document.getElementById('qf');
