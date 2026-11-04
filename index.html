@@ -1394,6 +1394,10 @@ function bg3Build(c){
  const flangeX=(x,y,z,r,blind)=>{cyl(r*1.75,0.045,M.ssd,x,y,z,0,Math.PI/2,32);for(let k=0;k<8;k++){const a=k/8*Math.PI*2;cyl(0.012,0.07,M.handle,x,y+Math.cos(a)*r*1.45,z+Math.sin(a)*r*1.45,0,Math.PI/2,8)}if(blind)cyl(r*1.75,0.03,M.ss,x+(blind>0?0.03:-0.03),y,z,0,Math.PI/2,32)};
  const arrowX=(x,y,z,dir,mat,len)=>{const sh=cyl(0.045,len,mat,x+dir*len/2,y,z,0,Math.PI/2,16);const cn=add(new THREE.ConeGeometry(0.11,0.24,24),mat,x+dir*(len+0.12),y,z,0,0,dir>0?-Math.PI/2:Math.PI/2);return cn};
  const arrowZ=(x,y,z,dir,mat)=>{add(new THREE.ConeGeometry(0.045,0.1,16),mat,x,y,z,dir>0?Math.PI/2:-Math.PI/2,0,0)};
+ const face=std({color:0xffffff,roughness:0.4}), needle=std({color:0xc9372c}), glass=std({color:0x1b1f24,metalness:0.6,roughness:0.3});
+ const gauge=(x,y,z,pr)=>{const top=y+pr; cyl(0.014,0.12,M.ssd,x,top+0.06,z,0,0,10); cyl(0.028,0.035,M.ssd,x,top+0.135,z,0,0,6);
+  const gy=top+0.22; cyl(0.085,0.04,glass,x,gy,z,Math.PI/2,0,32); cyl(0.072,0.005,face,x,gy,z+0.022,Math.PI/2,0,32);
+  const nd=add(new THREE.BoxGeometry(0.008,0.06,0.004),needle,x+0.012,gy+0.012,z+0.027,0,0,-0.7); add(new THREE.CylinderGeometry(0.01,0.01,0.006,12),glass,x,gy,z+0.027,Math.PI/2,0,0)};
  const bph=c.bph, sz=BB.size, bagL={1:0.42,2:0.81,3:0.2,4:0.355}[sz], bagR=(sz<=2?0.09:0.0525);
  const per=bph<=1?1:bph<=2?2:bph<=4?2:bph<=6?3:4, rowsN=Math.ceil(bph/per);
  const R=bph===1?bagR+0.07:Math.max(bagR*per,bagR*rowsN)+0.12;
@@ -1424,6 +1428,7 @@ function bg3Build(c){
    cyl(0.035,yOut-pipeR-(bH+0.06),M.ssd,x,(yOut-pipeR+bH+0.06)/2,zO,0,0,12);box(0.18,0.03,0.12,M.ssd,x,yOut-pipeR-0.015,zO);box(0.16,0.02,0.16,M.ssd,x,bH+0.07,zI);box(0.16,0.02,0.16,M.ssd,x,bH+0.07,zO)});
   // arrows + labels per line
   arrowX(xs-0.62,yIn,zI,1,M.aIn,0.38); arrowX(xe+0.06,yOut,zO,1,M.aOut,0.38);
+  gauge(xs+0.42,yIn,zI,pipeR); gauge(xe-0.42,yIn,zI,pipeR); gauge(xs+0.42,yOut,zO,pipeR); gauge(xe-0.42,yOut,zO,pipeR);
   const lb=nRows>1?' · L'+(r+1):'';
   const s1=bg3Label('ENTRADA'+lb,'#1F6FBF'); s1.position.set(xs-0.5,yIn+0.32,zI); s1.scale.set(0.9,0.225,1); g.add(s1);
   const s2=bg3Label('SALIDA'+lb,'#C77800'); s2.position.set(xe+0.45,yOut+0.32,zO); s2.scale.set(0.9,0.225,1); g.add(s2);
@@ -1479,6 +1484,8 @@ function bagSVG(c){
   s+=`<rect class="f l" x="${xa}" y="${yB+28}" width="${xb-xa}" height="14" rx="7"/><rect class="f l" x="${xa}" y="${yT-26}" width="${xb-xa}" height="14" rx="7"/>`;
   s+=`<path class="a" d="M${xa-34} ${yT-19} L${xa-4} ${yT-19} M${xa-12} ${yT-25} L${xa-4} ${yT-19} L${xa-12} ${yT-13}"/><text class="t" x="${xa-34}" y="${yT-32}">ENTRADA</text>`;
   s+=`<path class="a ao" d="M${xb+4} ${yB+35} L${xb+34} ${yB+35} M${xb+26} ${yB+29} L${xb+34} ${yB+35} L${xb+26} ${yB+41}"/><text class="t" x="${xb+34}" y="${yB+58}" text-anchor="end">SALIDA</text>`;
+  const gz=(gx,gy)=>`<line class="l" x1="${gx}" y1="${gy}" x2="${gx}" y2="${gy-12}"/><circle class="f l" cx="${gx}" cy="${gy-20}" r="8"/><line class="a" style="stroke-width:1.6" x1="${gx}" y1="${gy-20}" x2="${gx+4}" y2="${gy-24}"/>`;
+  s+=gz(xa+22,yT-26)+gz(xb-22,yT-26)+gz(xa+22,yB+28)+gz(xb-22,yB+28);
   for(let i=0;i<cnt;i++,idx++){const x=x0+i*gap,sp=c.nTot>c.n&&idx===n-1;
    s+=`<line class="l" x1="${x}" y1="${yB+28}" x2="${x}" y2="${yB+6}"/><line class="l" x1="${x}" y1="${yT-12}" x2="${x}" y2="${yT}"/>`;
    s+=`<path class="a" d="M${x-4} ${yT-8} L${x} ${yT-1} L${x+4} ${yT-8}"/><path class="a ao" d="M${x-4} ${yB+14} L${x} ${yB+21} L${x+4} ${yB+14}"/>`;
