@@ -1388,7 +1388,7 @@ function bg3Init(){
  const renderer=new THREE.WebGLRenderer({antialias:true});
  renderer.setPixelRatio(Math.min(2,window.devicePixelRatio||1)); renderer.shadowMap.enabled=true; renderer.shadowMap.type=THREE.PCFSoftShadowMap; renderer.outputEncoding=THREE.sRGBEncoding;
  el.appendChild(renderer.domElement);
- const scene=new THREE.Scene(); scene.background=new THREE.Color(0xe9eef3); scene.fog=new THREE.Fog(0xe9eef3,18,45);
+ const scene=new THREE.Scene(); scene.background=new THREE.Color(0xe9eef3); scene.fog=new THREE.Fog(0xe9eef3,60,140);
  const cam=new THREE.OrthographicCamera(-5,5,5,-5,0.1,200);
  scene.add(new THREE.HemisphereLight(0xffffff,0xaeb8c4,0.9));
  const sun=new THREE.DirectionalLight(0xffffff,0.85); sun.position.set(5,9,7); sun.castShadow=true; sun.shadow.mapSize.set(2048,2048);
@@ -1432,7 +1432,7 @@ function bg3Build(c){
  const R=bph===1?bagR+0.07:Math.max(bagR*per,bagR*rowsN)+0.12;
  const n=c.nTot, PER=6, nRows=Math.ceil(n/PER), perRow=Math.ceil(n/nRows);
  const y0=0.2, H=bagL+0.22, legH=0.5, gap=Math.max(2*R+0.5,0.9);
- const zIn=R+0.42, yIn=y0+legH+0.16, yOut=y0+legH+H-0.12, rowGap=2*zIn+0.9;
+ const zIn=R+0.42, yIn=y0+legH+H-0.12, yOut=y0+legH+0.16, rowGap=2*zIn+0.9;
  const pipeR=Math.min(0.15,0.05+c.dn/2800/Math.sqrt(nRows));
  const x0=-(perRow-1)*gap/2, xs=x0-R-0.55, xe=x0+(perRow-1)*gap+R+0.55;
  const L=xe-xs+0.3, Wd=(nRows-1)*rowGap+2*zIn+0.7;
@@ -1510,11 +1510,11 @@ function bagSVG(c){
   if(nRows>1)s+=`<text class="t" x="8" y="${oy+16}">LÍNEA ${r+1}</text>`;
   s+=`<line class="g" x1="0" y1="${oy+H-14}" x2="${W}" y2="${oy+H-14}"/>`;
   s+=`<rect class="f l" x="${xa}" y="${yB+28}" width="${xb-xa}" height="14" rx="7"/><rect class="f l" x="${xa}" y="${yT-26}" width="${xb-xa}" height="14" rx="7"/>`;
-  s+=`<path class="a" d="M${xa-34} ${yB+35} L${xa-4} ${yB+35} M${xa-12} ${yB+29} L${xa-4} ${yB+35} L${xa-12} ${yB+41}"/><text class="t" x="${xa-34}" y="${yB+58}">ENTRADA</text>`;
-  s+=`<path class="a ao" d="M${xb+4} ${yT-19} L${xb+34} ${yT-19} M${xb+26} ${yT-25} L${xb+34} ${yT-19} L${xb+26} ${yT-13}"/><text class="t" x="${xb+34}" y="${yT-32}" text-anchor="end">SALIDA</text>`;
+  s+=`<path class="a" d="M${xa-34} ${yT-19} L${xa-4} ${yT-19} M${xa-12} ${yT-25} L${xa-4} ${yT-19} L${xa-12} ${yT-13}"/><text class="t" x="${xa-34}" y="${yT-32}">ENTRADA</text>`;
+  s+=`<path class="a ao" d="M${xb+4} ${yB+35} L${xb+34} ${yB+35} M${xb+26} ${yB+29} L${xb+34} ${yB+35} L${xb+26} ${yB+41}"/><text class="t" x="${xb+34}" y="${yB+58}" text-anchor="end">SALIDA</text>`;
   for(let i=0;i<cnt;i++,idx++){const x=x0+i*gap,sp=c.nTot>c.n&&idx===n-1;
    s+=`<line class="l" x1="${x}" y1="${yB+28}" x2="${x}" y2="${yB+6}"/><line class="l" x1="${x}" y1="${yT-12}" x2="${x}" y2="${yT}"/>`;
-   s+=`<path class="a" d="M${x-4} ${yB+22} L${x} ${yB+14} L${x+4} ${yB+22}"/><path class="a ao" d="M${x-4} ${yT-4} L${x} ${yT-12} L${x+4} ${yT-4}"/>`;
+   s+=`<path class="a" d="M${x-4} ${yT-8} L${x} ${yT-1} L${x+4} ${yT-8}"/><path class="a ao" d="M${x-4} ${yB+14} L${x} ${yB+21} L${x+4} ${yB+14}"/>`;
    s+=`<rect class="${sp?'s2':'f'} l" x="${x-vw/2}" y="${yT}" width="${vw}" height="${yB-yT}" rx="12"/>`;
    s+=`<rect class="f l" x="${x-vw/2-4}" y="${yT-6}" width="${vw+8}" height="10" rx="3"/>`;
    const k=c.bph,cols=k<=2?k:k<=4?2:k<=6?3:4,rows=Math.ceil(k/cols),cw=(vw-12)/cols,ch=Math.min(cw,(yB-yT-40)/Math.max(rows,1));
